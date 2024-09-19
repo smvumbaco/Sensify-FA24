@@ -32,7 +32,7 @@
     (property "Sheetname" "MCU" (at 111.76 27.2284 0)
       (effects (font (size 1.27 1.27)) (justify left bottom))
     )
-    (property "Sheetfile" "MCU.kicad_sch.kicad_sch" (at 111.76 83.1346 0)
+    (property "Sheetfile" "MCU.kicad_sch" (at 111.76 83.1346 0)
       (effects (font (size 1.27 1.27)) (justify left top))
     )
     (instances
