@@ -25,6 +25,23 @@
     )
   )
 
+  (sheet (at 208.28 27.94) (size 54.61 54.61) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 326628ab-ecd6-4a75-a8ad-db965643b25a)
+    (property "Sheetname" "Haptics" (at 208.28 27.2284 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Haptics.kicad_sch" (at 208.28 83.1346 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe" (page "4"))
+      )
+    )
+  )
+
   (sheet (at 111.76 27.94) (size 60.96 54.61) (fields_autoplaced)
     (stroke (width 0.1524) (type solid))
     (fill (color 0 0 0 0.0000))

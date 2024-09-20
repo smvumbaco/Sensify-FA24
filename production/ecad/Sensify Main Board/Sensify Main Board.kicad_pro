@@ -334,6 +334,10 @@
     [
       "ec3ae12c-a69a-4cda-a73d-a33c865c767e",
       "MCU"
+    ],
+    [
+      "326628ab-ecd6-4a75-a8ad-db965643b25a",
+      "Haptics"
     ]
   ],
   "text_variables": {}
