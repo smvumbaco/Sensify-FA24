@@ -419,7 +419,7 @@
     (uuid f8021993-6d25-4ec6-a6f3-c41e76addd05)
   )
 
-  (text "Input" (at 60.96 20.32 0)
+  (text "Input" (at 60.96 21.59 0)
     (effects (font (face "KiCad Font") (size 5 5) bold) (justify left bottom))
     (uuid 84395bff-1509-4a65-a9e1-8c9ff02b8afc)
   )
