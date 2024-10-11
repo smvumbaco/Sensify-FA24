@@ -66,6 +66,23 @@
     )
   )
 
+  (sheet (at 26.67 115.57) (size 58.42 50.8) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 863c84cf-20d9-4517-8886-efede6184696)
+    (property "Sheetname" "IMU" (at 26.67 114.8584 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "IMU.kicad_sch" (at 26.67 166.9546 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe" (page "5"))
+      )
+    )
+  )
+
   (sheet (at 111.76 27.94) (size 60.96 54.61) (fields_autoplaced)
     (stroke (width 0.1524) (type solid))
     (fill (color 0 0 0 0.0000))

@@ -1081,6 +1081,11 @@
           (reference "#PWR07") (unit 1)
         )
       )
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
+          (reference "#PWR07") (unit 1)
+        )
+      )
     )
   )
 
@@ -1196,6 +1201,11 @@
     (instances
       (project "MCU"
         (path "/02f54834-ff3c-4d22-bc26-7423016c6c39"
+          (reference "#PWR05") (unit 1)
+        )
+      )
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
           (reference "#PWR05") (unit 1)
         )
       )
