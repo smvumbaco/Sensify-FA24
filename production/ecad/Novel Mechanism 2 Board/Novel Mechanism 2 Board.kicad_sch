@@ -1531,7 +1531,7 @@
     (property "Footprint" "Package_SO:SOP80P1410X360-17N" (at 81.915 81.28 0)
       (effects (font (size 1.27 1.27)) (justify bottom) hide)
     )
-    (property "Datasheet" "" (at 81.915 81.28 0)
+    (property "Datasheet" "https://www.mouser.com/datasheet/2/389/l9958-1849672.pdf" (at 81.915 81.28 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "PARTREV" "6" (at 81.915 81.28 0)
@@ -2081,12 +2081,12 @@
     (property "Datasheet" "~" (at 124.46 62.23 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "5" (uuid 2cfc3ecc-c60c-43b3-bae4-560f26a998e6))
-    (pin "4" (uuid 0f3c00c2-d663-49ab-9fcf-246a1b527459))
-    (pin "6" (uuid f8c39712-f193-4680-aa15-27bf7dc1b029))
-    (pin "1" (uuid 444508b8-b8a6-4313-b640-d247b4f1d85e))
-    (pin "3" (uuid 13e56384-4ee0-4590-8eab-08bbbe337c44))
-    (pin "2" (uuid 4e956a0a-da1d-463b-b1bc-cc3f9e5173ab))
+    (pin "5" (uuid 2cfc3ecc-c60c-43b3-bae4-560f26a998e7))
+    (pin "4" (uuid 0f3c00c2-d663-49ab-9fcf-246a1b52745a))
+    (pin "6" (uuid f8c39712-f193-4680-aa15-27bf7dc1b02a))
+    (pin "1" (uuid 444508b8-b8a6-4313-b640-d247b4f1d85f))
+    (pin "3" (uuid 13e56384-4ee0-4590-8eab-08bbbe337c45))
+    (pin "2" (uuid 4e956a0a-da1d-463b-b1bc-cc3f9e5173ac))
     (instances
       (project "Novel Mechanism 2 Board"
         (path "/148ef552-79ac-46c4-a436-ee743f083e73"
