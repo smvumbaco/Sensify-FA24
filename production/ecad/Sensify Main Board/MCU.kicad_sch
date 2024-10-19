@@ -1482,6 +1482,11 @@
     (effects (font (size 6 6)) (justify left bottom))
     (uuid 1f62a61c-32da-4e87-a94a-cf878e72f310)
   )
+  (text "for intermodule connections i was thinking these adafruit DIY connectors but they don't have any symbols or footprint, \nwhich is annoying but not the end of the world.\nwe were thinking of putting these on a breakout board. we would have two magnetic connectors per module.  \nhttps://www.digikey.com/en/products/detail/adafruit-industries-llc/5467/16637687\non the back of the breakout board would be\nhttps://www.digikey.com/en/products/detail/molex/0532611271/699104"
+    (at 17.9832 260.0706 0)
+    (effects (font (size 4 4)) (justify left bottom))
+    (uuid 72b49df8-eff2-487e-81cf-70bb6798a674)
+  )
   (text "Reset Button for MCU" (at 43.18 25.4 0)
     (effects (font (size 6 6)) (justify left bottom))
     (uuid 7c61a36e-b75a-4e30-8f88-74893623b2b3)
