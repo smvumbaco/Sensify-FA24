@@ -3557,6 +3557,11 @@
     )
     (pin "1" (uuid a49854f4-fdcb-4bd4-b3d8-6de5e8fb5e83))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR019") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR019") (unit 1)
@@ -3613,6 +3618,11 @@
     )
     (pin "1" (uuid 79ccc9a8-5731-46ff-80c9-ce28c715a32b))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR017") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR017") (unit 1)
@@ -3638,6 +3648,11 @@
     )
     (pin "1" (uuid ac634e17-9617-4803-a0e9-5baeaa7b845e))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR038") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR038") (unit 1)
@@ -3663,6 +3678,11 @@
     )
     (pin "1" (uuid df7b6d78-846f-4e3e-8781-6b58bb18846a))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR030") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR030") (unit 1)
@@ -3923,6 +3943,11 @@
     )
     (pin "1" (uuid 27305d68-6506-4413-9cf8-f658d6c1688c))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR040") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR040") (unit 1)
@@ -3948,6 +3973,11 @@
     )
     (pin "1" (uuid 335cc16d-49cf-4f1f-825f-4fd9a8bec042))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR021") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR021") (unit 1)
@@ -4079,6 +4109,11 @@
     )
     (pin "1" (uuid 41acaec5-2f30-4431-a716-e32c8647e6fd))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR013") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR013") (unit 1)
@@ -4457,6 +4492,11 @@
     )
     (pin "1" (uuid e84dc98e-c05b-402f-a8d5-3fb9b6e732c6))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR011") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR011") (unit 1)
@@ -4482,6 +4522,11 @@
     )
     (pin "1" (uuid 7c0b4eea-a19c-418f-ad7f-298dba1d24f7))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR039") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR039") (unit 1)
@@ -4507,6 +4552,11 @@
     )
     (pin "1" (uuid 8d107c37-ea39-4c65-a74c-46085b61cf07))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR024") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR024") (unit 1)
@@ -4563,6 +4613,11 @@
     )
     (pin "1" (uuid 4817873f-d1f3-46d9-a27f-55e6845b7019))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR016") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR016") (unit 1)
@@ -4588,6 +4643,11 @@
     )
     (pin "1" (uuid 5cea182c-51cd-4d80-9dbb-0f019edcc633))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR09") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR09") (unit 1)
@@ -4676,6 +4736,11 @@
     )
     (pin "1" (uuid 85eee35a-494d-497e-94a2-369ce7459d92))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR028") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR028") (unit 1)
@@ -4732,6 +4797,11 @@
     )
     (pin "1" (uuid 406e6400-bf4d-4b29-bedb-c62ed7b44a13))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR043") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR043") (unit 1)
@@ -4791,6 +4861,11 @@
     )
     (pin "1" (uuid 85dcbb0e-0d9b-4c30-be2f-a0b8788eca1c))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR012") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR012") (unit 1)
@@ -4816,6 +4891,11 @@
     )
     (pin "1" (uuid e77627e2-b28a-46fd-a89d-3bb06ac45d72))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR023") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR023") (unit 1)
@@ -4841,6 +4921,11 @@
     )
     (pin "1" (uuid 37bd657f-b8e9-4f61-a865-84491ef0ed13))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR020") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR020") (unit 1)
@@ -5026,6 +5111,11 @@
     )
     (pin "1" (uuid 8a316113-02ad-407e-bd65-010213156a0a))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR037") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR037") (unit 1)
@@ -5199,6 +5289,11 @@
     )
     (pin "1" (uuid f017dda1-286d-490f-87d4-b8fec15bd150))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR022") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR022") (unit 1)
@@ -5354,6 +5449,11 @@
     )
     (pin "1" (uuid 76087b4d-2836-4755-9489-361d06efdf48))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR029") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR029") (unit 1)
@@ -5509,6 +5609,11 @@
     )
     (pin "1" (uuid a64bc310-93c3-49b9-b9d3-3c37494fe23d))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR018") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR018") (unit 1)
@@ -5777,6 +5882,11 @@
     )
     (pin "1" (uuid f21fd6bd-ba50-4c0d-b44c-34d64506020b))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR035") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR035") (unit 1)
@@ -6093,6 +6203,11 @@
     )
     (pin "1" (uuid a3353c2f-a657-40f0-8949-f65f082a29df))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR036") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR036") (unit 1)
@@ -6118,6 +6233,11 @@
     )
     (pin "1" (uuid 3e13c5b9-9824-4b49-aeb2-31d5d32d3dfa))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR027") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR027") (unit 1)
@@ -6296,6 +6416,11 @@
     )
     (pin "1" (uuid 9f8330d2-7706-4493-a0af-3dabea8ad028))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR042") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR042") (unit 1)
@@ -6392,6 +6517,11 @@
     )
     (pin "1" (uuid f554d41e-59a8-40ca-85d6-d3521f383e5d))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR026") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR026") (unit 1)
@@ -6485,6 +6615,11 @@
     )
     (pin "1" (uuid a9b9c9ce-5a82-4131-abc2-ce2f32e5f733))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR015") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR015") (unit 1)
@@ -6541,6 +6676,11 @@
     )
     (pin "1" (uuid 0b7154f7-7da1-431a-9311-76f0af9a23cd))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR025") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR025") (unit 1)
@@ -6566,6 +6706,11 @@
     )
     (pin "1" (uuid bb70e57e-df7f-4506-ac92-ccf3f12d3353))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR010") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR010") (unit 1)
@@ -6824,6 +6969,11 @@
     )
     (pin "1" (uuid 6a82118b-4165-4804-ab42-878f119d82ef))
     (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR041") (unit 1)
+        )
+      )
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR041") (unit 1)
