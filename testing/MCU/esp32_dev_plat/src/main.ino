@@ -1,4 +1,13 @@
 #include "BluetoothSerial.h"
+
+// HID stuff
+#include <BLEDevice.h>
+#include <BLEHIDDevice.h>
+#include <BLEUtils.h>
+#include <BLEServer.h>
+#include <HIDKeyboardTypes.h>
+//
+
 #include "driver/i2c.h"
 #include "SPI.h"
 
@@ -18,9 +27,14 @@ String device_name = "ESP32-way-too-easy";
 #error Serial Port Profile for Bluetooth is not available or not enabled. It is only available for the ESP32 chip.
 #endif
 
-BluetoothSerial SerialBT;
+// BluetoothSerial SerialBT;
+
+BLEHIDDevice* hid;
+BLEServer* pServer;
 
 const int detect = 21;
+const int boot = 0;
+#define INPUT(size) 0x81, size
 
 enum State {
     IDLE,
@@ -82,7 +96,7 @@ class SPIAttachment {
         }
 };
 
-// takes in the current state and checks if there is a new state
+// // takes in the current state and checks if there is a new state
 State nextState(State current_state) {
     int current_detect_v = analogRead(detect);
 
@@ -132,21 +146,83 @@ void setup()
     State current_state = IDLE;
 
     Serial.begin(115200);
-    SerialBT.begin(device_name); // Bluetooth device name
+
+    BLEDevice::init("ESP32 Keyboard");
+  
+    pServer = BLEDevice::createServer();
+    hid = new BLEHIDDevice(pServer);
+
+    // HID service
+    hid->manufacturer()->setValue("Example");
+    hid->pnp(0x01, 0x02E5, 0xABCD, 0x0110);
+    hid->hidInfo(0x00, 0x01);
+
+    // example report map from chat
+    const uint8_t reportMap[] = {
+        USAGE_PAGE(1), 0x01,    // Generic Desktop Controls
+        USAGE(1), 0x06,         // Keyboard
+        COLLECTION(1), 0x01,    // Application
+        USAGE_PAGE(1), 0x07,    // Keyboard/Keypad
+        USAGE_MINIMUM(1), 0x00, // No modifiers
+        USAGE_MAXIMUM(1), 0x65, // Up to 101 keys
+        LOGICAL_MINIMUM(1), 0x00,
+        LOGICAL_MAXIMUM(1), 0x01,
+        REPORT_SIZE(1), 0x08,   // 1 byte for key press
+        REPORT_COUNT(1), 0x01,  // 1 key at a time
+        INPUT(1), 0x02,         // Data, Variable, Absolute
+        END_COLLECTION(0)       // End collection
+    };
+    hid->reportMap((uint8_t*)reportMap, sizeof(reportMap));
+    hid->startServices();
+
+    BLEAdvertising* pAdvertising = BLEDevice::getAdvertising();
+    pAdvertising->addServiceUUID(hid->hidService()->getUUID());
+    pAdvertising->start();
+
+    Serial.println("BLE HID ready.");
+
+
+
+    // SerialBT.begin(device_name); // Bluetooth device name
     // SerialBT.deleteAllBondedDevices(); // Uncomment this to delete paired devices; Must be called after begin
-    Serial.printf("The device with name \"%s\" is started.\nNow you can pair it with Bluetooth!\n", device_name.c_str());
+    // Serial.printf("The device with name \"%s\" is started.\nNow you can pair it with Bluetooth!\n", device_name.c_str());
 }
 
 void loop()
 {
+    // for HID device
+    // - input events
+    // hid->inputReport(0)->setValue(...); 
+    // send over bluetooth
 
-    if (Serial.available())
-    {
-        SerialBT.write(Serial.read());
+    // if (Serial.available())
+    // {
+    //     SerialBT.write(Serial.read());
+    // }
+    // if (SerialBT.available())
+    // {
+    //     Serial.write(SerialBT.read());
+    // }
+      // Read the state of the BOOT button (active-low, so pressed is LOW)
+    int buttonState = digitalRead(boot);
+
+    if (buttonState == LOW) {
+        // Button is pressed, simulate keypress (e.g., 'a' key)
+        uint8_t keypress[8] = {0}; // 8-byte report: 1st byte is modifier, 2nd is reserved, 3-8 are keycodes
+        keypress[2] = 0x04;        // Keycode for 'a'
+        hid->inputReport(0)->setValue(keypress, sizeof(keypress));
+        hid->inputReport(0)->notify();
+
+        Serial.println("Key 'a' pressed.");
+        delay(200); // Simple debounce
+    } else {
+        // Button is not pressed, release the key
+        uint8_t keyrelease[8] = {0}; // Empty report means no key is pressed
+        hid->inputReport(0)->setValue(keyrelease, sizeof(keyrelease));
+        hid->inputReport(0)->notify();
+
+        Serial.println("Key released.");
     }
-    if (SerialBT.available())
-    {
-        Serial.write(SerialBT.read());
-    }
-    delay(20);
+
+    delay(100);
 }
