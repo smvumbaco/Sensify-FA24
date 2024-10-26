@@ -454,7 +454,7 @@
   (symbol (lib_id "power:GND") (at 200.66 120.65 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 07865e47-353a-4d16-9e22-0779bff7e62d)
-    (property "Reference" "#PWR082" (at 200.66 127 0)
+    (property "Reference" "#PWR09" (at 200.66 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 200.66 125.73 0)
@@ -470,7 +470,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe"
-          (reference "#PWR082") (unit 1)
+          (reference "#PWR09") (unit 1)
         )
       )
     )
@@ -479,7 +479,7 @@
   (symbol (lib_id "Mechanical:MountingHole") (at 154.94 36.83 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 25e39213-ed42-4276-bab1-1667cffe7265)
-    (property "Reference" "H2" (at 157.48 35.56 0)
+    (property "Reference" "H3" (at 157.48 35.56 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "MountingHole" (at 157.48 38.1 0)
@@ -494,7 +494,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe"
-          (reference "H2") (unit 1)
+          (reference "H3") (unit 1)
         )
       )
     )
@@ -503,13 +503,13 @@
   (symbol (lib_id "Connector:TestPoint") (at 128.27 99.06 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 37f48d68-242d-448a-bc35-9b3747a57f3a)
-    (property "Reference" "TP3" (at 130.81 94.488 0)
+    (property "Reference" "TP2" (at 130.81 94.488 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 130.81 97.028 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 133.35 99.06 0)
+    (property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm" (at 133.35 99.06 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 133.35 99.06 0)
@@ -519,7 +519,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe"
-          (reference "TP3") (unit 1)
+          (reference "TP2") (unit 1)
         )
       )
     )
@@ -534,7 +534,7 @@
     (property "Value" "TestPoint" (at 130.81 77.978 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 133.35 80.01 0)
+    (property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm" (at 133.35 80.01 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 133.35 80.01 0)
@@ -553,7 +553,7 @@
   (symbol (lib_id "power:GND") (at 195.58 53.34 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 472c231a-9d89-452f-8eef-d3e6d1d9b73d)
-    (property "Reference" "#PWR087" (at 195.58 59.69 0)
+    (property "Reference" "#PWR08" (at 195.58 59.69 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 195.58 58.42 0)
@@ -569,7 +569,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe"
-          (reference "#PWR087") (unit 1)
+          (reference "#PWR08") (unit 1)
         )
       )
     )
@@ -578,7 +578,7 @@
   (symbol (lib_id "power:GND") (at 101.6 152.4 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 498e096d-97bd-40d3-8052-fd4c8ef3c679)
-    (property "Reference" "#PWR066" (at 101.6 158.75 0)
+    (property "Reference" "#PWR01" (at 101.6 158.75 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 101.6 157.48 0)
@@ -594,7 +594,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe"
-          (reference "#PWR066") (unit 1)
+          (reference "#PWR01") (unit 1)
         )
       )
     )
@@ -603,13 +603,13 @@
   (symbol (lib_id "Connector:TestPoint") (at 128.27 111.76 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4fccb811-486f-45ff-9b03-b4b5bfc21849)
-    (property "Reference" "TP5" (at 130.81 107.188 0)
+    (property "Reference" "TP3" (at 130.81 107.188 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 130.81 109.728 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 133.35 111.76 0)
+    (property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm" (at 133.35 111.76 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 133.35 111.76 0)
@@ -619,7 +619,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe"
-          (reference "TP5") (unit 1)
+          (reference "TP3") (unit 1)
         )
       )
     )
@@ -628,7 +628,7 @@
   (symbol (lib_id "power:+5V") (at 193.04 114.3 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 64fd0d79-931e-44ab-97bf-a7ed005add04)
-    (property "Reference" "#PWR080" (at 193.04 118.11 0)
+    (property "Reference" "#PWR06" (at 193.04 118.11 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 193.04 109.22 0)
@@ -644,7 +644,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe"
-          (reference "#PWR080") (unit 1)
+          (reference "#PWR06") (unit 1)
         )
       )
     )
@@ -653,7 +653,7 @@
   (symbol (lib_id "power:+3V3") (at 193.04 127 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 680f1391-c230-4f6c-9ee9-93551eab0f65)
-    (property "Reference" "#PWR081" (at 193.04 130.81 0)
+    (property "Reference" "#PWR07" (at 193.04 130.81 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 193.04 121.92 0)
@@ -669,7 +669,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe"
-          (reference "#PWR081") (unit 1)
+          (reference "#PWR07") (unit 1)
         )
       )
     )
@@ -678,7 +678,7 @@
   (symbol (lib_id "power:+5V") (at 204.47 38.1 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 70ef5d68-31bc-4cef-9706-0c1644d3c159)
-    (property "Reference" "#PWR085" (at 204.47 41.91 0)
+    (property "Reference" "#PWR010" (at 204.47 41.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 204.47 33.02 0)
@@ -694,7 +694,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe"
-          (reference "#PWR085") (unit 1)
+          (reference "#PWR010") (unit 1)
         )
       )
     )
@@ -703,13 +703,13 @@
   (symbol (lib_id "Connector:TestPoint") (at 149.86 99.06 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8060da27-b18d-4353-8d8d-f16d5ff21012)
-    (property "Reference" "TP4" (at 152.4 94.488 0)
+    (property "Reference" "TP5" (at 152.4 94.488 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 152.4 97.028 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 154.94 99.06 0)
+    (property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm" (at 154.94 99.06 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 154.94 99.06 0)
@@ -719,7 +719,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe"
-          (reference "TP4") (unit 1)
+          (reference "TP5") (unit 1)
         )
       )
     )
@@ -776,7 +776,7 @@
   (symbol (lib_id "power:+3V3") (at 142.24 97.79 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9b970eb1-c8c1-4e64-ab6a-abe1a92269b5)
-    (property "Reference" "#PWR073" (at 142.24 101.6 0)
+    (property "Reference" "#PWR03" (at 142.24 101.6 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 142.24 92.71 0)
@@ -792,7 +792,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe"
-          (reference "#PWR073") (unit 1)
+          (reference "#PWR03") (unit 1)
         )
       )
     )
@@ -801,7 +801,7 @@
   (symbol (lib_id "power:+3V3") (at 101.6 165.1 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a2114ab3-f39b-4957-a5d6-3da98ec1f554)
-    (property "Reference" "#PWR079" (at 101.6 168.91 0)
+    (property "Reference" "#PWR02" (at 101.6 168.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 101.6 160.02 0)
@@ -817,7 +817,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe"
-          (reference "#PWR079") (unit 1)
+          (reference "#PWR02") (unit 1)
         )
       )
     )
@@ -826,7 +826,7 @@
   (symbol (lib_id "power:+5V") (at 163.83 97.79 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ab816bf0-1214-4571-86fd-07a6f50d33a2)
-    (property "Reference" "#PWR076" (at 163.83 101.6 0)
+    (property "Reference" "#PWR05" (at 163.83 101.6 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 163.83 92.71 0)
@@ -842,7 +842,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe"
-          (reference "#PWR076") (unit 1)
+          (reference "#PWR05") (unit 1)
         )
       )
     )
@@ -851,7 +851,7 @@
   (symbol (lib_id "power:GND") (at 142.24 113.03 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c4d9f9c6-ae30-4244-973c-1d70d0653409)
-    (property "Reference" "#PWR077" (at 142.24 119.38 0)
+    (property "Reference" "#PWR04" (at 142.24 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 142.24 118.11 0)
@@ -867,7 +867,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe"
-          (reference "#PWR077") (unit 1)
+          (reference "#PWR04") (unit 1)
         )
       )
     )
@@ -876,13 +876,13 @@
   (symbol (lib_id "Connector:TestPoint") (at 149.86 80.01 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d9faa51d-304e-466d-a248-e9c407b8e126)
-    (property "Reference" "TP2" (at 152.4 75.438 0)
+    (property "Reference" "TP4" (at 152.4 75.438 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 152.4 77.978 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 154.94 80.01 0)
+    (property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm" (at 154.94 80.01 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 154.94 80.01 0)
@@ -892,7 +892,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe"
-          (reference "TP2") (unit 1)
+          (reference "TP4") (unit 1)
         )
       )
     )
@@ -901,7 +901,7 @@
   (symbol (lib_id "Mechanical:MountingHole") (at 129.54 48.26 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fc212f01-045c-4cd4-8917-99ef06898db4)
-    (property "Reference" "H3" (at 132.08 46.99 0)
+    (property "Reference" "H2" (at 132.08 46.99 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "MountingHole" (at 132.08 49.53 0)
@@ -916,7 +916,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe"
-          (reference "H3") (unit 1)
+          (reference "H2") (unit 1)
         )
       )
     )
