@@ -2003,7 +2003,7 @@
     (property "Value" "TestPoint" (at 229.87 86.868 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 232.41 88.9 0)
+    (property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm" (at 232.41 88.9 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 232.41 88.9 0)
@@ -2022,13 +2022,13 @@
   (symbol (lib_id "Connector:TestPoint") (at 227.33 25.4 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 59c6f987-96cf-4c5c-8c13-cc728ed2b8d6)
-    (property "Reference" "TP3" (at 229.87 20.828 0)
+    (property "Reference" "TP1" (at 229.87 20.828 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 229.87 23.368 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 232.41 25.4 0)
+    (property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm" (at 232.41 25.4 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 232.41 25.4 0)
@@ -2038,7 +2038,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "TP3") (unit 1)
+          (reference "TP1") (unit 1)
         )
       )
     )
@@ -2200,7 +2200,7 @@
   (symbol (lib_id "Mechanical:MountingHole") (at 45.72 19.05 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6d6f098f-6283-46f1-a931-81e925201060)
-    (property "Reference" "H2" (at 48.26 17.78 0)
+    (property "Reference" "H3" (at 48.26 17.78 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "MountingHole" (at 48.26 20.32 0)
@@ -2215,7 +2215,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "H2") (unit 1)
+          (reference "H3") (unit 1)
         )
       )
     )
@@ -2250,13 +2250,13 @@
   (symbol (lib_id "Connector:TestPoint") (at 227.33 54.61 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 75ad1b7e-1249-42d7-9a7d-969a45449239)
-    (property "Reference" "TP2" (at 229.87 50.038 0)
+    (property "Reference" "TP3" (at 229.87 50.038 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 229.87 52.578 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 232.41 54.61 0)
+    (property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm" (at 232.41 54.61 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 232.41 54.61 0)
@@ -2266,7 +2266,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "TP2") (unit 1)
+          (reference "TP3") (unit 1)
         )
       )
     )
@@ -2610,13 +2610,13 @@
   (symbol (lib_id "Connector:TestPoint") (at 227.33 40.64 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid bd99a15b-bb74-4ca7-a8b1-db562e438892)
-    (property "Reference" "TP1" (at 229.87 36.068 0)
+    (property "Reference" "TP2" (at 229.87 36.068 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 229.87 38.608 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 232.41 40.64 0)
+    (property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm" (at 232.41 40.64 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 232.41 40.64 0)
@@ -2626,7 +2626,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "TP1") (unit 1)
+          (reference "TP2") (unit 1)
         )
       )
     )
@@ -2641,7 +2641,7 @@
     (property "Value" "TestPoint" (at 229.87 67.818 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 232.41 69.85 0)
+    (property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm" (at 232.41 69.85 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 232.41 69.85 0)
@@ -2820,7 +2820,7 @@
     (property "Value" "TestPoint" (at 262.89 23.368 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 265.43 25.4 0)
+    (property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm" (at 265.43 25.4 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 265.43 25.4 0)
@@ -2890,7 +2890,7 @@
   (symbol (lib_id "Mechanical:MountingHole") (at 22.86 29.21 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e91e8d98-3f3f-464d-9c6c-cd856ad418a1)
-    (property "Reference" "H3" (at 25.4 27.94 0)
+    (property "Reference" "H2" (at 25.4 27.94 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "MountingHole" (at 25.4 30.48 0)
@@ -2905,7 +2905,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "H3") (unit 1)
+          (reference "H2") (unit 1)
         )
       )
     )
