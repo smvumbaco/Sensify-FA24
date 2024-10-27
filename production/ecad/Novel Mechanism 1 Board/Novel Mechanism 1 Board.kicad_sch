@@ -153,6 +153,41 @@
         )
       )
     )
+    (symbol "Connector:TestPoint" (pin_numbers hide) (pin_names (offset 0.762) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "TP" (at 0 6.858 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "TestPoint" (at 0 5.08 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 5.08 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 5.08 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "test point tp" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "test point" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "Pin* Test*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "TestPoint_0_1"
+        (circle (center 0 3.302) (radius 0.762)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "TestPoint_1_1"
+        (pin passive line (at 0 0 90) (length 2.54)
+          (name "1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
     (symbol "Device:C" (pin_numbers hide) (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
       (property "Reference" "C" (at 0.635 2.54 0)
         (effects (font (size 1.27 1.27)) (justify left))
@@ -285,6 +320,35 @@
         (pin passive line (at 0 -3.81 90) (length 1.27)
           (name "~" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+    (symbol "Mechanical:MountingHole" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
+      (property "Reference" "H" (at 0 5.08 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "MountingHole" (at 0 3.175 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "mounting hole" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Mounting Hole without connection" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "MountingHole*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "MountingHole_0_1"
+        (circle (center 0 0) (radius 1.27)
+          (stroke (width 1.27) (type default))
+          (fill (type none))
         )
       )
     )
@@ -613,6 +677,10 @@
     (stroke (width 0) (type default))
     (uuid 0ea997c7-7459-47f6-9bb0-735f1463f7e7)
   )
+  (wire (pts (xy 227.33 40.64) (xy 227.33 44.45))
+    (stroke (width 0) (type default))
+    (uuid 15251686-eb15-460c-9b9d-006cf6aa3e86)
+  )
   (wire (pts (xy 134.62 163.83) (xy 147.32 163.83))
     (stroke (width 0) (type default))
     (uuid 1869d9cb-345d-4686-b077-7c164e7ea24b)
@@ -661,6 +729,10 @@
     (stroke (width 0) (type default))
     (uuid 3b7e26ad-4602-490f-865e-5723985cda70)
   )
+  (wire (pts (xy 227.33 78.74) (xy 234.95 78.74))
+    (stroke (width 0) (type default))
+    (uuid 3cff5a3c-60fb-4243-af2d-5c71e4dbfc79)
+  )
   (wire (pts (xy 190.5 125.73) (xy 190.5 120.65))
     (stroke (width 0) (type default))
     (uuid 3ef8b04a-905f-4b95-a739-1face929f4ae)
@@ -672,6 +744,10 @@
   (wire (pts (xy 25.4 161.29) (xy 25.4 158.75))
     (stroke (width 0) (type default))
     (uuid 4297fa7a-6080-460f-8cb0-d20ed952da67)
+  )
+  (wire (pts (xy 227.33 59.69) (xy 232.41 59.69))
+    (stroke (width 0) (type default))
+    (uuid 42bad424-d975-4e9d-a8e9-773d803959d3)
   )
   (wire (pts (xy 36.83 172.72) (xy 36.83 168.91))
     (stroke (width 0) (type default))
@@ -700,6 +776,10 @@
   (wire (pts (xy 119.38 175.26) (xy 119.38 173.99))
     (stroke (width 0) (type default))
     (uuid 50afd7d7-463b-424a-9293-58b3daee4116)
+  )
+  (wire (pts (xy 260.35 31.75) (xy 267.97 31.75))
+    (stroke (width 0) (type default))
+    (uuid 53f16505-78a6-4794-9dc2-50805a775e75)
   )
   (wire (pts (xy 134.62 101.6) (xy 147.32 101.6))
     (stroke (width 0) (type default))
@@ -745,6 +825,10 @@
     (stroke (width 0) (type default))
     (uuid 741c1b97-7d2c-4066-aa87-6af3bf7f518b)
   )
+  (wire (pts (xy 227.33 44.45) (xy 232.41 44.45))
+    (stroke (width 0) (type default))
+    (uuid 77da0915-9673-43c0-aeea-50373a1085cd)
+  )
   (wire (pts (xy 254 153.67) (xy 250.19 153.67))
     (stroke (width 0) (type default))
     (uuid 7b203f92-1059-4bca-bff6-ab25904ebc3b)
@@ -788,6 +872,10 @@
   (wire (pts (xy 133.35 30.48) (xy 133.35 33.02))
     (stroke (width 0) (type default))
     (uuid 870fbea1-4f8c-4616-b820-fa806888e4da)
+  )
+  (wire (pts (xy 227.33 54.61) (xy 227.33 59.69))
+    (stroke (width 0) (type default))
+    (uuid 8bc394c3-4543-4c58-aeb8-db71eaa63ed0)
   )
   (wire (pts (xy 36.83 158.75) (xy 73.66 158.75))
     (stroke (width 0) (type default))
@@ -864,6 +952,10 @@
   (wire (pts (xy 113.03 44.45) (xy 146.05 44.45))
     (stroke (width 0) (type default))
     (uuid b0299af4-57a7-4e4a-9257-3e0d57e3d21a)
+  )
+  (wire (pts (xy 227.33 69.85) (xy 227.33 78.74))
+    (stroke (width 0) (type default))
+    (uuid b2a193cd-4ed4-4ed0-9e40-3ef7c7491644)
   )
   (wire (pts (xy 24.13 55.88) (xy 24.13 58.42))
     (stroke (width 0) (type default))
@@ -949,9 +1041,25 @@
     (stroke (width 0) (type default))
     (uuid dab6d480-7d51-47eb-b415-e2c9e71920b0)
   )
+  (wire (pts (xy 227.33 88.9) (xy 227.33 96.52))
+    (stroke (width 0) (type default))
+    (uuid db6d86dd-a6c7-4620-8a01-9609dff3838d)
+  )
+  (wire (pts (xy 227.33 96.52) (xy 234.95 96.52))
+    (stroke (width 0) (type default))
+    (uuid dc604831-146c-4fd0-9828-b90c93325219)
+  )
   (wire (pts (xy 237.49 143.51) (xy 241.3 143.51))
     (stroke (width 0) (type default))
     (uuid dca656dc-33d0-4838-937d-a831c771c024)
+  )
+  (wire (pts (xy 227.33 30.48) (xy 232.41 30.48))
+    (stroke (width 0) (type default))
+    (uuid e55e4212-44c3-4ce1-995b-6731243a21f4)
+  )
+  (wire (pts (xy 227.33 25.4) (xy 227.33 30.48))
+    (stroke (width 0) (type default))
+    (uuid e67b7805-1266-4267-b380-f0b047437b6e)
   )
   (wire (pts (xy 25.4 168.91) (xy 25.4 172.72))
     (stroke (width 0) (type default))
@@ -972,6 +1080,10 @@
   (wire (pts (xy 36.83 110.49) (xy 46.99 110.49))
     (stroke (width 0) (type default))
     (uuid ea6d6ce7-90fe-4e3a-b8cf-5def25e4989c)
+  )
+  (wire (pts (xy 260.35 25.4) (xy 260.35 31.75))
+    (stroke (width 0) (type default))
+    (uuid ec8263a3-5f47-4487-91ef-a9197c1d7255)
   )
   (wire (pts (xy 250.19 125.73) (xy 254 125.73))
     (stroke (width 0) (type default))
@@ -1051,6 +1163,20 @@
     (uuid ab5dbd00-acac-4e42-849e-26cc2aae6b6a)
   )
 
+  (global_label "LIN_POT" (shape input) (at 234.95 78.74 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 16becf95-0550-4d47-a111-82723b61e71f)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 245.4343 78.74 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
+  (global_label "INTERRUPT_LP" (shape bidirectional) (at 232.41 44.45 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 216ee9c0-0f06-4040-811f-a138049918fb)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 249.9322 44.45 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
   (global_label "INTERRUPT_F2" (shape bidirectional) (at 250.19 130.81 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 238e3986-e8c6-4a52-b5b0-14b7dd4c9b76)
@@ -1107,6 +1233,13 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
+  (global_label "INTERRUPT_F2" (shape bidirectional) (at 232.41 30.48 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 5b4ecbd3-7737-4234-ab3f-1c9eb600e867)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 249.9322 30.48 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
   (global_label "SCL" (shape input) (at 146.05 44.45 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 6110ecd9-b177-4d9e-89cf-ffa854f11851)
@@ -1132,6 +1265,13 @@
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 83826d10-62ee-4311-9405-46498f9935dc)
     (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 153.8128 161.29 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
+  (global_label "FSR_2" (shape input) (at 267.97 31.75 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 9ccf24c1-8058-4a4e-ad61-ce06f1721507)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 276.7004 31.75 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -1170,6 +1310,13 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
+  (global_label "FSR_1" (shape input) (at 234.95 96.52 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid e75f77b9-6c8e-403f-9bcd-006631f465cf)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 243.6804 96.52 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
   (global_label "SDA" (shape bidirectional) (at 147.32 96.52 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid edf1ee79-ee69-4d16-a903-58a2768d24f3)
@@ -1191,11 +1338,18 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
+  (global_label "INTERRUPT_F1" (shape bidirectional) (at 232.41 59.69 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid fa1d5a5a-cc72-4a64-9079-dd4bbdbd7e04)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 249.9322 59.69 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
 
   (symbol (lib_id "0532611271:0532611271") (at 264.16 135.89 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 05175169-0b41-4991-82d7-3aced6e6d6d8)
-    (property "Reference" "J3" (at 270.51 137.16 0)
+    (property "Reference" "J4" (at 270.51 137.16 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0532611271" (at 270.51 139.7 0)
@@ -1236,7 +1390,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "J3") (unit 1)
+          (reference "J4") (unit 1)
         )
       )
     )
@@ -1245,7 +1399,7 @@
   (symbol (lib_id "power:+3V3") (at 190.5 39.37 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0ba8a750-a4f1-4e8d-84d0-1c32bfe07e2d)
-    (property "Reference" "#PWR019" (at 190.5 43.18 0)
+    (property "Reference" "#PWR016" (at 190.5 43.18 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 190.5 34.29 0)
@@ -1261,7 +1415,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "#PWR019") (unit 1)
+          (reference "#PWR016") (unit 1)
         )
       )
     )
@@ -1270,7 +1424,7 @@
   (symbol (lib_id "Device:R_US") (at 247.65 146.05 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0c7b9222-09dd-4b8e-88b8-2101da1b31f3)
-    (property "Reference" "R1" (at 247.65 143.51 90)
+    (property "Reference" "R13" (at 247.65 143.51 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0" (at 247.65 148.59 90)
@@ -1287,7 +1441,31 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "R1") (unit 1)
+          (reference "R13") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Mechanical:MountingHole") (at 22.86 19.05 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 0e5fe055-7e83-4a41-a4ef-8c5d3f62894e)
+    (property "Reference" "H1" (at 25.4 17.78 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "MountingHole" (at 25.4 20.32 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 22.86 19.05 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 22.86 19.05 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "Novel Mechanism 1 Board"
+        (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
+          (reference "H1") (unit 1)
         )
       )
     )
@@ -1296,7 +1474,7 @@
   (symbol (lib_id "Device:R_US") (at 119.38 170.18 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0f42e833-f1fd-43b7-ba8f-9d0d377dbe5e)
-    (property "Reference" "R18" (at 121.92 168.91 0)
+    (property "Reference" "R5" (at 121.92 168.91 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0" (at 121.92 171.45 0)
@@ -1313,7 +1491,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "R18") (unit 1)
+          (reference "R5") (unit 1)
         )
       )
     )
@@ -1322,7 +1500,7 @@
   (symbol (lib_id "power:+3V3") (at 134.62 146.05 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 10ecb5bf-4194-428e-b25c-88c87f51a2b3)
-    (property "Reference" "#PWR010" (at 134.62 149.86 0)
+    (property "Reference" "#PWR014" (at 134.62 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 134.62 140.97 0)
@@ -1338,7 +1516,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "#PWR010") (unit 1)
+          (reference "#PWR014") (unit 1)
         )
       )
     )
@@ -1347,7 +1525,7 @@
   (symbol (lib_id "power:GND") (at 118.11 58.42 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 11a14098-9313-4f6a-81c1-27b1501cb9de)
-    (property "Reference" "#PWR07" (at 118.11 64.77 0)
+    (property "Reference" "#PWR011" (at 118.11 64.77 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 118.11 63.5 0)
@@ -1363,7 +1541,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "#PWR07") (unit 1)
+          (reference "#PWR011") (unit 1)
         )
       )
     )
@@ -1404,7 +1582,7 @@
   (symbol (lib_id "Device:R_US") (at 190.5 95.25 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 19816e30-84cf-446c-8509-acf176f68fad)
-    (property "Reference" "R4" (at 193.04 93.98 0)
+    (property "Reference" "R11" (at 193.04 93.98 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 193.04 96.52 0)
@@ -1421,7 +1599,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "R4") (unit 1)
+          (reference "R11") (unit 1)
         )
       )
     )
@@ -1430,7 +1608,7 @@
   (symbol (lib_id "power:GND") (at 60.96 58.42 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1c5e8faf-7fb4-46a1-bdfa-bdbabf376188)
-    (property "Reference" "#PWR05" (at 60.96 64.77 0)
+    (property "Reference" "#PWR07" (at 60.96 64.77 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 60.96 63.5 0)
@@ -1446,7 +1624,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "#PWR05") (unit 1)
+          (reference "#PWR07") (unit 1)
         )
       )
     )
@@ -1455,7 +1633,7 @@
   (symbol (lib_id "Device:R_US") (at 190.5 57.15 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1c91b6e0-f8b2-46c8-a540-d6708c656558)
-    (property "Reference" "R2" (at 193.04 55.88 0)
+    (property "Reference" "R10" (at 193.04 55.88 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 193.04 58.42 0)
@@ -1472,7 +1650,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "R2") (unit 1)
+          (reference "R10") (unit 1)
         )
       )
     )
@@ -1481,7 +1659,7 @@
   (symbol (lib_id "Device:R_US") (at 190.5 132.08 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1e6869d8-6740-4ad0-9cc8-4012c3a9fb8a)
-    (property "Reference" "R5" (at 193.04 130.81 0)
+    (property "Reference" "R12" (at 193.04 130.81 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 193.04 133.35 0)
@@ -1498,7 +1676,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "R5") (unit 1)
+          (reference "R12") (unit 1)
         )
       )
     )
@@ -1507,7 +1685,7 @@
   (symbol (lib_id "power:GND") (at 190.5 137.16 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 22b0e5d2-b8d9-4a96-b789-6ee4396044cc)
-    (property "Reference" "#PWR030" (at 190.5 143.51 0)
+    (property "Reference" "#PWR021" (at 190.5 143.51 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 190.5 142.24 0)
@@ -1523,7 +1701,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "#PWR030") (unit 1)
+          (reference "#PWR021") (unit 1)
         )
       )
     )
@@ -1532,7 +1710,7 @@
   (symbol (lib_id "Device:R_US") (at 134.62 152.4 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 23157dcd-3c17-468e-ae5b-5d3447d2f583)
-    (property "Reference" "R9" (at 137.16 151.13 0)
+    (property "Reference" "R8" (at 137.16 151.13 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "5k" (at 137.16 153.67 0)
@@ -1549,32 +1727,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "R9") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+3.3V") (at 229.87 148.59 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 2655737d-c0c8-495a-8146-d6950502e94d)
-    (property "Reference" "#PWR025" (at 229.87 152.4 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3.3V" (at 229.87 144.78 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 229.87 148.59 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 229.87 148.59 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 98bc4762-df4a-4b7d-8173-93461738eb45))
-    (instances
-      (project "Novel Mechanism 1 Board"
-        (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "#PWR025") (unit 1)
+          (reference "R8") (unit 1)
         )
       )
     )
@@ -1583,7 +1736,7 @@
   (symbol (lib_id "power:GND") (at 190.5 100.33 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 29e019f1-1a7b-4c40-b308-999044785297)
-    (property "Reference" "#PWR028" (at 190.5 106.68 0)
+    (property "Reference" "#PWR019" (at 190.5 106.68 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 190.5 105.41 0)
@@ -1599,7 +1752,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "#PWR028") (unit 1)
+          (reference "#PWR019") (unit 1)
         )
       )
     )
@@ -1634,7 +1787,7 @@
   (symbol (lib_id "power:GND") (at 190.5 62.23 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 369f6f5c-c737-43e7-95fb-7c6540707119)
-    (property "Reference" "#PWR023" (at 190.5 68.58 0)
+    (property "Reference" "#PWR017" (at 190.5 68.58 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 190.5 67.31 0)
@@ -1650,7 +1803,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "#PWR023") (unit 1)
+          (reference "#PWR017") (unit 1)
         )
       )
     )
@@ -1659,7 +1812,7 @@
   (symbol (lib_id "power:GND") (at 62.23 172.72 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 373e3e66-9919-41ba-bc80-bfc661c8c326)
-    (property "Reference" "#PWR012" (at 62.23 179.07 0)
+    (property "Reference" "#PWR09" (at 62.23 179.07 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 62.23 177.8 0)
@@ -1675,7 +1828,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "#PWR012") (unit 1)
+          (reference "#PWR09") (unit 1)
         )
       )
     )
@@ -1684,7 +1837,7 @@
   (symbol (lib_id "Device:C") (at 36.83 102.87 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4231698a-e96d-4854-9234-f7b3d8871c0e)
-    (property "Reference" "C4" (at 40.64 101.6 0)
+    (property "Reference" "C5" (at 40.64 101.6 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1u" (at 40.64 104.14 0)
@@ -1701,7 +1854,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "C4") (unit 1)
+          (reference "C5") (unit 1)
         )
       )
     )
@@ -1742,7 +1895,7 @@
   (symbol (lib_id "Device:C") (at 25.4 102.87 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 537189bf-bf69-478f-9147-b40da91fa974)
-    (property "Reference" "C3" (at 29.21 101.6 0)
+    (property "Reference" "C2" (at 29.21 101.6 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "4.7u" (at 29.21 104.14 0)
@@ -1759,7 +1912,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "C3") (unit 1)
+          (reference "C2") (unit 1)
         )
       )
     )
@@ -1768,7 +1921,7 @@
   (symbol (lib_id "power:+3V3") (at 17.78 156.21 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 54cc067f-ec05-4428-bf5f-daafeb4e5408)
-    (property "Reference" "#PWR09" (at 17.78 160.02 0)
+    (property "Reference" "#PWR03" (at 17.78 160.02 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 17.78 151.13 0)
@@ -1784,7 +1937,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "#PWR09") (unit 1)
+          (reference "#PWR03") (unit 1)
         )
       )
     )
@@ -1793,7 +1946,7 @@
   (symbol (lib_id "Device:R_US") (at 143.51 90.17 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 54dd94c6-63d3-4b4c-95d1-3bbe1bb03c7d)
-    (property "Reference" "R15" (at 146.05 88.9 0)
+    (property "Reference" "R9" (at 146.05 88.9 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "0" (at 146.05 91.44 0)
@@ -1810,7 +1963,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "R15") (unit 1)
+          (reference "R9") (unit 1)
         )
       )
     )
@@ -1819,7 +1972,7 @@
   (symbol (lib_id "power:+3V3") (at 190.5 77.47 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 55ffbde5-7337-418a-b3a2-36b14c8c8756)
-    (property "Reference" "#PWR027" (at 190.5 81.28 0)
+    (property "Reference" "#PWR018" (at 190.5 81.28 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 190.5 72.39 0)
@@ -1835,7 +1988,57 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "#PWR027") (unit 1)
+          (reference "#PWR018") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Connector:TestPoint") (at 227.33 88.9 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 59aab9e5-f391-4e57-b734-f065647340e7)
+    (property "Reference" "TP5" (at 229.87 84.328 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "TestPoint" (at 229.87 86.868 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (at 232.41 88.9 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 232.41 88.9 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid fd5d8fdd-716c-4b9c-9505-b5c54f0e7e4c))
+    (instances
+      (project "Novel Mechanism 1 Board"
+        (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
+          (reference "TP5") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Connector:TestPoint") (at 227.33 25.4 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 59c6f987-96cf-4c5c-8c13-cc728ed2b8d6)
+    (property "Reference" "TP3" (at 229.87 20.828 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "TestPoint" (at 229.87 23.368 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (at 232.41 25.4 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 232.41 25.4 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 11374e48-6ca5-4335-bfe8-748d8774824e))
+    (instances
+      (project "Novel Mechanism 1 Board"
+        (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
+          (reference "TP3") (unit 1)
         )
       )
     )
@@ -1844,7 +2047,7 @@
   (symbol (lib_id "power:+3V3") (at 133.35 30.48 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5de1e53d-bcd6-4881-bbea-721810c63890)
-    (property "Reference" "#PWR021" (at 133.35 34.29 0)
+    (property "Reference" "#PWR013" (at 133.35 34.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 133.35 25.4 0)
@@ -1860,7 +2063,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "#PWR021") (unit 1)
+          (reference "#PWR013") (unit 1)
         )
       )
     )
@@ -1869,7 +2072,7 @@
   (symbol (lib_id "Device:R_US") (at 118.11 53.34 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5eedd294-d933-4c48-8a0a-01fbc5e5418b)
-    (property "Reference" "R13" (at 120.65 52.07 0)
+    (property "Reference" "R4" (at 120.65 52.07 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0" (at 120.65 54.61 0)
@@ -1886,7 +2089,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "R13") (unit 1)
+          (reference "R4") (unit 1)
         )
       )
     )
@@ -1895,7 +2098,7 @@
   (symbol (lib_id "Device:R_US") (at 133.35 36.83 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6211e534-a06b-49d5-9c26-5550c8bdb16e)
-    (property "Reference" "R3" (at 135.89 35.56 0)
+    (property "Reference" "R6" (at 135.89 35.56 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "5k" (at 135.89 38.1 0)
@@ -1912,7 +2115,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "R3") (unit 1)
+          (reference "R6") (unit 1)
         )
       )
     )
@@ -1921,7 +2124,7 @@
   (symbol (lib_id "Device:R_US") (at 67.31 57.15 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 642c6866-2e95-46fb-a773-33bae28792fc)
-    (property "Reference" "R14" (at 67.31 59.69 90)
+    (property "Reference" "R1" (at 67.31 59.69 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0" (at 67.31 62.23 90)
@@ -1938,7 +2141,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "R14") (unit 1)
+          (reference "R1") (unit 1)
         )
       )
     )
@@ -1972,7 +2175,7 @@
   (symbol (lib_id "power:GND") (at 250.19 160.02 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6ae82800-a445-448b-a800-a87b835782e5)
-    (property "Reference" "#PWR026" (at 250.19 166.37 0)
+    (property "Reference" "#PWR024" (at 250.19 166.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 250.19 163.83 0)
@@ -1988,7 +2191,31 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "#PWR026") (unit 1)
+          (reference "#PWR024") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Mechanical:MountingHole") (at 45.72 19.05 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 6d6f098f-6283-46f1-a931-81e925201060)
+    (property "Reference" "H2" (at 48.26 17.78 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "MountingHole" (at 48.26 20.32 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 45.72 19.05 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 45.72 19.05 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "Novel Mechanism 1 Board"
+        (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
+          (reference "H2") (unit 1)
         )
       )
     )
@@ -2020,10 +2247,35 @@
     )
   )
 
+  (symbol (lib_id "Connector:TestPoint") (at 227.33 54.61 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 75ad1b7e-1249-42d7-9a7d-969a45449239)
+    (property "Reference" "TP2" (at 229.87 50.038 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "TestPoint" (at 229.87 52.578 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (at 232.41 54.61 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 232.41 54.61 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid ed371037-fa51-4987-b205-b83dab1d6334))
+    (instances
+      (project "Novel Mechanism 1 Board"
+        (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
+          (reference "TP2") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:GND") (at 62.23 113.03 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7ccf388d-2851-480b-b613-9554ccfda7a4)
-    (property "Reference" "#PWR06" (at 62.23 119.38 0)
+    (property "Reference" "#PWR08" (at 62.23 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 62.23 118.11 0)
@@ -2039,7 +2291,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "#PWR06") (unit 1)
+          (reference "#PWR08") (unit 1)
         )
       )
     )
@@ -2048,7 +2300,7 @@
   (symbol (lib_id "power:+3V3") (at 143.51 81.28 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7f9c3aaa-1fc0-46d0-9a70-6f39c5d02a95)
-    (property "Reference" "#PWR020" (at 143.51 85.09 0)
+    (property "Reference" "#PWR015" (at 143.51 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 143.51 76.2 0)
@@ -2064,7 +2316,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "#PWR020") (unit 1)
+          (reference "#PWR015") (unit 1)
         )
       )
     )
@@ -2073,7 +2325,7 @@
   (symbol (lib_id "power:+3.3V") (at 71.12 147.32 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 814ed0be-982d-4250-9af8-fd4fd5600eea)
-    (property "Reference" "#PWR08" (at 71.12 151.13 0)
+    (property "Reference" "#PWR010" (at 71.12 151.13 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 71.12 142.24 0)
@@ -2089,7 +2341,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "#PWR08") (unit 1)
+          (reference "#PWR010") (unit 1)
         )
       )
     )
@@ -2098,7 +2350,7 @@
   (symbol (lib_id "power:+3V3") (at 190.5 114.3 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8d4a7e4d-054b-4ef8-a07a-359717852556)
-    (property "Reference" "#PWR029" (at 190.5 118.11 0)
+    (property "Reference" "#PWR020" (at 190.5 118.11 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 190.5 109.22 0)
@@ -2114,7 +2366,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "#PWR029") (unit 1)
+          (reference "#PWR020") (unit 1)
         )
       )
     )
@@ -2123,7 +2375,7 @@
   (symbol (lib_id "power:GND") (at 237.49 143.51 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8d7b475b-1da5-42d2-80b0-b9db1a72e876)
-    (property "Reference" "#PWR024" (at 237.49 149.86 0)
+    (property "Reference" "#PWR023" (at 237.49 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 237.49 147.32 0)
@@ -2139,7 +2391,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "#PWR024") (unit 1)
+          (reference "#PWR023") (unit 1)
         )
       )
     )
@@ -2148,7 +2400,7 @@
   (symbol (lib_id "Device:C") (at 25.4 165.1 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9d048742-fdd9-4bf5-918a-334fa052eeb9)
-    (property "Reference" "C7" (at 29.21 163.83 0)
+    (property "Reference" "C3" (at 29.21 163.83 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "4.7u" (at 29.21 166.37 0)
@@ -2165,7 +2417,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "C7") (unit 1)
+          (reference "C3") (unit 1)
         )
       )
     )
@@ -2174,7 +2426,7 @@
   (symbol (lib_id "Device:R_US") (at 71.12 151.13 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a05f2db1-eec9-454e-a434-60d32f655091)
-    (property "Reference" "R17" (at 73.66 149.86 0)
+    (property "Reference" "R3" (at 73.66 149.86 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0" (at 73.66 152.4 0)
@@ -2191,7 +2443,31 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "R17") (unit 1)
+          (reference "R3") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Mechanical:MountingHole") (at 45.72 29.21 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid a89ccaef-f5b1-4105-a96b-f0514c5e9b26)
+    (property "Reference" "H4" (at 48.26 27.94 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "MountingHole" (at 48.26 30.48 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 45.72 29.21 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 45.72 29.21 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "Novel Mechanism 1 Board"
+        (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
+          (reference "H4") (unit 1)
         )
       )
     )
@@ -2200,7 +2476,7 @@
   (symbol (lib_id "power:GND") (at 24.13 58.42 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ab47d9f4-38ef-4feb-8777-634853ae885a)
-    (property "Reference" "#PWR03" (at 24.13 64.77 0)
+    (property "Reference" "#PWR04" (at 24.13 64.77 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 24.13 63.5 0)
@@ -2216,7 +2492,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "#PWR03") (unit 1)
+          (reference "#PWR04") (unit 1)
         )
       )
     )
@@ -2257,7 +2533,7 @@
   (symbol (lib_id "Device:C") (at 36.83 165.1 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b284f81a-5000-410f-9852-88f8b8e472a5)
-    (property "Reference" "C8" (at 40.64 163.83 0)
+    (property "Reference" "C6" (at 40.64 163.83 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1u" (at 40.64 166.37 0)
@@ -2274,7 +2550,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "C8") (unit 1)
+          (reference "C6") (unit 1)
         )
       )
     )
@@ -2283,7 +2559,7 @@
   (symbol (lib_id "power:GND") (at 119.38 175.26 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b69ce2cc-fdcb-4257-9020-01bb7bf54049)
-    (property "Reference" "#PWR022" (at 119.38 181.61 0)
+    (property "Reference" "#PWR012" (at 119.38 181.61 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 119.38 180.34 0)
@@ -2299,7 +2575,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "#PWR022") (unit 1)
+          (reference "#PWR012") (unit 1)
         )
       )
     )
@@ -2331,10 +2607,60 @@
     )
   )
 
+  (symbol (lib_id "Connector:TestPoint") (at 227.33 40.64 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid bd99a15b-bb74-4ca7-a8b1-db562e438892)
+    (property "Reference" "TP1" (at 229.87 36.068 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "TestPoint" (at 229.87 38.608 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (at 232.41 40.64 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 232.41 40.64 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 0a4e3029-d4a8-414e-846b-c244f6f19a1d))
+    (instances
+      (project "Novel Mechanism 1 Board"
+        (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
+          (reference "TP1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Connector:TestPoint") (at 227.33 69.85 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid c4cfce09-8e0b-455d-9e8c-fc83e86028db)
+    (property "Reference" "TP4" (at 229.87 65.278 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "TestPoint" (at 229.87 67.818 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (at 232.41 69.85 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 232.41 69.85 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 1ff7e128-f802-4c76-9e8f-b9c1cf0e8d92))
+    (instances
+      (project "Novel Mechanism 1 Board"
+        (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
+          (reference "TP4") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:GND") (at 25.4 175.26 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c4d3a245-28d1-4980-995b-19dc867d9408)
-    (property "Reference" "#PWR011" (at 25.4 181.61 0)
+    (property "Reference" "#PWR06" (at 25.4 181.61 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 25.4 180.34 0)
@@ -2350,7 +2676,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "#PWR011") (unit 1)
+          (reference "#PWR06") (unit 1)
         )
       )
     )
@@ -2359,7 +2685,7 @@
   (symbol (lib_id "Device:C") (at 62.23 105.41 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c866be1f-8de9-4a77-b73c-8fb4ba407eba)
-    (property "Reference" "C6" (at 66.04 104.14 0)
+    (property "Reference" "C8" (at 66.04 104.14 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "470p" (at 66.04 106.68 0)
@@ -2376,7 +2702,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "C6") (unit 1)
+          (reference "C8") (unit 1)
         )
       )
     )
@@ -2385,7 +2711,7 @@
   (symbol (lib_id "Device:C") (at 60.96 50.8 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ce391898-6602-45ce-be62-bd7b6a5d9724)
-    (property "Reference" "C5" (at 64.77 49.53 0)
+    (property "Reference" "C7" (at 64.77 49.53 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "470p" (at 64.77 52.07 0)
@@ -2402,7 +2728,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "C5") (unit 1)
+          (reference "C7") (unit 1)
         )
       )
     )
@@ -2437,7 +2763,7 @@
   (symbol (lib_id "Device:C") (at 35.56 48.26 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d1763936-7454-41e7-95f6-bdff6a6c3a26)
-    (property "Reference" "C2" (at 39.37 46.99 0)
+    (property "Reference" "C4" (at 39.37 46.99 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1u" (at 39.37 49.53 0)
@@ -2454,7 +2780,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "C2") (unit 1)
+          (reference "C4") (unit 1)
         )
       )
     )
@@ -2463,7 +2789,7 @@
   (symbol (lib_id "power:GND") (at 25.4 113.03 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d3145f9a-4526-4509-8048-17b56b026ed6)
-    (property "Reference" "#PWR04" (at 25.4 119.38 0)
+    (property "Reference" "#PWR05" (at 25.4 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 25.4 118.11 0)
@@ -2479,7 +2805,32 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "#PWR04") (unit 1)
+          (reference "#PWR05") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Connector:TestPoint") (at 260.35 25.4 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid d32dcb02-a1b2-4aae-b98b-bb6f17dec11e)
+    (property "Reference" "TP6" (at 262.89 20.828 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "TestPoint" (at 262.89 23.368 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (at 265.43 25.4 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 265.43 25.4 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid e83c72e2-076f-40cb-8415-7f0058a423fd))
+    (instances
+      (project "Novel Mechanism 1 Board"
+        (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
+          (reference "TP6") (unit 1)
         )
       )
     )
@@ -2488,7 +2839,7 @@
   (symbol (lib_id "Connector:Conn_01x02_Socket") (at 195.58 118.11 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d5454a64-a6e5-46ed-91d2-4c7b1c125dd7)
-    (property "Reference" "J4" (at 196.85 118.11 0)
+    (property "Reference" "J3" (at 196.85 118.11 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Conn_01x02_Socket" (at 196.85 120.65 0)
@@ -2505,7 +2856,56 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "J4") (unit 1)
+          (reference "J3") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3V3") (at 229.87 148.59 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid dafaa7b4-bcfc-476f-9cc7-17e5bb2f415f)
+    (property "Reference" "#PWR022" (at 229.87 152.4 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3V3" (at 229.87 143.51 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 229.87 148.59 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 229.87 148.59 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 729c6737-a508-40ce-9ae8-2f7dcb23d6a8))
+    (instances
+      (project "Novel Mechanism 1 Board"
+        (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
+          (reference "#PWR022") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Mechanical:MountingHole") (at 22.86 29.21 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid e91e8d98-3f3f-464d-9c6c-cd856ad418a1)
+    (property "Reference" "H3" (at 25.4 27.94 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "MountingHole" (at 25.4 30.48 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 22.86 29.21 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 22.86 29.21 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "Novel Mechanism 1 Board"
+        (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
+          (reference "H3") (unit 1)
         )
       )
     )
@@ -2539,7 +2939,7 @@
   (symbol (lib_id "Device:R_US") (at 134.62 90.17 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f7f66354-0942-492c-bd7b-a55e11923b93)
-    (property "Reference" "R6" (at 137.16 88.9 0)
+    (property "Reference" "R7" (at 137.16 88.9 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "5k" (at 137.16 91.44 0)
@@ -2556,7 +2956,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "R6") (unit 1)
+          (reference "R7") (unit 1)
         )
       )
     )
@@ -2565,7 +2965,7 @@
   (symbol (lib_id "Device:R_US") (at 69.85 110.49 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f8033727-3201-4c50-bfae-291ede924642)
-    (property "Reference" "R16" (at 69.85 113.03 90)
+    (property "Reference" "R2" (at 69.85 113.03 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0" (at 69.85 115.57 90)
@@ -2582,7 +2982,7 @@
     (instances
       (project "Novel Mechanism 1 Board"
         (path "/fd604e6b-a654-4356-8ca3-60ffdd33afe1"
-          (reference "R16") (unit 1)
+          (reference "R2") (unit 1)
         )
       )
     )
