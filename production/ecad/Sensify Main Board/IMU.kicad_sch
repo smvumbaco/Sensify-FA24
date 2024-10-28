@@ -742,7 +742,7 @@
       )
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/863c84cf-20d9-4517-8886-efede6184696"
-          (reference "#PWR0103") (unit 1)
+          (reference "#PWR0112") (unit 1)
         )
       )
     )
@@ -754,7 +754,7 @@
     (property "Reference" "TP10" (at 104.14 27.178 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "TestPoint" (at 104.14 29.718 0)
+    (property "Value" "INTERRUPT1_IMU" (at 104.14 29.718 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm" (at 106.68 31.75 0)
@@ -776,7 +776,7 @@
   (symbol (lib_id "power:GND") (at 33.02 41.91 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1d4a9966-0229-4324-a9f5-902c644c12b2)
-    (property "Reference" "#PWR0100" (at 33.02 48.26 0)
+    (property "Reference" "#PWR0109" (at 33.02 48.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 33.02 46.99 0)
@@ -792,7 +792,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/863c84cf-20d9-4517-8886-efede6184696"
-          (reference "#PWR0100") (unit 1)
+          (reference "#PWR0109") (unit 1)
         )
       )
     )
@@ -823,7 +823,7 @@
       )
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/863c84cf-20d9-4517-8886-efede6184696"
-          (reference "C42") (unit 1)
+          (reference "C39") (unit 1)
         )
       )
     )
@@ -854,7 +854,7 @@
       )
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/863c84cf-20d9-4517-8886-efede6184696"
-          (reference "R44") (unit 1)
+          (reference "R47") (unit 1)
         )
       )
     )
@@ -884,7 +884,7 @@
       )
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/863c84cf-20d9-4517-8886-efede6184696"
-          (reference "#PWR0101") (unit 1)
+          (reference "#PWR0110") (unit 1)
         )
       )
     )
@@ -958,7 +958,7 @@
       )
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/863c84cf-20d9-4517-8886-efede6184696"
-          (reference "C41") (unit 1)
+          (reference "C38") (unit 1)
         )
       )
     )
@@ -967,7 +967,7 @@
   (symbol (lib_id "power:+3.3V") (at 33.02 30.48 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 989e8382-36e6-4abb-81ea-91ff1f593c0c)
-    (property "Reference" "#PWR099" (at 33.02 34.29 0)
+    (property "Reference" "#PWR0108" (at 33.02 34.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 33.02 25.4 0)
@@ -983,7 +983,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/863c84cf-20d9-4517-8886-efede6184696"
-          (reference "#PWR099") (unit 1)
+          (reference "#PWR0108") (unit 1)
         )
       )
     )
@@ -1013,7 +1013,7 @@
       )
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/863c84cf-20d9-4517-8886-efede6184696"
-          (reference "#PWR098") (unit 1)
+          (reference "#PWR0107") (unit 1)
         )
       )
     )
@@ -1044,7 +1044,7 @@
       )
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/863c84cf-20d9-4517-8886-efede6184696"
-          (reference "R45") (unit 1)
+          (reference "R48") (unit 1)
         )
       )
     )
@@ -1056,7 +1056,7 @@
     (property "Reference" "TP11" (at 137.16 27.178 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "TestPoint" (at 137.16 29.718 0)
+    (property "Value" "INTERRUPT2_IMU" (at 137.16 29.718 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm" (at 139.7 31.75 0)
@@ -1099,7 +1099,7 @@
       )
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/863c84cf-20d9-4517-8886-efede6184696"
-          (reference "#PWR0102") (unit 1)
+          (reference "#PWR0111") (unit 1)
         )
       )
     )
