@@ -2487,10 +2487,10 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "MCU_WAKEUP" (shape input) (at 245.11 218.44 0) (fields_autoplaced)
+  (global_label "BMS_ALERT" (shape input) (at 245.11 218.44 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 7ef99e98-e9ec-4eba-a045-6fa7cbd89970)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 260.6742 218.44 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 258.497 218.44 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -2648,10 +2648,10 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "MCU_WAKEUP" (shape output) (at 365.76 68.58 180) (fields_autoplaced)
+  (global_label "BMS_ALERT" (shape output) (at 365.76 68.58 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid c9b56c55-b85a-4fa4-8151-5fe121597e4a)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 350.1958 68.58 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 352.373 68.58 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
@@ -2744,7 +2744,7 @@
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 075773f5-8b68-4fab-b252-3774c0b7504a)
   )
-  (hierarchical_label "MCU_WAKEUP" (shape input) (at 372.11 68.58 0) (fields_autoplaced)
+  (hierarchical_label "BMS_ALERT" (shape input) (at 372.11 68.58 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 4b7649d8-c2e5-455a-a8cc-c8468e93d4c0)
   )
@@ -2780,7 +2780,7 @@
   (symbol (lib_id "power:+3V3") (at 142.24 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 03d0501d-1d03-42aa-8b82-79037c8df32e)
-    (property "Reference" "#PWR057" (at 142.24 77.47 0)
+    (property "Reference" "#PWR066" (at 142.24 77.47 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 142.24 68.58 0)
@@ -2796,7 +2796,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR057") (unit 1)
+          (reference "#PWR066") (unit 1)
         )
       )
     )
@@ -2876,7 +2876,7 @@
   (symbol (lib_id "Device:R") (at 208.28 87.63 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0453b6d9-8746-484c-ac79-065ee9a39355)
-    (property "Reference" "R35" (at 210.82 86.36 0)
+    (property "Reference" "R38" (at 210.82 86.36 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 210.82 88.9 0)
@@ -2893,7 +2893,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "R35") (unit 1)
+          (reference "R38") (unit 1)
         )
       )
     )
@@ -2902,7 +2902,7 @@
   (symbol (lib_id "Switch:SW_Push") (at 142.24 87.63 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0aae4a4f-2826-4618-8468-bfc5abc4a8c7)
-    (property "Reference" "SW2" (at 146.05 86.36 90)
+    (property "Reference" "SW1" (at 146.05 86.36 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "SW_Push" (at 146.05 88.9 90)
@@ -2919,7 +2919,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "SW2") (unit 1)
+          (reference "SW1") (unit 1)
         )
       )
     )
@@ -2928,7 +2928,7 @@
   (symbol (lib_id "power:GND") (at 284.48 48.26 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1089db8f-a17b-4caa-b3fe-c6f480ba982c)
-    (property "Reference" "#PWR074" (at 284.48 54.61 0)
+    (property "Reference" "#PWR083" (at 284.48 54.61 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 284.48 53.34 0)
@@ -2944,7 +2944,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR074") (unit 1)
+          (reference "#PWR083") (unit 1)
         )
       )
     )
@@ -2953,7 +2953,7 @@
   (symbol (lib_id "Device:R") (at 105.41 151.13 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 112b7df9-8c93-4647-ad9a-557e9915b88a)
-    (property "Reference" "R29" (at 107.95 149.86 0)
+    (property "Reference" "R32" (at 107.95 149.86 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "5.1k" (at 107.95 152.4 0)
@@ -2970,7 +2970,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "R29") (unit 1)
+          (reference "R32") (unit 1)
         )
       )
     )
@@ -2979,7 +2979,7 @@
   (symbol (lib_id "A03400A:AO3400A") (at 76.2 55.88 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1321da6b-ef86-430a-99df-5ba6b8ff149d)
-    (property "Reference" "Q6" (at 81.28 54.61 0)
+    (property "Reference" "Q5" (at 81.28 54.61 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "AO3400A" (at 81.28 57.15 0)
@@ -3009,7 +3009,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "Q6") (unit 1)
+          (reference "Q5") (unit 1)
         )
       )
     )
@@ -3018,7 +3018,7 @@
   (symbol (lib_id "power:GND") (at 76.2 234.95 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 13595b17-03c3-464d-8f80-387b45bd1ba0)
-    (property "Reference" "#PWR054" (at 76.2 241.3 0)
+    (property "Reference" "#PWR063" (at 76.2 241.3 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 76.2 240.03 0)
@@ -3034,7 +3034,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR054") (unit 1)
+          (reference "#PWR063") (unit 1)
         )
       )
     )
@@ -3043,7 +3043,7 @@
   (symbol (lib_id "power:+3V3") (at 364.49 34.29 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 145d51e7-8acb-4e08-bad4-4714066262c0)
-    (property "Reference" "#PWR076" (at 364.49 38.1 0)
+    (property "Reference" "#PWR085" (at 364.49 38.1 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 364.49 29.21 0)
@@ -3059,7 +3059,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR076") (unit 1)
+          (reference "#PWR085") (unit 1)
         )
       )
     )
@@ -3068,7 +3068,7 @@
   (symbol (lib_id "power:GND") (at 19.05 149.86 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1b51065e-719f-41b4-a25d-27029ee5d538)
-    (property "Reference" "#PWR049" (at 19.05 156.21 0)
+    (property "Reference" "#PWR058" (at 19.05 156.21 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 19.05 154.94 0)
@@ -3084,7 +3084,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR049") (unit 1)
+          (reference "#PWR058") (unit 1)
         )
       )
     )
@@ -3093,7 +3093,7 @@
   (symbol (lib_id "Device:C") (at 121.92 86.36 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1de9ef05-b2e7-413a-a85a-737a982ba187)
-    (property "Reference" "C28" (at 125.73 85.09 0)
+    (property "Reference" "C25" (at 125.73 85.09 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1uF" (at 125.73 87.63 0)
@@ -3110,7 +3110,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "C28") (unit 1)
+          (reference "C25") (unit 1)
         )
       )
     )
@@ -3119,7 +3119,7 @@
   (symbol (lib_id "Device:R") (at 142.24 77.47 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 24380636-cb3c-470d-8168-4d73a1316297)
-    (property "Reference" "R30" (at 144.78 76.2 0)
+    (property "Reference" "R33" (at 144.78 76.2 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1k" (at 144.78 78.74 0)
@@ -3136,7 +3136,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "R30") (unit 1)
+          (reference "R33") (unit 1)
         )
       )
     )
@@ -3145,7 +3145,7 @@
   (symbol (lib_id "Device:C") (at 185.42 57.15 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 28c46ebe-14e1-487b-825a-96eb2ee5e414)
-    (property "Reference" "C32" (at 185.42 49.53 90)
+    (property "Reference" "C29" (at 185.42 49.53 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100nF" (at 185.42 52.07 90)
@@ -3162,7 +3162,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "C32") (unit 1)
+          (reference "C29") (unit 1)
         )
       )
     )
@@ -3171,7 +3171,7 @@
   (symbol (lib_id "power:GND") (at 142.24 92.71 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2ab9497b-4115-49e0-a545-1bee692e328e)
-    (property "Reference" "#PWR058" (at 142.24 99.06 0)
+    (property "Reference" "#PWR067" (at 142.24 99.06 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 142.24 97.79 0)
@@ -3187,7 +3187,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR058") (unit 1)
+          (reference "#PWR067") (unit 1)
         )
       )
     )
@@ -3196,7 +3196,7 @@
   (symbol (lib_id "Device:R") (at 200.66 80.01 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2f5ab345-296a-46ec-adfa-a421eddd8e09)
-    (property "Reference" "R34" (at 200.66 73.66 90)
+    (property "Reference" "R37" (at 200.66 73.66 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10k" (at 200.66 76.2 90)
@@ -3213,7 +3213,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "R34") (unit 1)
+          (reference "R37") (unit 1)
         )
       )
     )
@@ -3222,7 +3222,7 @@
   (symbol (lib_id "Connector:Screw_Terminal_01x08") (at 361.95 144.78 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2fbf7c0e-2e47-4352-9fb8-ffdbbb71c6a2)
-    (property "Reference" "J6" (at 361.95 128.27 0)
+    (property "Reference" "J5" (at 361.95 128.27 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Screw_Terminal_01x08" (at 361.95 130.81 0)
@@ -3245,7 +3245,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "J6") (unit 1)
+          (reference "J5") (unit 1)
         )
       )
     )
@@ -3254,7 +3254,7 @@
   (symbol (lib_id "power:GND") (at 172.72 203.2 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3252be67-fb08-4f3f-8d93-2f99ef004fb8)
-    (property "Reference" "#PWR064" (at 172.72 209.55 0)
+    (property "Reference" "#PWR073" (at 172.72 209.55 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 172.72 208.28 0)
@@ -3270,7 +3270,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR064") (unit 1)
+          (reference "#PWR073") (unit 1)
         )
       )
     )
@@ -3279,7 +3279,7 @@
   (symbol (lib_id "power:+3V3") (at 143.51 35.56 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 36f20c07-6664-4980-87bd-6baf8f69b558)
-    (property "Reference" "#PWR059" (at 143.51 39.37 0)
+    (property "Reference" "#PWR068" (at 143.51 39.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 143.51 30.48 0)
@@ -3295,7 +3295,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR059") (unit 1)
+          (reference "#PWR068") (unit 1)
         )
       )
     )
@@ -3304,7 +3304,7 @@
   (symbol (lib_id "Device:R") (at 172.72 67.31 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 41c06cb6-9e06-4803-9377-418e72b8676d)
-    (property "Reference" "R32" (at 175.26 66.04 0)
+    (property "Reference" "R35" (at 175.26 66.04 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22.1k" (at 175.26 68.58 0)
@@ -3321,7 +3321,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "R32") (unit 1)
+          (reference "R35") (unit 1)
         )
       )
     )
@@ -3330,7 +3330,7 @@
   (symbol (lib_id "A03400A:AO3400A") (at 76.2 69.85 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 42cc6b05-6583-4db1-9031-668d47bf10fb)
-    (property "Reference" "Q7" (at 81.28 68.58 0)
+    (property "Reference" "Q6" (at 81.28 68.58 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "AO3400A" (at 81.28 71.12 0)
@@ -3360,7 +3360,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "Q7") (unit 1)
+          (reference "Q6") (unit 1)
         )
       )
     )
@@ -3369,7 +3369,7 @@
   (symbol (lib_id "power:GND") (at 177.8 160.02 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 437550b8-b8a0-4682-85ae-f5eb0a2f3c5f)
-    (property "Reference" "#PWR066" (at 177.8 166.37 0)
+    (property "Reference" "#PWR075" (at 177.8 166.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 177.8 165.1 0)
@@ -3385,7 +3385,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR066") (unit 1)
+          (reference "#PWR075") (unit 1)
         )
       )
     )
@@ -3394,7 +3394,7 @@
   (symbol (lib_id "power:GND") (at 381 39.37 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 44ab1ae6-270e-4a50-8e7a-67f6d5112123)
-    (property "Reference" "#PWR079" (at 381 45.72 0)
+    (property "Reference" "#PWR088" (at 381 45.72 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 381 44.45 0)
@@ -3410,7 +3410,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR079") (unit 1)
+          (reference "#PWR088") (unit 1)
         )
       )
     )
@@ -3419,7 +3419,7 @@
   (symbol (lib_id "power:GND") (at 105.41 157.48 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 47017664-9113-4b07-ad99-9b6d72f0e9f6)
-    (property "Reference" "#PWR056" (at 105.41 163.83 0)
+    (property "Reference" "#PWR065" (at 105.41 163.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 105.41 162.56 0)
@@ -3435,7 +3435,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR056") (unit 1)
+          (reference "#PWR065") (unit 1)
         )
       )
     )
@@ -3444,7 +3444,7 @@
   (symbol (lib_id "Device:R") (at 50.8 72.39 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4ac5bad6-68ab-4189-a4ab-160cca85d1dc)
-    (property "Reference" "R24" (at 50.8 66.04 90)
+    (property "Reference" "R27" (at 50.8 66.04 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10k" (at 50.8 68.58 90)
@@ -3461,7 +3461,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "R24") (unit 1)
+          (reference "R27") (unit 1)
         )
       )
     )
@@ -3470,7 +3470,7 @@
   (symbol (lib_id "Device:R") (at 104.14 144.78 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4ceaf037-1ec1-4e24-aa46-182a6020d92e)
-    (property "Reference" "R28" (at 104.14 139.7 90)
+    (property "Reference" "R31" (at 104.14 139.7 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0" (at 104.14 142.24 90)
@@ -3487,7 +3487,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "R28") (unit 1)
+          (reference "R31") (unit 1)
         )
       )
     )
@@ -3496,7 +3496,7 @@
   (symbol (lib_id "power:+3V3") (at 378.46 134.62 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 52ee9353-ccbe-4db0-bb2b-7a2779a1170b)
-    (property "Reference" "#PWR077" (at 378.46 138.43 0)
+    (property "Reference" "#PWR086" (at 378.46 138.43 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 378.46 129.54 0)
@@ -3512,7 +3512,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR077") (unit 1)
+          (reference "#PWR086") (unit 1)
         )
       )
     )
@@ -3521,7 +3521,7 @@
   (symbol (lib_id "Device:C") (at 121.92 46.99 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 580c626e-efe0-415b-8d9a-505beda01ae9)
-    (property "Reference" "C27" (at 125.73 45.72 0)
+    (property "Reference" "C24" (at 125.73 45.72 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1uF" (at 125.73 48.26 0)
@@ -3538,7 +3538,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "C27") (unit 1)
+          (reference "C24") (unit 1)
         )
       )
     )
@@ -3547,7 +3547,7 @@
   (symbol (lib_id "power:+3V3") (at 187.96 80.01 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5f0a4482-10ca-40fb-9701-2b0bbffaa197)
-    (property "Reference" "#PWR067" (at 187.96 83.82 0)
+    (property "Reference" "#PWR076" (at 187.96 83.82 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 187.96 74.93 0)
@@ -3563,7 +3563,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR067") (unit 1)
+          (reference "#PWR076") (unit 1)
         )
       )
     )
@@ -3572,7 +3572,7 @@
   (symbol (lib_id "Device:R") (at 172.72 77.47 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 62b29cbe-5ae1-43c3-9fee-773cd49f9287)
-    (property "Reference" "R33" (at 175.26 76.2 0)
+    (property "Reference" "R36" (at 175.26 76.2 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "47.5k" (at 175.26 78.74 0)
@@ -3589,7 +3589,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "R33") (unit 1)
+          (reference "R36") (unit 1)
         )
       )
     )
@@ -3598,7 +3598,7 @@
   (symbol (lib_id "power:GND") (at 143.51 54.61 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 62ec340a-d8cb-4de3-91e8-4f5b0bad31b4)
-    (property "Reference" "#PWR060" (at 143.51 60.96 0)
+    (property "Reference" "#PWR069" (at 143.51 60.96 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 143.51 59.69 0)
@@ -3614,7 +3614,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR060") (unit 1)
+          (reference "#PWR069") (unit 1)
         )
       )
     )
@@ -3623,7 +3623,7 @@
   (symbol (lib_id "USBC CONN:1332645") (at 78.74 144.78 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 64fc0e06-3097-4ac8-9697-0ae5b05be58e)
-    (property "Reference" "J4" (at 78.74 127 0)
+    (property "Reference" "J3" (at 78.74 127 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1332645" (at 78.74 129.54 0)
@@ -3666,7 +3666,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "J4") (unit 1)
+          (reference "J3") (unit 1)
         )
       )
     )
@@ -3675,7 +3675,7 @@
   (symbol (lib_id "Device:R") (at 50.8 58.42 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 67ab7837-3708-4639-8c0d-6d3a044a7f24)
-    (property "Reference" "R23" (at 50.8 52.07 90)
+    (property "Reference" "R26" (at 50.8 52.07 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10k" (at 50.8 54.61 90)
@@ -3692,7 +3692,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "R23") (unit 1)
+          (reference "R26") (unit 1)
         )
       )
     )
@@ -3701,7 +3701,7 @@
   (symbol (lib_id "0532611271:0532611271") (at 86.36 212.09 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6a4ed915-7b18-4982-8190-c521b30174b6)
-    (property "Reference" "J5" (at 92.71 213.36 0)
+    (property "Reference" "J4" (at 92.71 213.36 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0532611271" (at 92.71 215.9 0)
@@ -3742,7 +3742,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "J5") (unit 1)
+          (reference "J4") (unit 1)
         )
       )
     )
@@ -3751,7 +3751,7 @@
   (symbol (lib_id "power:GND") (at 60.96 166.37 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 735bc0a5-9065-49f1-a424-14caf8c695cd)
-    (property "Reference" "#PWR053" (at 60.96 172.72 0)
+    (property "Reference" "#PWR062" (at 60.96 172.72 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 60.96 171.45 0)
@@ -3767,7 +3767,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR053") (unit 1)
+          (reference "#PWR062") (unit 1)
         )
       )
     )
@@ -3776,7 +3776,7 @@
   (symbol (lib_id "Device:R") (at 19.05 143.51 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 74b8d50c-5a75-4d4f-b637-888342dd5471)
-    (property "Reference" "R22" (at 21.59 142.24 0)
+    (property "Reference" "R25" (at 21.59 142.24 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "5.1k" (at 21.59 144.78 0)
@@ -3793,7 +3793,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "R22") (unit 1)
+          (reference "R25") (unit 1)
         )
       )
     )
@@ -3802,7 +3802,7 @@
   (symbol (lib_id "Device:R") (at 257.81 175.26 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7736fba1-f31a-4d32-990f-e27b7bb31764)
-    (property "Reference" "R39" (at 260.35 173.99 0)
+    (property "Reference" "R42" (at 260.35 173.99 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "4.7k" (at 260.35 176.53 0)
@@ -3819,7 +3819,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "R39") (unit 1)
+          (reference "R42") (unit 1)
         )
       )
     )
@@ -3828,7 +3828,7 @@
   (symbol (lib_id "power:+3V3") (at 53.34 224.79 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7ad8aec2-8379-4e22-a108-b34a71f2c23f)
-    (property "Reference" "#PWR052" (at 53.34 220.98 0)
+    (property "Reference" "#PWR061" (at 53.34 220.98 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 53.34 229.87 0)
@@ -3844,7 +3844,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR052") (unit 1)
+          (reference "#PWR061") (unit 1)
         )
       )
     )
@@ -3853,7 +3853,7 @@
   (symbol (lib_id "Device:C") (at 165.1 154.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 828ce878-f1c8-43fd-872e-b4865c34a7de)
-    (property "Reference" "C29" (at 168.91 153.67 0)
+    (property "Reference" "C26" (at 168.91 153.67 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1uF" (at 168.91 156.21 0)
@@ -3870,7 +3870,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "C29") (unit 1)
+          (reference "C26") (unit 1)
         )
       )
     )
@@ -3879,7 +3879,7 @@
   (symbol (lib_id "Device:R") (at 247.65 175.26 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8bf886e2-09a3-411e-aafb-d522c8846960)
-    (property "Reference" "R38" (at 250.19 173.99 0)
+    (property "Reference" "R41" (at 250.19 173.99 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "4.7k" (at 250.19 176.53 0)
@@ -3896,7 +3896,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "R38") (unit 1)
+          (reference "R41") (unit 1)
         )
       )
     )
@@ -3905,7 +3905,7 @@
   (symbol (lib_id "power:GND") (at 53.34 219.71 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8d43eb4c-ca69-4e8d-8d6a-39f7a8976e02)
-    (property "Reference" "#PWR051" (at 53.34 213.36 0)
+    (property "Reference" "#PWR060" (at 53.34 213.36 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 53.34 214.63 0)
@@ -3921,7 +3921,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR051") (unit 1)
+          (reference "#PWR060") (unit 1)
         )
       )
     )
@@ -3930,7 +3930,7 @@
   (symbol (lib_id "power:+3V3") (at 252.73 171.45 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 903053b1-a502-4014-8d85-55cb599929cf)
-    (property "Reference" "#PWR073" (at 252.73 175.26 0)
+    (property "Reference" "#PWR082" (at 252.73 175.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 252.73 166.37 0)
@@ -3946,7 +3946,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR073") (unit 1)
+          (reference "#PWR082") (unit 1)
         )
       )
     )
@@ -3955,7 +3955,7 @@
   (symbol (lib_id "power:GND") (at 247.65 154.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 93678793-0602-4523-8873-44073e36cbb9)
-    (property "Reference" "#PWR072" (at 247.65 161.29 0)
+    (property "Reference" "#PWR081" (at 247.65 161.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 247.65 160.02 0)
@@ -3971,7 +3971,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR072") (unit 1)
+          (reference "#PWR081") (unit 1)
         )
       )
     )
@@ -3980,7 +3980,7 @@
   (symbol (lib_id "Device:R") (at 143.51 39.37 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 97d976b1-62ce-47c5-b499-c3f608115e79)
-    (property "Reference" "R31" (at 146.05 38.1 0)
+    (property "Reference" "R34" (at 146.05 38.1 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1k" (at 146.05 40.64 0)
@@ -3997,7 +3997,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "R31") (unit 1)
+          (reference "R34") (unit 1)
         )
       )
     )
@@ -4006,7 +4006,7 @@
   (symbol (lib_id "power:GND") (at 210.82 49.53 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9b64ba7f-3fbc-467f-aac8-e026a9abe8a5)
-    (property "Reference" "#PWR071" (at 210.82 55.88 0)
+    (property "Reference" "#PWR080" (at 210.82 55.88 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 210.82 54.61 0)
@@ -4022,7 +4022,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR071") (unit 1)
+          (reference "#PWR080") (unit 1)
         )
       )
     )
@@ -4031,7 +4031,7 @@
   (symbol (lib_id "power:GND") (at 165.1 160.02 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a016c1a2-8f97-4aff-936a-05673dd7d010)
-    (property "Reference" "#PWR062" (at 165.1 166.37 0)
+    (property "Reference" "#PWR071" (at 165.1 166.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 165.1 165.1 0)
@@ -4047,7 +4047,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR062") (unit 1)
+          (reference "#PWR071") (unit 1)
         )
       )
     )
@@ -4056,7 +4056,7 @@
   (symbol (lib_id "power:+3V3") (at 177.8 45.72 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a1f327ba-3680-4392-ae1b-2c08637bfc51)
-    (property "Reference" "#PWR065" (at 177.8 49.53 0)
+    (property "Reference" "#PWR074" (at 177.8 49.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 177.8 40.64 0)
@@ -4072,7 +4072,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR065") (unit 1)
+          (reference "#PWR074") (unit 1)
         )
       )
     )
@@ -4081,7 +4081,7 @@
   (symbol (lib_id "power:+5V") (at 346.71 34.29 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ad688fbd-5a6e-4d6e-9dd3-06e738cc34c8)
-    (property "Reference" "#PWR075" (at 346.71 38.1 0)
+    (property "Reference" "#PWR084" (at 346.71 38.1 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 346.71 29.21 0)
@@ -4097,7 +4097,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR075") (unit 1)
+          (reference "#PWR084") (unit 1)
         )
       )
     )
@@ -4106,7 +4106,7 @@
   (symbol (lib_id "Device:R") (at 295.91 62.23 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ae5416ea-f3dc-4336-9eb1-3c0f1d185c70)
-    (property "Reference" "R42" (at 295.91 55.88 90)
+    (property "Reference" "R45" (at 295.91 55.88 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0" (at 295.91 58.42 90)
@@ -4123,7 +4123,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "R42") (unit 1)
+          (reference "R45") (unit 1)
         )
       )
     )
@@ -4132,7 +4132,7 @@
   (symbol (lib_id "Device:R") (at 271.78 190.5 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid af9436d7-44f9-4b04-bd17-ac4b9c2c7862)
-    (property "Reference" "R40" (at 271.78 184.15 90)
+    (property "Reference" "R43" (at 271.78 184.15 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0" (at 271.78 187.96 90)
@@ -4149,7 +4149,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "R40") (unit 1)
+          (reference "R43") (unit 1)
         )
       )
     )
@@ -4158,7 +4158,7 @@
   (symbol (lib_id "Switch:SW_Push") (at 143.51 49.53 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b2b86d2c-fda0-4a35-a7d5-b431b9270a5a)
-    (property "Reference" "SW3" (at 147.32 48.26 90)
+    (property "Reference" "SW2" (at 147.32 48.26 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "SW_Push" (at 147.32 50.8 90)
@@ -4175,7 +4175,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "SW3") (unit 1)
+          (reference "SW2") (unit 1)
         )
       )
     )
@@ -4184,7 +4184,7 @@
   (symbol (lib_id "Device:R") (at 209.55 62.23 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bb39116f-fd7b-4fc3-887d-e2321c16265f)
-    (property "Reference" "R36" (at 209.55 57.15 90)
+    (property "Reference" "R39" (at 209.55 57.15 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0" (at 209.55 59.69 90)
@@ -4201,7 +4201,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "R36") (unit 1)
+          (reference "R39") (unit 1)
         )
       )
     )
@@ -4210,7 +4210,7 @@
   (symbol (lib_id "Device:R") (at 104.14 142.24 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c8916338-56a7-4f47-bcff-d922077aaac4)
-    (property "Reference" "R27" (at 104.14 137.16 90)
+    (property "Reference" "R30" (at 104.14 137.16 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0" (at 104.14 139.7 90)
@@ -4227,7 +4227,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "R27") (unit 1)
+          (reference "R30") (unit 1)
         )
       )
     )
@@ -4261,7 +4261,7 @@
   (symbol (lib_id "Device:C") (at 185.42 45.72 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d6f093ab-f649-4b82-b283-2d5c59392b7c)
-    (property "Reference" "C31" (at 185.42 38.1 90)
+    (property "Reference" "C28" (at 185.42 38.1 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "4.7uF" (at 185.42 40.64 90)
@@ -4278,7 +4278,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "C31") (unit 1)
+          (reference "C28") (unit 1)
         )
       )
     )
@@ -4287,7 +4287,7 @@
   (symbol (lib_id "power:GND") (at 208.28 91.44 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d77f2185-f5b6-40fa-9a1d-f141efa406d8)
-    (property "Reference" "#PWR070" (at 208.28 97.79 0)
+    (property "Reference" "#PWR079" (at 208.28 97.79 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 208.28 96.52 0)
@@ -4303,7 +4303,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR070") (unit 1)
+          (reference "#PWR079") (unit 1)
         )
       )
     )
@@ -4312,7 +4312,7 @@
   (symbol (lib_id "Device:R") (at 53.34 144.78 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid dbd688a2-c243-40b1-ab21-1b853eb1a52f)
-    (property "Reference" "R26" (at 53.34 139.7 90)
+    (property "Reference" "R29" (at 53.34 139.7 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0" (at 53.34 142.24 90)
@@ -4329,7 +4329,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "R26") (unit 1)
+          (reference "R29") (unit 1)
         )
       )
     )
@@ -4338,7 +4338,7 @@
   (symbol (lib_id "power:+5V") (at 53.34 196.85 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid dd7f890c-c206-43f9-a438-72dabbc1cd10)
-    (property "Reference" "#PWR050" (at 53.34 200.66 0)
+    (property "Reference" "#PWR059" (at 53.34 200.66 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 53.34 191.77 0)
@@ -4354,7 +4354,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR050") (unit 1)
+          (reference "#PWR059") (unit 1)
         )
       )
     )
@@ -4363,7 +4363,7 @@
   (symbol (lib_id "power:GND") (at 189.23 59.69 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e51480c5-8d3b-435a-8d7f-3156d089c7d5)
-    (property "Reference" "#PWR068" (at 189.23 66.04 0)
+    (property "Reference" "#PWR077" (at 189.23 66.04 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 189.23 64.77 0)
@@ -4379,7 +4379,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR068") (unit 1)
+          (reference "#PWR077") (unit 1)
         )
       )
     )
@@ -4388,7 +4388,7 @@
   (symbol (lib_id "power:GND") (at 190.5 154.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e8b62d7a-f60a-4fb4-9073-2538830b8426)
-    (property "Reference" "#PWR069" (at 190.5 161.29 0)
+    (property "Reference" "#PWR078" (at 190.5 161.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 190.5 160.02 0)
@@ -4404,7 +4404,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR069") (unit 1)
+          (reference "#PWR078") (unit 1)
         )
       )
     )
@@ -4413,7 +4413,7 @@
   (symbol (lib_id "Device:C") (at 177.8 154.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid eca2c7af-7112-4a4f-834b-593a296f8169)
-    (property "Reference" "C30" (at 181.61 153.67 0)
+    (property "Reference" "C27" (at 181.61 153.67 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10uF" (at 181.61 156.21 0)
@@ -4430,7 +4430,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "C30") (unit 1)
+          (reference "C27") (unit 1)
         )
       )
     )
@@ -4439,7 +4439,7 @@
   (symbol (lib_id "power:GND") (at 172.72 82.55 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ed74c5d1-922d-4605-948a-dbc97e4695a7)
-    (property "Reference" "#PWR063" (at 172.72 88.9 0)
+    (property "Reference" "#PWR072" (at 172.72 88.9 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 172.72 87.63 0)
@@ -4455,7 +4455,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR063") (unit 1)
+          (reference "#PWR072") (unit 1)
         )
       )
     )
@@ -4464,7 +4464,7 @@
   (symbol (lib_id "Device:R") (at 303.53 64.77 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ede222c9-4c79-4879-aefd-92ce3a121d51)
-    (property "Reference" "R43" (at 303.53 58.42 90)
+    (property "Reference" "R46" (at 303.53 58.42 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0" (at 303.53 60.96 90)
@@ -4481,7 +4481,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "R43") (unit 1)
+          (reference "R46") (unit 1)
         )
       )
     )
@@ -4490,7 +4490,7 @@
   (symbol (lib_id "Device:R") (at 209.55 64.77 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f20deb91-2abd-4640-ad2c-030683c26d0f)
-    (property "Reference" "R37" (at 209.55 59.69 90)
+    (property "Reference" "R40" (at 209.55 59.69 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0" (at 209.55 62.23 90)
@@ -4507,7 +4507,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "R37") (unit 1)
+          (reference "R40") (unit 1)
         )
       )
     )
@@ -4516,7 +4516,7 @@
   (symbol (lib_id "power:GND") (at 378.46 153.67 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f639ce24-79f9-4e9f-a21f-f0f42ecaaf28)
-    (property "Reference" "#PWR078" (at 378.46 160.02 0)
+    (property "Reference" "#PWR087" (at 378.46 160.02 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 378.46 158.75 0)
@@ -4532,7 +4532,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR078") (unit 1)
+          (reference "#PWR087") (unit 1)
         )
       )
     )
@@ -4619,7 +4619,7 @@
   (symbol (lib_id "Device:R") (at 293.37 193.04 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f7bad7bd-0d7a-4f7a-a159-688addb2aafa)
-    (property "Reference" "R41" (at 293.37 187.96 90)
+    (property "Reference" "R44" (at 293.37 187.96 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0" (at 293.37 190.5 90)
@@ -4636,7 +4636,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "R41") (unit 1)
+          (reference "R44") (unit 1)
         )
       )
     )
@@ -4670,7 +4670,7 @@
   (symbol (lib_id "Device:R") (at 53.34 142.24 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f942c0b4-b366-4f90-b4f7-958f122da3cb)
-    (property "Reference" "R25" (at 53.34 137.16 90)
+    (property "Reference" "R28" (at 53.34 137.16 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0" (at 53.34 139.7 90)
@@ -4687,7 +4687,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "R25") (unit 1)
+          (reference "R28") (unit 1)
         )
       )
     )
@@ -4696,7 +4696,7 @@
   (symbol (lib_id "power:GND") (at 96.52 152.4 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f9888548-b837-4e98-b64c-23ba081459cc)
-    (property "Reference" "#PWR055" (at 96.52 158.75 0)
+    (property "Reference" "#PWR064" (at 96.52 158.75 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 96.52 157.48 0)
@@ -4712,7 +4712,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR055") (unit 1)
+          (reference "#PWR064") (unit 1)
         )
       )
     )
@@ -4721,7 +4721,7 @@
   (symbol (lib_id "power:+3V3") (at 165.1 148.59 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fdf9d1ca-fefc-4339-b399-84e8686e723f)
-    (property "Reference" "#PWR061" (at 165.1 152.4 0)
+    (property "Reference" "#PWR070" (at 165.1 152.4 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 165.1 143.51 0)
@@ -4737,7 +4737,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/ec3ae12c-a69a-4cda-a73d-a33c865c767e"
-          (reference "#PWR061") (unit 1)
+          (reference "#PWR070") (unit 1)
         )
       )
     )
