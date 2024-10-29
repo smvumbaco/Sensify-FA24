@@ -3500,7 +3500,7 @@
   (symbol (lib_id "power:GND") (at 260.35 114.3 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 013b96e0-8323-4a65-8f13-6838dcd178db)
-    (property "Reference" "#PWR046" (at 260.35 120.65 0)
+    (property "Reference" "#PWR043" (at 260.35 120.65 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 260.35 118.11 0)
@@ -3516,7 +3516,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "#PWR046") (unit 1)
+          (reference "#PWR043") (unit 1)
         )
       )
       (project "BMS"
@@ -3591,7 +3591,7 @@
   (symbol (lib_id "power:GND") (at 330.2 125.73 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1185749d-65cb-4fac-a941-532d268eca4e)
-    (property "Reference" "#PWR053" (at 330.2 132.08 0)
+    (property "Reference" "#PWR050" (at 330.2 132.08 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 330.2 129.54 0)
@@ -3607,7 +3607,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "#PWR053") (unit 1)
+          (reference "#PWR050") (unit 1)
         )
       )
       (project "BMS"
@@ -3813,7 +3813,7 @@
   (symbol (lib_id "power:GND") (at 35.56 114.3 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1acfe243-e618-463e-be4b-dbacf3846f4f)
-    (property "Reference" "#PWR018" (at 35.56 120.65 0)
+    (property "Reference" "#PWR017" (at 35.56 120.65 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 35.56 118.11 0)
@@ -3829,7 +3829,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "#PWR018") (unit 1)
+          (reference "#PWR017") (unit 1)
         )
       )
       (project "BMS"
@@ -3971,7 +3971,7 @@
   (symbol (lib_id "power:GND") (at 35.56 236.22 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 243f570d-3743-4ff7-bda9-95cd1e60e0d0)
-    (property "Reference" "#PWR017" (at 34.29 238.76 0)
+    (property "Reference" "#PWR018" (at 34.29 238.76 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 35.56 240.03 0)
@@ -3987,7 +3987,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "#PWR017") (unit 1)
+          (reference "#PWR018") (unit 1)
         )
       )
       (project "BMS"
@@ -4128,7 +4128,7 @@
   (symbol (lib_id "power:GND") (at 322.58 125.73 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 358a1e18-d80b-46a1-b216-e201127a1bf8)
-    (property "Reference" "#PWR052" (at 322.58 132.08 0)
+    (property "Reference" "#PWR049" (at 322.58 132.08 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 322.58 129.54 0)
@@ -4144,7 +4144,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "#PWR052") (unit 1)
+          (reference "#PWR049") (unit 1)
         )
       )
       (project "BMS"
@@ -4188,7 +4188,7 @@
   (symbol (lib_id "power:GND") (at 271.78 210.82 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3cdc0f57-e886-4898-ad4e-f78983965685)
-    (property "Reference" "#PWR050" (at 271.78 217.17 0)
+    (property "Reference" "#PWR047" (at 271.78 217.17 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 271.78 214.63 0)
@@ -4204,7 +4204,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "#PWR050") (unit 1)
+          (reference "#PWR047") (unit 1)
         )
       )
       (project "BMS"
@@ -4536,7 +4536,7 @@
   (symbol (lib_id "power:GND") (at 193.04 127 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 557c9ea6-0936-412b-afaf-7e6ab1f6fb50)
-    (property "Reference" "#PWR042" (at 193.04 133.35 0)
+    (property "Reference" "#PWR039" (at 193.04 133.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 194.31 130.81 0)
@@ -4552,7 +4552,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "#PWR042") (unit 1)
+          (reference "#PWR039") (unit 1)
         )
       )
       (project "BMS"
@@ -4602,7 +4602,7 @@
   (symbol (lib_id "power:GND") (at 265.43 210.82 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 56635407-b2fd-42c1-8f06-8ebee7d52e47)
-    (property "Reference" "#PWR047" (at 265.43 217.17 0)
+    (property "Reference" "#PWR044" (at 265.43 217.17 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 265.43 214.63 0)
@@ -4618,7 +4618,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "#PWR047") (unit 1)
+          (reference "#PWR044") (unit 1)
         )
       )
       (project "BMS"
@@ -4821,7 +4821,7 @@
   (symbol (lib_id "power:GND") (at 358.14 123.19 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 64b4e914-f1f1-4f3c-a4d0-bdae708284cb)
-    (property "Reference" "#PWR054" (at 358.14 129.54 0)
+    (property "Reference" "#PWR051" (at 358.14 129.54 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 358.14 127 0)
@@ -4837,7 +4837,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "#PWR054") (unit 1)
+          (reference "#PWR051") (unit 1)
         )
       )
       (project "BMS"
@@ -4851,7 +4851,7 @@
   (symbol (lib_id "power:+5V") (at 236.22 199.39 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6742a4b9-d45a-4e6a-93b8-55edb8763494)
-    (property "Reference" "#PWR044" (at 236.22 203.2 0)
+    (property "Reference" "#PWR041" (at 236.22 203.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 236.22 194.31 0)
@@ -4867,7 +4867,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "#PWR044") (unit 1)
+          (reference "#PWR041") (unit 1)
         )
       )
       (project "BMS"
@@ -4881,7 +4881,7 @@
   (symbol (lib_id "power:GND") (at 367.03 123.19 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 691c307d-de31-40ce-a8fa-abaf773ab639)
-    (property "Reference" "#PWR055" (at 367.03 129.54 0)
+    (property "Reference" "#PWR052" (at 367.03 129.54 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 367.03 127 0)
@@ -4897,7 +4897,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "#PWR055") (unit 1)
+          (reference "#PWR052") (unit 1)
         )
       )
       (project "BMS"
@@ -4942,7 +4942,7 @@
   (symbol (lib_id "power:GND") (at 271.78 114.3 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6df1c061-f8d7-4fb8-a709-3dcc6d3b95ea)
-    (property "Reference" "#PWR048" (at 271.78 120.65 0)
+    (property "Reference" "#PWR045" (at 271.78 120.65 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 271.78 118.11 0)
@@ -4958,7 +4958,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "#PWR048") (unit 1)
+          (reference "#PWR045") (unit 1)
         )
       )
       (project "BMS"
@@ -5073,7 +5073,7 @@
   (symbol (lib_id "power:+3.3V") (at 271.78 199.39 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7034e795-d3b8-4c64-82a6-e0b2b38e6996)
-    (property "Reference" "#PWR049" (at 271.78 203.2 0)
+    (property "Reference" "#PWR046" (at 271.78 203.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 271.78 194.31 0)
@@ -5089,7 +5089,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "#PWR049") (unit 1)
+          (reference "#PWR046") (unit 1)
         )
       )
       (project "BMS"
@@ -5103,7 +5103,7 @@
   (symbol (lib_id "power:GND") (at 68.58 208.28 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 72037ac1-0433-483e-8cce-1d19a5129ef0)
-    (property "Reference" "#PWR022" (at 73.66 214.63 0)
+    (property "Reference" "#PWR021" (at 73.66 214.63 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 64.77 210.82 0)
@@ -5119,7 +5119,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "#PWR022") (unit 1)
+          (reference "#PWR021") (unit 1)
         )
       )
       (project "BMS"
@@ -5197,7 +5197,7 @@
   (symbol (lib_id "power:GND") (at 207.01 139.7 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 744f3455-d405-4bee-aabe-f1cb012a8b53)
-    (property "Reference" "#PWR043" (at 207.01 146.05 0)
+    (property "Reference" "#PWR040" (at 207.01 146.05 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 207.01 143.51 0)
@@ -5213,7 +5213,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "#PWR043") (unit 1)
+          (reference "#PWR040") (unit 1)
         )
       )
       (project "BMS"
@@ -5529,7 +5529,7 @@
   (symbol (lib_id "Device:C") (at 73.66 93.98 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8f220c8a-6d76-404f-ae43-bcdec99d5e69)
-    (property "Reference" "C6" (at 68.58 97.79 90)
+    (property "Reference" "C7" (at 68.58 97.79 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "0.1u" (at 73.66 97.79 90)
@@ -5549,7 +5549,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "C6") (unit 1)
+          (reference "C7") (unit 1)
         )
       )
       (project "BMS"
@@ -5937,7 +5937,7 @@
   (symbol (lib_id "power:GND") (at 160.02 233.68 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a38b8a96-8704-42f2-b86a-1564d1047540)
-    (property "Reference" "#PWR040" (at 160.02 240.03 0)
+    (property "Reference" "#PWR037" (at 160.02 240.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 163.83 236.22 0)
@@ -5953,7 +5953,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "#PWR040") (unit 1)
+          (reference "#PWR037") (unit 1)
         )
       )
       (project "BMS"
@@ -6172,7 +6172,7 @@
   (symbol (lib_id "power:GND") (at 72.39 161.29 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid aeb32726-ff9d-4a9b-930e-7d1881e7c4c5)
-    (property "Reference" "#PWR021" (at 72.39 167.64 0)
+    (property "Reference" "#PWR022" (at 72.39 167.64 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 68.58 163.83 0)
@@ -6188,7 +6188,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "#PWR021") (unit 1)
+          (reference "#PWR022") (unit 1)
         )
       )
       (project "BMS"
@@ -6395,7 +6395,7 @@
   (symbol (lib_id "power:+3.3V") (at 177.8 105.41 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid cbcf9286-2aae-4075-af9b-f0851041a958)
-    (property "Reference" "#PWR041" (at 177.8 109.22 0)
+    (property "Reference" "#PWR038" (at 177.8 109.22 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 177.8 100.33 0)
@@ -6411,7 +6411,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "#PWR041") (unit 1)
+          (reference "#PWR038") (unit 1)
         )
       )
       (project "BMS"
@@ -6558,7 +6558,7 @@
   (symbol (lib_id "power:GND") (at 377.19 123.19 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d3e7ec9d-08d2-4747-bac0-5888e665b69e)
-    (property "Reference" "#PWR056" (at 377.19 129.54 0)
+    (property "Reference" "#PWR053" (at 377.19 129.54 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 377.19 127 0)
@@ -6574,7 +6574,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "#PWR056") (unit 1)
+          (reference "#PWR053") (unit 1)
         )
       )
       (project "BMS"
@@ -6701,7 +6701,7 @@
   (symbol (lib_id "power:GND") (at 153.67 201.93 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e4d4fc44-b2df-4a0a-854f-23aa398baea7)
-    (property "Reference" "#PWR039" (at 153.67 208.28 0)
+    (property "Reference" "#PWR036" (at 153.67 208.28 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 149.86 204.47 0)
@@ -6717,7 +6717,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "#PWR039") (unit 1)
+          (reference "#PWR036") (unit 1)
         )
       )
       (project "BMS"
@@ -6829,7 +6829,7 @@
   (symbol (lib_id "power:GND") (at 280.67 120.65 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ea3af0b7-18dd-4899-ac63-2f853c492525)
-    (property "Reference" "#PWR051" (at 280.67 127 0)
+    (property "Reference" "#PWR048" (at 280.67 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 280.67 124.46 0)
@@ -6845,7 +6845,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "#PWR051") (unit 1)
+          (reference "#PWR048") (unit 1)
         )
       )
       (project "BMS"
@@ -6984,7 +6984,7 @@
   (symbol (lib_id "power:GND") (at 236.22 210.82 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid eeb69d8d-f981-4d00-8cd0-8027ab81bdbd)
-    (property "Reference" "#PWR045" (at 236.22 217.17 0)
+    (property "Reference" "#PWR042" (at 236.22 217.17 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 236.22 214.63 0)
@@ -7000,7 +7000,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "#PWR045") (unit 1)
+          (reference "#PWR042") (unit 1)
         )
       )
       (project "BMS"
@@ -7048,7 +7048,7 @@
   (symbol (lib_id "Device:C") (at 68.58 204.47 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f081c4ca-7448-44f3-9b3c-d21db6fcac9e)
-    (property "Reference" "C7" (at 66.04 203.2 0)
+    (property "Reference" "C6" (at 66.04 203.2 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "2.2u" (at 66.04 205.74 0)
@@ -7068,7 +7068,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "C7") (unit 1)
+          (reference "C6") (unit 1)
         )
       )
       (project "BMS"
@@ -7204,7 +7204,7 @@
   (symbol (lib_id "power:+5V") (at 384.81 109.22 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f63e0b8c-4342-4b67-b7c6-1de2096ffa28)
-    (property "Reference" "#PWR057" (at 384.81 113.03 0)
+    (property "Reference" "#PWR054" (at 384.81 113.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 384.81 104.14 0)
@@ -7220,7 +7220,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "#PWR057") (unit 1)
+          (reference "#PWR054") (unit 1)
         )
       )
       (project "BMS"
