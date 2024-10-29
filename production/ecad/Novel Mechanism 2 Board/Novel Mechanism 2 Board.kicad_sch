@@ -1423,7 +1423,7 @@
     (property "Value" "TMCS1108A4BQDRQ1" (at 150.495 69.85 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "TMCS1108A4BQDRQ1:SOIC127P599X175-8N" (at 150.495 50.165 0)
+    (property "Footprint" "Package_SO:TMCS1108A4BQDRQ1" (at 150.495 50.165 0)
       (effects (font (size 1.27 1.27)) (justify bottom) hide)
     )
     (property "Datasheet" "https://www.ti.com/lit/ds/symlink/tmcs1108-q1.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&ts=1730170236177" (at 150.495 50.165 0)
