@@ -1,4 +1,13 @@
 #include "BluetoothSerial.h"
+
+// HID stuff
+#include <BLEDevice.h>
+#include <BLEHIDDevice.h>
+#include <BLEUtils.h>
+#include <BLEServer.h>
+#include <HIDKeyboardTypes.h>
+//
+
 #include "driver/i2c.h"
 #include "SPI.h"
 
@@ -6,7 +15,7 @@
 // add a connection test that tests SPI connections on bootup
 // code for sensors and BMS
 
-String device_name = "ESP32-yeah-buddy";
+String device_name = "ESP32-way-too-easy";
 
 // Check if Bluetooth is available
 #if !defined(CONFIG_BT_ENABLED) || !defined(CONFIG_BLUEDROID_ENABLED)
@@ -18,120 +27,216 @@ String device_name = "ESP32-yeah-buddy";
 #error Serial Port Profile for Bluetooth is not available or not enabled. It is only available for the ESP32 chip.
 #endif
 
-// constant pins
-const int detect = 21;
-const int sda_main = 23;
-const int scl_main = 25;
+// BluetoothSerial SerialBT;
 
-// TODO: finish class definitions, ask: to make this highly customizable what class setup should I have
-class Attachment
+BLEHIDDevice *hid;
+BLEServer *pServer;
+
+const int detect = 21;
+const int boot = 0;
+#define INPUT(size) 0x81, size
+
+enum State
 {
-   // constructor
-   Attachment()
+   IDLE,
+   DRILL,
+   VICE
+};
+
+class I2CAttachment
+{
+private:
+   // TODO: do I need to set memory here for initialization of memory block before assigning values?
+   i2c_config_t *config_i;
+
+public:
+   // could take in speed? depending on attachment we might need higher speeds, maybe implement later
+   I2CAttachment()
    {
-      // I2C configurations for (a)ttachment
-      i2c_config_t config_a;
-      config_a.mode = I2C_MODE_MASTER;
-      config_a.sda_io_num = 17;
-      config_a.scl_io_num = 16;
-      // these two use the internal pullup resistors to
-      config_a.sda_pullup_en = true;
-      config_a.scl_pullup_en = true;
-      // 100kHz for now, change later
-      config_a.master.clk_speed = 100000;
-      // I2C_NUM_1 is one of the two I2C buses that we can use
-      i2c_param_config(I2C_NUM_1, &config_a);
-      i2c_driver_install(I2C_NUM_1, config_a.mode, 0, 0, 0);
+      // config_i = new i2c_config_t;
+      // initialize i2c pins
+      config_i->mode = I2C_MODE_MASTER;
+      config_i->sda_io_num = 17;
+      config_i->scl_io_num = 16;
+      config_i->sda_pullup_en = true;
+      config_i->scl_pullup_en = true;
+      config_i->master.clk_speed = 100000;
+      i2c_driver_install(I2C_NUM_1, config_i->mode, 0, 0, 0);
+   }
+
+   ~I2CAttachment()
+   {
+      i2c_driver_delete(I2C_NUM_1);
+      // TODO: if I dont use 'new' to create this do I need delete? should I use new?
+      delete config_i;
    }
 };
 
-BluetoothSerial SerialBT;
+class SPIAttachment
+{
+private:
+   SPIClass *config_s;
+
+public:
+   SPIAttachment()
+   {
+      // TODO: define spi pins, do I begin spi transaction here or should I make a begin transaction function once the class is initialized
+
+      const int cs = 15;
+      const int scl = 16;
+      const int miso = 18;
+      const int mosi = 17;
+
+      // uses hardware for chip select
+      config_s->setHwCs(true);
+      // sets MSB first
+      config_s->setBitOrder(MSBFIRST);
+      // in this mode the clock is low when idel and data is taken on the rising edge of the clock
+      config_s->setDataMode(SPI_MODE0);
+      // TODO: 1 MHz for now, probably wont need, could have another constructor that takes in clock speed
+      config_s->setFrequency(1000000);
+   }
+
+   ~SPIAttachment()
+   {
+      // delete config_s;
+   }
+};
+
+// // takes in the current state and checks if there is a new state
+State nextState(State current_state)
+{
+   int current_detect_v = analogRead(detect);
+
+   // converts to float
+   float voltage = current_detect_v * (3.3 / 4095.0);
+
+   // TODO: define voltage thresholds for each state
+
+   // TODO: if detect is an analog pin and I am doing voltage thresholds to determine state, is that really scalable?
+   switch (current_state)
+   {
+   // TODO: implement idle state
+   case IDLE:
+      if (voltage > /*voltage threshold for drill*/ &&voltage < /*voltage threshold for vice*/)
+      {
+         current_state = DRILL;
+      }
+      else if (voltage > /*voltage threshold for vice*/)
+      {
+         current_state = VICE;
+      }
+   // TODO: implement drill state
+   case DRILL:
+      if (voltage < /*voltage threshold for drill*/)
+      {
+         current_state = IDLE;
+      }
+   // TODO: implement vice state
+   case VICE:
+      // this should never happen
+      if (voltage < /*voltage threshold for vice*/)
+      {
+         current_state = IDLE;
+      }
+   }
+   return current_state;
+}
 
 void setup()
 {
-   // We have two I2C busses, one in 12 pin connector and one meant for main board stuff
-   // I2C configurations for (m)ain board
-   i2c_config_t config_m;
-   config_m.mode = I2C_MODE_MASTER;
-   config_m.sda_io_num = sda_main;
-   config_m.scl_io_num = scl_main;
-   config_m.master.clk_speed = 100000;
-   i2c_param_config(I2C_NUM_0, &config_m);
-   i2c_driver_install(I2C_NUM_0, config_m.mode, 0, 0, 0);
+   i2c_config_t *config_m;
+   config_m->mode = I2C_MODE_MASTER;
+   // TODO: these pins are probably different on the schematic
+   config_m->sda_io_num = 25;
+   config_m->scl_io_num = 26;
+   config_m->sda_pullup_en = true;
+   config_m->scl_pullup_en = true;
+   config_m->master.clk_speed = 100000;
+   i2c_driver_install(I2C_NUM_1, config_m->mode, 0, 0, 0);
 
-   // need to configure interrupt pin for direction of motor
-   // - instead of always tracking the motors state a change in state would trigger the interrupt and then send that through bluetooth
-   // configure en pin
-   // - when a device is enabled or disabled
-   // configure SPI for drill (prob do this in the drill class)
-
-   // configure detect
-   pinMode(detect, INPUT);
+   // when setting up we are in the idle state
+   State current_state = IDLE;
 
    Serial.begin(115200);
-   SerialBT.begin(device_name); // Bluetooth device name
+
+   BLEDevice::init("ESP32 Keyboard");
+
+   pServer = BLEDevice::createServer();
+   hid = new BLEHIDDevice(pServer);
+
+   // HID service
+   hid->manufacturer()->setValue("Example");
+   hid->pnp(0x01, 0x02E5, 0xABCD, 0x0110);
+   hid->hidInfo(0x00, 0x01);
+
+   // example report map from chat
+   const uint8_t reportMap[] = {
+       USAGE_PAGE(1), 0x01,    // Generic Desktop Controls
+       USAGE(1), 0x06,         // Keyboard
+       COLLECTION(1), 0x01,    // Application
+       USAGE_PAGE(1), 0x07,    // Keyboard/Keypad
+       USAGE_MINIMUM(1), 0x00, // No modifiers
+       USAGE_MAXIMUM(1), 0x65, // Up to 101 keys
+       LOGICAL_MINIMUM(1), 0x00,
+       LOGICAL_MAXIMUM(1), 0x01,
+       REPORT_SIZE(1), 0x08,  // 1 byte for key press
+       REPORT_COUNT(1), 0x01, // 1 key at a time
+       INPUT(1), 0x02,        // Data, Variable, Absolute
+       END_COLLECTION(0)      // End collection
+   };
+   hid->reportMap((uint8_t *)reportMap, sizeof(reportMap));
+   hid->startServices();
+
+   BLEAdvertising *pAdvertising = BLEDevice::getAdvertising();
+   pAdvertising->addServiceUUID(hid->hidService()->getUUID());
+   pAdvertising->start();
+
+   Serial.println("BLE HID ready.");
+
+   // SerialBT.begin(device_name); // Bluetooth device name
    // SerialBT.deleteAllBondedDevices(); // Uncomment this to delete paired devices; Must be called after begin
-   Serial.printf("The device with name \"%s\" is started.\nNow you can pair it with Bluetooth!\n", device_name.c_str());
+   // Serial.printf("The device with name \"%s\" is started.\nNow you can pair it with Bluetooth!\n", device_name.c_str());
 }
 
 void loop()
 {
-   // continue reading the detect pin to determine state (would this be an interrupt as well?)
-   int current_detect_state = digitalRead(detect);
+   // for HID device
+   // - input events
+   // hid->inputReport(0)->setValue(...);
+   // send over bluetooth
 
-   // TODO: switch case or if statements for detect - for scalability purposes, if we are reading voltage levels, is it possible to go up to like 50 possible attachments?
+   // if (Serial.available())
+   // {
+   //     SerialBT.write(Serial.read());
+   // }
+   // if (SerialBT.available())
+   // {
+   //     Serial.write(SerialBT.read());
+   // }
+   // Read the state of the BOOT button (active-low, so pressed is LOW)
+   int buttonState = digitalRead(boot);
 
-   if (Serial.available())
+   if (buttonState == LOW)
    {
-      SerialBT.write(Serial.read());
+      // Button is pressed, simulate keypress (e.g., 'a' key)
+      uint8_t keypress[8] = {0}; // 8-byte report: 1st byte is modifier, 2nd is reserved, 3-8 are keycodes
+      keypress[2] = 0x04;        // Keycode for 'a'
+      hid->inputReport(0)->setValue(keypress, sizeof(keypress));
+      hid->inputReport(0)->notify();
+
+      Serial.println("Key 'a' pressed.");
+      delay(200); // Simple debounce
    }
-   if (SerialBT.available())
+   else
    {
-      Serial.write(SerialBT.read());
+      // Button is not pressed, release the key
+      uint8_t keyrelease[8] = {0}; // Empty report means no key is pressed
+      hid->inputReport(0)->setValue(keyrelease, sizeof(keyrelease));
+      hid->inputReport(0)->notify();
+
+      Serial.println("Key released.");
    }
-   delay(20);
+
+   delay(100);
 }
-
-/* State machine for reading from specific sensors (which will then mean we only write values that we are currently reading)
-States:
- - setup state?
-    - once something is attached when it is running, do we need to give it a sec to configure/test connections (could just implement test in drill and vice grips state)
- - drill
-    - enter this state when voltage is read for drill state
-    - reading from
- - vice grip
-    - enter this state when detect pin measures voltage for vice grips state
-    - reading from ADCs that the potentiometers are connected to (3 ADCs)
-    - set interrupts for ADCs if getting whack readings so we can stop and restart each one mid run
- - detached (idle)
-    - enter this state when detect pin reads 0 V
-    - nothing attached to the MCU
-    - nothing needs to be configured, read from, or sent over bluetooth
-
-
-implementation
- - switch case for performing specific actions based on the detect pin reading
- - create instance of the specific attachments
- - ...
-
-
-scalability
- - is switch case scalable/modular?
- - probably could do classes that represent each attachment that has the configuration of pins and new instance is created in a switch statement
- - do a class attachment, that is configured based on the number of pins needed?
-
- - could create two base attachment classes, then build classes off that for each attachment depending on communication protocol of different sensors
- - should we make a base class for attachments that only use I2C, only use SPI, or use both? This will allow for a high variability of sensors in future mechanism designs
- - can the state machine be for configuring pins? or is it just for reading from specific pins?
-
- - pins will stay the same, sensors being read from will change, but we will still need to create instances of attachments to know the data being sent?
-   - Or can we figure that out through I2C scan?
-
-
-Options
-- attachment base class
-- drill and vice class build off the base class - this would work if every attachment we have is required to use I2C,
-- and anything additional can be configured in each additional attachment class
-
-- three base classes - I2C attachemnts, SPI attachments, both
-*/
