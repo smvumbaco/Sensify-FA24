@@ -3094,7 +3094,7 @@
     (stroke (width 0) (type default))
     (uuid efac411d-9fe0-416f-af39-1a75d1f886bc)
   )
-  (wire (pts (xy 198.12 33.02) (xy 198.12 26.67))
+  (wire (pts (xy 200.66 31.75) (xy 200.66 25.4))
     (stroke (width 0) (type default))
     (uuid f1aaea53-617d-4631-a398-2d63e6dac195)
   )
@@ -3310,10 +3310,10 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "BMS_ALERT" (shape input) (at 198.12 33.02 0) (fields_autoplaced)
+  (global_label "BMS_ALERT" (shape input) (at 200.66 31.75 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 4a83f79b-7a04-40a4-a028-0657ae739b89)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 211.507 33.02 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 214.047 31.75 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -3401,10 +3401,10 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "BAT1+" (shape input) (at 151.13 33.02 0) (fields_autoplaced)
+  (global_label "USB_9V+" (shape input) (at 151.13 33.02 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid a5416238-1720-474f-9157-9116e5e90ba4)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 160.2233 33.02 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 162.7633 33.02 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -3519,17 +3519,18 @@
           (reference "#PWR046") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "#PWR046") (unit 1)
+        )
+      )
     )
   )
 
   (symbol (lib_id "power:GND") (at 124.46 137.16 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 044a465c-2767-4efe-88f8-989d1f98b794)
-<<<<<<< Updated upstream
     (property "Reference" "#PWR030" (at 124.46 143.51 0)
-=======
-    (property "Reference" "#PWR0107" (at 124.46 143.51 0)
->>>>>>> Stashed changes
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 124.46 140.97 0)
@@ -3545,11 +3546,12 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-<<<<<<< Updated upstream
           (reference "#PWR030") (unit 1)
-=======
-          (reference "#PWR0107") (unit 1)
->>>>>>> Stashed changes
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "#PWR030") (unit 1)
         )
       )
     )
@@ -3578,6 +3580,11 @@
           (reference "R19") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "R19") (unit 1)
+        )
+      )
     )
   )
 
@@ -3600,6 +3607,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR053") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR053") (unit 1)
         )
       )
@@ -3632,17 +3644,18 @@
           (reference "C5") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "C5") (unit 1)
+        )
+      )
     )
   )
 
   (symbol (lib_id "Device:R_US") (at 35.56 220.98 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp yes)
     (uuid 12fa77f8-574a-4b64-bf86-debebb235540)
-<<<<<<< Updated upstream
     (property "Reference" "R2" (at 29.21 215.9 0)
-=======
-    (property "Reference" "R25" (at 30.48 219.71 0)
->>>>>>> Stashed changes
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0" (at 33.02 222.25 0)
@@ -3662,17 +3675,18 @@
           (reference "R2") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "R2") (unit 1)
+        )
+      )
     )
   )
 
   (symbol (lib_id "Device:R_US") (at 35.56 231.14 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp yes)
     (uuid 17673779-1804-415f-8009-c998fe63dbe5)
-<<<<<<< Updated upstream
     (property "Reference" "R3" (at 29.21 226.06 0)
-=======
-    (property "Reference" "R38" (at 30.48 229.87 0)
->>>>>>> Stashed changes
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0" (at 33.02 232.41 0)
@@ -3689,6 +3703,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "R3") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "R3") (unit 1)
         )
       )
@@ -3717,6 +3736,11 @@
           (reference "DIS_TP1") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "DIS_TP1") (unit 1)
+        )
+      )
     )
   )
 
@@ -3741,6 +3765,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "F1") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "F1") (unit 1)
         )
       )
@@ -3773,17 +3802,18 @@
           (reference "C15") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "C15") (unit 1)
+        )
+      )
     )
   )
 
   (symbol (lib_id "power:GND") (at 35.56 114.3 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1acfe243-e618-463e-be4b-dbacf3846f4f)
-<<<<<<< Updated upstream
     (property "Reference" "#PWR018" (at 35.56 120.65 0)
-=======
-    (property "Reference" "#PWR0111" (at 35.56 120.65 0)
->>>>>>> Stashed changes
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 35.56 118.11 0)
@@ -3799,11 +3829,12 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-<<<<<<< Updated upstream
           (reference "#PWR018") (unit 1)
-=======
-          (reference "#PWR0111") (unit 1)
->>>>>>> Stashed changes
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "#PWR018") (unit 1)
         )
       )
     )
@@ -3831,6 +3862,11 @@
           (reference "#PWR015") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "#PWR015") (unit 1)
+        )
+      )
     )
   )
 
@@ -3853,6 +3889,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR027") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR027") (unit 1)
         )
       )
@@ -3889,6 +3930,11 @@
           (reference "U4") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "U4") (unit 1)
+        )
+      )
     )
   )
 
@@ -3914,17 +3960,18 @@
           (reference "#PWR029") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "#PWR029") (unit 1)
+        )
+      )
     )
   )
 
   (symbol (lib_id "power:GND") (at 35.56 236.22 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 243f570d-3743-4ff7-bda9-95cd1e60e0d0)
-<<<<<<< Updated upstream
     (property "Reference" "#PWR017" (at 34.29 238.76 0)
-=======
-    (property "Reference" "#PWR095" (at 35.56 242.57 0)
->>>>>>> Stashed changes
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 35.56 240.03 0)
@@ -3940,6 +3987,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR017") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR017") (unit 1)
         )
       )
@@ -3966,6 +4018,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "R21") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "R21") (unit 1)
         )
       )
@@ -3998,6 +4055,11 @@
           (reference "C17") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "C17") (unit 1)
+        )
+      )
     )
   )
 
@@ -4021,6 +4083,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "R18") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "R18") (unit 1)
         )
       )
@@ -4050,6 +4117,11 @@
           (reference "J2") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "J2") (unit 1)
+        )
+      )
     )
   )
 
@@ -4072,6 +4144,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR052") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR052") (unit 1)
         )
       )
@@ -4100,6 +4177,11 @@
           (reference "#PWR035") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "#PWR035") (unit 1)
+        )
+      )
     )
   )
 
@@ -4122,6 +4204,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR050") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR050") (unit 1)
         )
       )
@@ -4148,34 +4235,11 @@
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
           (reference "CHG_TP1") (unit 1)
-<<<<<<< Updated upstream
         )
       )
-    )
-  )
-
-  (symbol (lib_id "power:+3.3V") (at 152.4 40.64 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 3dd617c7-57f3-498c-9b5e-c8150f2984ef)
-    (property "Reference" "#PWR037" (at 152.4 36.83 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3.3V" (at 152.4 45.72 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 152.4 40.64 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 152.4 40.64 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 5ccb6971-8524-4a2f-b31a-4f64e36a2ed7))
-    (instances
-      (project "Sensify Main Board"
-        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "#PWR037") (unit 1)
-=======
->>>>>>> Stashed changes
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "CHG_TP1") (unit 1)
         )
       )
     )
@@ -4204,6 +4268,11 @@
           (reference "R4") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "R4") (unit 1)
+        )
+      )
     )
   )
 
@@ -4229,17 +4298,18 @@
           (reference "#PWR032") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "#PWR032") (unit 1)
+        )
+      )
     )
   )
 
   (symbol (lib_id "power:GND") (at 104.14 152.4 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 47bb4489-61c7-4f33-9a82-a69cb7432119)
-<<<<<<< Updated upstream
     (property "Reference" "#PWR026" (at 104.14 158.75 0)
-=======
-    (property "Reference" "#PWR0108" (at 104.14 158.75 0)
->>>>>>> Stashed changes
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 104.14 156.21 0)
@@ -4255,11 +4325,12 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-<<<<<<< Updated upstream
           (reference "#PWR026") (unit 1)
-=======
-          (reference "#PWR0108") (unit 1)
->>>>>>> Stashed changes
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "#PWR026") (unit 1)
         )
       )
     )
@@ -4268,11 +4339,7 @@
   (symbol (lib_id "power:GND") (at 113.03 139.7 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 483c7475-8ba4-4cae-af0d-1f980bcf2af9)
-<<<<<<< Updated upstream
     (property "Reference" "#PWR028" (at 113.03 146.05 0)
-=======
-    (property "Reference" "#PWR0106" (at 113.03 146.05 0)
->>>>>>> Stashed changes
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 113.03 143.51 0)
@@ -4288,11 +4355,12 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-<<<<<<< Updated upstream
           (reference "#PWR028") (unit 1)
-=======
-          (reference "#PWR0106") (unit 1)
->>>>>>> Stashed changes
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "#PWR028") (unit 1)
         )
       )
     )
@@ -4321,6 +4389,11 @@
           (reference "R17") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "R17") (unit 1)
+        )
+      )
     )
   )
 
@@ -4343,6 +4416,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR025") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR025") (unit 1)
         )
       )
@@ -4375,6 +4453,11 @@
           (reference "C14") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "C14") (unit 1)
+        )
+      )
     )
   )
 
@@ -4398,6 +4481,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "R22") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "R22") (unit 1)
         )
       )
@@ -4437,6 +4525,11 @@
           (reference "Q4") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "Q4") (unit 1)
+        )
+      )
     )
   )
 
@@ -4459,6 +4552,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR042") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR042") (unit 1)
         )
       )
@@ -4493,6 +4591,11 @@
           (reference "R7") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "R7") (unit 1)
+        )
+      )
     )
   )
 
@@ -4518,17 +4621,18 @@
           (reference "#PWR047") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "#PWR047") (unit 1)
+        )
+      )
     )
   )
 
   (symbol (lib_id "power:GND") (at 53.34 204.47 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5a56759e-b766-4917-b543-0ed11ab8e199)
-<<<<<<< Updated upstream
     (property "Reference" "#PWR020" (at 60.96 210.82 0)
-=======
-    (property "Reference" "#PWR024" (at 53.34 210.82 0)
->>>>>>> Stashed changes
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 49.53 207.01 0)
@@ -4544,6 +4648,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR020") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR020") (unit 1)
         )
       )
@@ -4576,6 +4685,11 @@
           (reference "C23") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "C23") (unit 1)
+        )
+      )
     )
   )
 
@@ -4599,6 +4713,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "R6") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "R6") (unit 1)
         )
       )
@@ -4627,17 +4746,18 @@
           (reference "#PWR031") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "#PWR031") (unit 1)
+        )
+      )
     )
   )
 
   (symbol (lib_id "Connector:TestPoint") (at 151.13 26.67 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5ead5d60-843f-4fa4-9322-5519d7d45ea0)
-<<<<<<< Updated upstream
-    (property "Reference" "USB_9V+1" (at 168.91 26.162 0)
-=======
-    (property "Reference" "USB_9V+1" (at 152.4 26.162 0)
->>>>>>> Stashed changes
+    (property "Reference" "USB_9V+1" (at 152.4 25.4 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 152.4 28.702 0)
@@ -4654,34 +4774,11 @@
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
           (reference "USB_9V+1") (unit 1)
-<<<<<<< Updated upstream
         )
       )
-    )
-  )
-
-  (symbol (lib_id "Connector:TestPoint") (at 152.4 40.64 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 5f920ac6-5287-428e-a55c-fa1033e499fa)
-    (property "Reference" "3.3V_TP1" (at 153.67 40.132 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "TestPoint" (at 153.67 42.672 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm" (at 157.48 40.64 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 157.48 40.64 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 26cd12ad-9c7b-4bc5-b0bc-c937db64b2d3))
-    (instances
-      (project "Sensify Main Board"
-        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "3.3V_TP1") (unit 1)
-=======
->>>>>>> Stashed changes
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "USB_9V+1") (unit 1)
         )
       )
     )
@@ -4713,6 +4810,11 @@
           (reference "C13") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "C13") (unit 1)
+        )
+      )
     )
   )
 
@@ -4738,17 +4840,18 @@
           (reference "#PWR054") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "#PWR054") (unit 1)
+        )
+      )
     )
   )
 
   (symbol (lib_id "power:+5V") (at 236.22 199.39 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6742a4b9-d45a-4e6a-93b8-55edb8763494)
-<<<<<<< Updated upstream
     (property "Reference" "#PWR044" (at 236.22 203.2 0)
-=======
-    (property "Reference" "#PWR0104" (at 236.22 203.2 0)
->>>>>>> Stashed changes
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 236.22 194.31 0)
@@ -4764,11 +4867,12 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-<<<<<<< Updated upstream
           (reference "#PWR044") (unit 1)
-=======
-          (reference "#PWR0104") (unit 1)
->>>>>>> Stashed changes
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "#PWR044") (unit 1)
         )
       )
     )
@@ -4793,6 +4897,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR055") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR055") (unit 1)
         )
       )
@@ -4822,37 +4931,14 @@
           (reference "R8") (unit 1)
         )
       )
-    )
-  )
-
-<<<<<<< Updated upstream
-  (symbol (lib_id "power:+3.3V") (at 152.4 54.61 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 6df0e308-4455-40d6-a782-b7002a8a8620)
-    (property "Reference" "#PWR038" (at 152.4 50.8 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3.3V" (at 152.4 59.69 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 152.4 54.61 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 152.4 54.61 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid d9088565-3469-4e11-88c6-31d6ad4f08d7))
-    (instances
-      (project "Sensify Main Board"
-        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "#PWR038") (unit 1)
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "R8") (unit 1)
         )
       )
     )
   )
 
-=======
->>>>>>> Stashed changes
   (symbol (lib_id "power:GND") (at 271.78 114.3 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6df1c061-f8d7-4fb8-a709-3dcc6d3b95ea)
@@ -4872,6 +4958,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR048") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR048") (unit 1)
         )
       )
@@ -4897,6 +4988,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR034") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR034") (unit 1)
         )
       )
@@ -4932,17 +5028,18 @@
           (reference "Q3") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "Q3") (unit 1)
+        )
+      )
     )
   )
 
   (symbol (lib_id "Device:C") (at 53.34 200.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6f8eb698-913f-445e-9191-bde1a86924df)
-<<<<<<< Updated upstream
     (property "Reference" "C3" (at 58.42 199.39 0)
-=======
-    (property "Reference" "C33" (at 50.8 199.39 0)
->>>>>>> Stashed changes
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "2.2u" (at 50.8 201.93 0)
@@ -4962,6 +5059,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "C3") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "C3") (unit 1)
         )
       )
@@ -4990,17 +5092,18 @@
           (reference "#PWR049") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "#PWR049") (unit 1)
+        )
+      )
     )
   )
 
   (symbol (lib_id "power:GND") (at 68.58 208.28 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 72037ac1-0433-483e-8cce-1d19a5129ef0)
-<<<<<<< Updated upstream
     (property "Reference" "#PWR022" (at 73.66 214.63 0)
-=======
-    (property "Reference" "#PWR023" (at 68.58 214.63 0)
->>>>>>> Stashed changes
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 64.77 210.82 0)
@@ -5019,17 +5122,18 @@
           (reference "#PWR022") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "#PWR022") (unit 1)
+        )
+      )
     )
   )
 
   (symbol (lib_id "power:GND") (at 53.34 111.76 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 734e2d87-b5f5-4732-8c4a-98449d202c21)
-<<<<<<< Updated upstream
     (property "Reference" "#PWR019" (at 53.34 118.11 0)
-=======
-    (property "Reference" "#PWR0112" (at 53.34 118.11 0)
->>>>>>> Stashed changes
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 53.34 115.57 0)
@@ -5045,11 +5149,12 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-<<<<<<< Updated upstream
           (reference "#PWR019") (unit 1)
-=======
-          (reference "#PWR0112") (unit 1)
->>>>>>> Stashed changes
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "#PWR019") (unit 1)
         )
       )
     )
@@ -5081,6 +5186,11 @@
           (reference "C16") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "C16") (unit 1)
+        )
+      )
     )
   )
 
@@ -5106,6 +5216,11 @@
           (reference "#PWR043") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "#PWR043") (unit 1)
+        )
+      )
     )
   )
 
@@ -5128,6 +5243,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "PMID_TP1") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "PMID_TP1") (unit 1)
         )
       )
@@ -5160,17 +5280,18 @@
           (reference "C2") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "C2") (unit 1)
+        )
+      )
     )
   )
 
   (symbol (lib_id "Device:LED") (at 80.01 209.55 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7678bae5-5f67-400f-b357-61df3dffdd40)
-<<<<<<< Updated upstream
     (property "Reference" "D1" (at 77.47 209.55 90)
-=======
-    (property "Reference" "D2" (at 74.93 209.55 90)
->>>>>>> Stashed changes
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "LED" (at 74.93 212.09 90)
@@ -5190,6 +5311,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "D1") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "D1") (unit 1)
         )
       )
@@ -5220,6 +5346,11 @@
           (reference "Q1") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "Q1") (unit 1)
+        )
+      )
     )
   )
 
@@ -5242,6 +5373,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR024") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR024") (unit 1)
         )
       )
@@ -5283,6 +5419,11 @@
           (reference "S1") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "S1") (unit 1)
+        )
+      )
     )
   )
 
@@ -5309,6 +5450,11 @@
           (reference "R23") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "R23") (unit 1)
+        )
+      )
     )
   )
 
@@ -5332,6 +5478,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "R13") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "R13") (unit 1)
         )
       )
@@ -5367,6 +5518,11 @@
           (reference "D3") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "D3") (unit 1)
+        )
+      )
     )
   )
 
@@ -5393,6 +5549,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "C6") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "C6") (unit 1)
         )
       )
@@ -5474,17 +5635,18 @@
           (reference "U1") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "U1") (unit 1)
+        )
+      )
     )
   )
 
   (symbol (lib_id "power:GND") (at 85.09 208.28 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9285058e-2ff3-497e-89b8-3706c8c40c01)
-<<<<<<< Updated upstream
     (property "Reference" "#PWR023" (at 86.36 214.63 0)
-=======
-    (property "Reference" "#PWR022" (at 85.09 214.63 0)
->>>>>>> Stashed changes
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 85.09 212.09 0)
@@ -5500,6 +5662,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR023") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR023") (unit 1)
         )
       )
@@ -5526,6 +5693,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "R10") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "R10") (unit 1)
         )
       )
@@ -5558,6 +5730,11 @@
           (reference "C4") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "C4") (unit 1)
+        )
+      )
     )
   )
 
@@ -5584,6 +5761,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "C10") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "C10") (unit 1)
         )
       )
@@ -5619,6 +5801,11 @@
           (reference "Q2") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "Q2") (unit 1)
+        )
+      )
     )
   )
 
@@ -5641,6 +5828,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR014") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR014") (unit 1)
         )
       )
@@ -5673,6 +5865,11 @@
           (reference "TH1") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "TH1") (unit 1)
+        )
+      )
     )
   )
 
@@ -5699,17 +5896,18 @@
           (reference "R20") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "R20") (unit 1)
+        )
+      )
     )
   )
 
   (symbol (lib_id "Connector:TestPoint") (at 175.26 40.64 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9c067368-046c-4301-a1f4-f2531c2855cb)
-<<<<<<< Updated upstream
-    (property "Reference" "PACK+_TP1" (at 184.15 40.132 0)
-=======
-    (property "Reference" "PACK+_TP1" (at 176.53 40.132 0)
->>>>>>> Stashed changes
+    (property "Reference" "PACK+_TP1" (at 176.53 39.37 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 176.53 42.672 0)
@@ -5725,6 +5923,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "PACK+_TP1") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "PACK+_TP1") (unit 1)
         )
       )
@@ -5753,37 +5956,14 @@
           (reference "#PWR040") (unit 1)
         )
       )
-    )
-  )
-
-<<<<<<< Updated upstream
-  (symbol (lib_id "Connector:TestPoint") (at 152.4 26.67 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid a4243954-2d97-4e17-a596-92fdaf0a66a5)
-    (property "Reference" "5V_TP1" (at 153.67 26.162 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "TestPoint" (at 153.67 28.702 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm" (at 157.48 26.67 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 157.48 26.67 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid a9546608-a9ae-492d-982d-41fbe48adde6))
-    (instances
-      (project "Sensify Main Board"
-        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "5V_TP1") (unit 1)
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "#PWR040") (unit 1)
         )
       )
     )
   )
 
-=======
->>>>>>> Stashed changes
   (symbol (lib_id "Connector_Generic:Conn_01x03") (at 123.19 34.29 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a425d592-8350-4ad6-888e-1edcb836ab46)
@@ -5805,6 +5985,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "J1") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "J1") (unit 1)
         )
       )
@@ -5834,6 +6019,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "C18") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "C18") (unit 1)
         )
       )
@@ -5900,6 +6090,11 @@
           (reference "U3") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "U3") (unit 1)
+        )
+      )
     )
   )
 
@@ -5926,6 +6121,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "R11") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "R11") (unit 1)
         )
       )
@@ -5961,30 +6161,9 @@
           (reference "C21") (unit 1)
         )
       )
-    )
-  )
-
-<<<<<<< Updated upstream
-  (symbol (lib_id "Connector:TestPoint") (at 152.4 54.61 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid ae2c2fa2-03d7-4b00-b547-3b0d58aa4b6a)
-    (property "Reference" "GND_TP1" (at 153.67 54.102 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "TestPoint" (at 153.67 56.642 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm" (at 157.48 54.61 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 157.48 54.61 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 4ca647eb-4a64-452f-b75e-a903c793a2d1))
-    (instances
-      (project "Sensify Main Board"
-        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "GND_TP1") (unit 1)
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "C21") (unit 1)
         )
       )
     )
@@ -5994,12 +6173,6 @@
     (in_bom yes) (on_board yes) (dnp no)
     (uuid aeb32726-ff9d-4a9b-930e-7d1881e7c4c5)
     (property "Reference" "#PWR021" (at 72.39 167.64 0)
-=======
-  (symbol (lib_id "power:GND") (at 72.39 161.29 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid aeb32726-ff9d-4a9b-930e-7d1881e7c4c5)
-    (property "Reference" "#PWR0109" (at 72.39 167.64 0)
->>>>>>> Stashed changes
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 68.58 163.83 0)
@@ -6015,11 +6188,12 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-<<<<<<< Updated upstream
           (reference "#PWR021") (unit 1)
-=======
-          (reference "#PWR0109") (unit 1)
->>>>>>> Stashed changes
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "#PWR021") (unit 1)
         )
       )
     )
@@ -6048,32 +6222,38 @@
           (reference "R1") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "R1") (unit 1)
+        )
+      )
     )
   )
 
-  (symbol (lib_id "Connector:TestPoint") (at 198.12 26.67 0) (unit 1)
+  (symbol (lib_id "Connector:TestPoint") (at 200.66 25.4 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b59446d4-6f4c-4556-a99e-12d9217b33e3)
-<<<<<<< Updated upstream
-    (property "Reference" "BMS_ALERT_TP1" (at 200.66 26.162 0)
-=======
-    (property "Reference" "BMS_ALERT_TP1" (at 199.39 26.162 0)
->>>>>>> Stashed changes
+    (property "Reference" "BMS_ALERT_TP1" (at 201.93 24.13 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "TestPoint" (at 199.39 28.702 0)
+    (property "Value" "TestPoint" (at 201.93 27.432 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm" (at 203.2 26.67 0)
+    (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm" (at 205.74 25.4 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 203.2 26.67 0)
+    (property "Datasheet" "~" (at 205.74 25.4 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 623fa437-540d-4d86-9433-715cdec43e70))
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "BMS_ALERT_TP1") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "BMS_ALERT_TP1") (unit 1)
         )
       )
@@ -6099,6 +6279,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR016") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR016") (unit 1)
         )
       )
@@ -6131,6 +6316,11 @@
           (reference "C8") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "C8") (unit 1)
+        )
+      )
     )
   )
 
@@ -6157,6 +6347,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "C11") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "C11") (unit 1)
         )
       )
@@ -6189,6 +6384,11 @@
           (reference "C1") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "C1") (unit 1)
+        )
+      )
     )
   )
 
@@ -6211,6 +6411,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR041") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR041") (unit 1)
         )
       )
@@ -6240,6 +6445,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "C22") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "C22") (unit 1)
         )
       )
@@ -6275,6 +6485,11 @@
           (reference "C19") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "C19") (unit 1)
+        )
+      )
     )
   )
 
@@ -6298,6 +6513,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "R9") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "R9") (unit 1)
         )
       )
@@ -6327,6 +6547,11 @@
           (reference "R5") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "R5") (unit 1)
+        )
+      )
     )
   )
 
@@ -6349,6 +6574,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR056") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR056") (unit 1)
         )
       )
@@ -6429,37 +6659,14 @@
           (reference "U2") (unit 1)
         )
       )
-    )
-  )
-
-<<<<<<< Updated upstream
-  (symbol (lib_id "power:+5V") (at 152.4 26.67 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid e03b3ad7-cef9-421b-9577-2563df88cd29)
-    (property "Reference" "#PWR036" (at 152.4 22.86 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+5V" (at 152.4 31.75 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 152.4 26.67 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 152.4 26.67 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 99127656-f7a1-4955-9bf0-0c42804c50bb))
-    (instances
-      (project "Sensify Main Board"
-        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "#PWR036") (unit 1)
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "U2") (unit 1)
         )
       )
     )
   )
 
-=======
->>>>>>> Stashed changes
   (symbol (lib_id "Device:R_US") (at 97.79 226.06 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp yes)
     (uuid e2c80063-7d41-47d7-953e-3c65be72734e)
@@ -6480,6 +6687,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "R12") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "R12") (unit 1)
         )
       )
@@ -6508,17 +6720,18 @@
           (reference "#PWR039") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "#PWR039") (unit 1)
+        )
+      )
     )
   )
 
   (symbol (lib_id "Connector:TestPoint_Small") (at 86.36 200.66 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e5e42ff3-cb58-43c1-82dd-cbd7d03be8a7)
-<<<<<<< Updated upstream
     (property "Reference" "STAT_TP1" (at 85.09 200.66 0)
-=======
-    (property "Reference" "STAT_TP1" (at 82.55 200.66 0)
->>>>>>> Stashed changes
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 82.55 201.93 0)
@@ -6534,6 +6747,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "STAT_TP1") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "STAT_TP1") (unit 1)
         )
       )
@@ -6566,6 +6784,11 @@
           (reference "C12") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "C12") (unit 1)
+        )
+      )
     )
   )
 
@@ -6595,6 +6818,11 @@
           (reference "L2") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "L2") (unit 1)
+        )
+      )
     )
   )
 
@@ -6617,6 +6845,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "#PWR051") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "#PWR051") (unit 1)
         )
       )
@@ -6649,6 +6882,11 @@
           (reference "L1") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "L1") (unit 1)
+        )
+      )
     )
   )
 
@@ -6674,17 +6912,18 @@
           (reference "TH1_TP1") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "TH1_TP1") (unit 1)
+        )
+      )
     )
   )
 
   (symbol (lib_id "Connector:TestPoint") (at 151.13 54.61 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ed8ea205-ef97-4c0d-bce0-e99b9d1fcb15)
-<<<<<<< Updated upstream
-    (property "Reference" "BAT1-/BAT2+1_TP1" (at 168.91 54.102 0)
-=======
-    (property "Reference" "BAT1-/BAT2+1_TP1" (at 152.4 54.102 0)
->>>>>>> Stashed changes
+    (property "Reference" "BAT1-/BAT2+_TP1" (at 152.4 52.07 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 152.4 56.642 0)
@@ -6700,6 +6939,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "BAT1-/BAT2+_TP1") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "BAT1-/BAT2+1_TP1") (unit 1)
         )
       )
@@ -6729,17 +6973,18 @@
           (reference "D2") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "D2") (unit 1)
+        )
+      )
     )
   )
 
   (symbol (lib_id "power:GND") (at 236.22 210.82 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid eeb69d8d-f981-4d00-8cd0-8027ab81bdbd)
-<<<<<<< Updated upstream
     (property "Reference" "#PWR045" (at 236.22 217.17 0)
-=======
-    (property "Reference" "#PWR0105" (at 236.22 217.17 0)
->>>>>>> Stashed changes
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 236.22 214.63 0)
@@ -6755,11 +7000,12 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-<<<<<<< Updated upstream
           (reference "#PWR045") (unit 1)
-=======
-          (reference "#PWR0105") (unit 1)
->>>>>>> Stashed changes
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "#PWR045") (unit 1)
         )
       )
     )
@@ -6791,17 +7037,18 @@
           (reference "C9") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "C9") (unit 1)
+        )
+      )
     )
   )
 
   (symbol (lib_id "Device:C") (at 68.58 204.47 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f081c4ca-7448-44f3-9b3c-d21db6fcac9e)
-<<<<<<< Updated upstream
     (property "Reference" "C7" (at 71.12 203.2 0)
-=======
-    (property "Reference" "C32" (at 66.04 203.2 0)
->>>>>>> Stashed changes
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "2.2u" (at 66.04 205.74 0)
@@ -6821,6 +7068,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "C7") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "C7") (unit 1)
         )
       )
@@ -6850,17 +7102,18 @@
           (reference "R14") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "R14") (unit 1)
+        )
+      )
     )
   )
 
   (symbol (lib_id "Connector:TestPoint") (at 175.26 26.67 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f3b8b714-7bae-4060-bf7c-821dfd543068)
-<<<<<<< Updated upstream
-    (property "Reference" "BAT2-_TP1" (at 184.15 26.162 0)
-=======
-    (property "Reference" "BAT2-_TP1" (at 176.53 26.162 0)
->>>>>>> Stashed changes
+    (property "Reference" "BAT2-_TP1" (at 176.53 25.4 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 176.53 28.702 0)
@@ -6876,6 +7129,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "BAT2-_TP1") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "BAT2-_TP1") (unit 1)
         )
       )
@@ -6905,17 +7163,18 @@
           (reference "R24") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "R24") (unit 1)
+        )
+      )
     )
   )
 
   (symbol (lib_id "power:GND") (at 134.62 113.03 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f58c7142-adad-42c0-a9f8-57cffa5cb1b3)
-<<<<<<< Updated upstream
     (property "Reference" "#PWR033" (at 134.62 119.38 0)
-=======
-    (property "Reference" "#PWR0110" (at 134.62 119.38 0)
->>>>>>> Stashed changes
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 138.43 114.3 0)
@@ -6931,11 +7190,12 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-<<<<<<< Updated upstream
           (reference "#PWR033") (unit 1)
-=======
-          (reference "#PWR0110") (unit 1)
->>>>>>> Stashed changes
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "#PWR033") (unit 1)
         )
       )
     )
@@ -6963,6 +7223,11 @@
           (reference "#PWR057") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "#PWR057") (unit 1)
+        )
+      )
     )
   )
 
@@ -6986,6 +7251,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "R16") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "R16") (unit 1)
         )
       )
@@ -7018,17 +7288,18 @@
           (reference "C20") (unit 1)
         )
       )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
+          (reference "C20") (unit 1)
+        )
+      )
     )
   )
 
   (symbol (lib_id "Connector:TestPoint") (at 151.13 40.64 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid fc7f2eae-19cc-49fa-ac51-78c68cfaa247)
-<<<<<<< Updated upstream
-    (property "Reference" "BAT1+_TP1" (at 168.91 40.132 0)
-=======
-    (property "Reference" "BAT1+_TP1" (at 152.4 40.132 0)
->>>>>>> Stashed changes
+    (property "Reference" "BAT1+_TP1" (at 152.4 38.1 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 152.4 42.672 0)
@@ -7044,6 +7315,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "BAT1+_TP1") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "BAT1+_TP1") (unit 1)
         )
       )
@@ -7070,6 +7346,11 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "R15") (unit 1)
+        )
+      )
+      (project "BMS"
+        (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "R15") (unit 1)
         )
       )
