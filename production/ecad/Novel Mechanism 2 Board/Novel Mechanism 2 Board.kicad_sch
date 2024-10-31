@@ -1850,7 +1850,7 @@
     (property "Value" "0532611271" (at 55.245 142.875 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "0532611271:MOLEX_0532611271" (at 48.895 139.065 0)
+    (property "Footprint" "Connector:MOLEX_0532611271" (at 48.895 139.065 0)
       (effects (font (size 1.27 1.27)) (justify bottom) hide)
     )
     (property "Datasheet" "" (at 48.895 139.065 0)
