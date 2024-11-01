@@ -823,7 +823,7 @@
     (property "Sheetname" "")
     (path "/e9c3808e-72d0-4d3b-add2-7c80830c8c91")
     (attr through_hole)
-    (fp_text reference "J2" (at 3.175 -12.135 90) (layer "F.SilkS")
+    (fp_text reference "J2" (at -1.77 -6.4725 90) (layer "F.SilkS")
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp f9b2011a-e964-4cdb-880f-5778bcd27a88)
     )
@@ -1377,6 +1377,9 @@
     (pad "S2" smd rect (at 9.425 0) (size 2.1 3) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 24 "unconnected-(J3-SHIELD__1-PadS2)") (pinfunction "SHIELD__1") (pintype "passive") (solder_mask_margin 0.0762) (tstamp 21bd8140-a3c6-4d05-9497-698ea50ebb23))
   )
+
+  (gr_rect (start 116.95 46) (end 158.7 92.1)
+    (stroke (width 0.2) (type default)) (fill none) (layer "Edge.Cuts") (tstamp 38fa93a1-34a9-479d-87af-88878958b0c4))
 
   (segment (start 136.8 63.445) (end 136.8 61.942213) (width 0.2032) (layer "F.Cu") (net 1) (tstamp 051ebe4e-dae4-4ef3-90ce-427f299bd581))
   (segment (start 138.191 59.35) (end 138.191 55.059) (width 0.2032) (layer "F.Cu") (net 1) (tstamp 0d61ff12-3512-4f19-9ade-3712ea028e75))
