@@ -2,6 +2,7 @@
 
 // HID stuff
 #include <BLEDevice.h>
+// #include <BleKeyboard.h>
 #include <BLEHIDDevice.h>
 #include <BLEUtils.h>
 #include <BLEServer.h>
@@ -15,26 +16,26 @@
 // add a connection test that tests SPI connections on bootup
 // code for sensors and BMS
 
-String device_name = "ESP32-way-too-easy";
+// // Check if Bluetooth is available
+// #if !defined(CONFIG_BT_ENABLED) || !defined(CONFIG_BLUEDROID_ENABLED)
+// #error Bluetooth is not enabled! Please run `make menuconfig` to and enable it
+// #endif
 
-// Check if Bluetooth is available
-#if !defined(CONFIG_BT_ENABLED) || !defined(CONFIG_BLUEDROID_ENABLED)
-#error Bluetooth is not enabled! Please run `make menuconfig` to and enable it
-#endif
-
-// Check Serial Port Profile
-#if !defined(CONFIG_BT_SPP_ENABLED)
-#error Serial Port Profile for Bluetooth is not available or not enabled. It is only available for the ESP32 chip.
-#endif
+// // Check Serial Port Profile
+// #if !defined(CONFIG_BT_SPP_ENABLED)
+// #error Serial Port Profile for Bluetooth is not available or not enabled. It is only available for the ESP32 chip.
+// #endif
 
 // BluetoothSerial SerialBT;
 
 BLEHIDDevice *hid;
 BLEServer *pServer;
+BLEService *pService;
+BLECharacteristic *pCharacteristic;
 
 const int detect = 21;
-const int boot = 0;
-#define INPUT(size) 0x81, size
+const int button_test = 13;
+// #define INPUT(size) 0x81, size
 
 enum State
 {
@@ -61,8 +62,15 @@ public:
       config_i->sda_pullup_en = true;
       config_i->scl_pullup_en = true;
       config_i->master.clk_speed = 100000;
+      i2c_param_config(I2C_NUM_1, config_i);
       i2c_driver_install(I2C_NUM_1, config_i->mode, 0, 0, 0);
    }
+
+   // function for starting a transaction
+
+   // function for ending a transaction
+
+   // function for reading data and sending over bluetoooth?
 
    ~I2CAttachment()
    {
@@ -96,6 +104,14 @@ public:
       // TODO: 1 MHz for now, probably wont need, could have another constructor that takes in clock speed
       config_s->setFrequency(1000000);
    }
+   // function for starting a transaction
+
+   // function for ending a transaction
+
+   // function for reading data and sending over bluetoooth?
+   // - or should we do a function for reading data, then giving that data to a function that send it over bluetooth?
+
+   // function for pulling certain cs pins low (activating the device)
 
    ~SPIAttachment()
    {
@@ -103,49 +119,81 @@ public:
    }
 };
 
-// // takes in the current state and checks if there is a new state
-State nextState(State current_state)
+class Vice : public I2CAttachment
 {
-   int current_detect_v = analogRead(detect);
+public:
+   // function for reading potentiometers to activate specific haptics responses?
 
-   // converts to float
-   float voltage = current_detect_v * (3.3 / 4095.0);
+   //
+};
 
-   // TODO: define voltage thresholds for each state
+class Drill : public SPIAttachment
+{
+public:
+   // function for reading pwm signal?
 
-   // TODO: if detect is an analog pin and I am doing voltage thresholds to determine state, is that really scalable?
-   switch (current_state)
-   {
-   // TODO: implement idle state
-   case IDLE:
-      if (voltage > /*voltage threshold for drill*/ &&voltage < /*voltage threshold for vice*/)
-      {
-         current_state = DRILL;
-      }
-      else if (voltage > /*voltage threshold for vice*/)
-      {
-         current_state = VICE;
-      }
-   // TODO: implement drill state
-   case DRILL:
-      if (voltage < /*voltage threshold for drill*/)
-      {
-         current_state = IDLE;
-      }
-   // TODO: implement vice state
-   case VICE:
-      // this should never happen
-      if (voltage < /*voltage threshold for vice*/)
-      {
-         current_state = IDLE;
-      }
-   }
-   return current_state;
-}
+   // function for setting current limit?
+};
+
+// // takes in the current state and checks if there is a new state
+// State nextState(State current_state)
+// {
+//    int current_detect_v = analogRead(detect);
+
+//    // converts to float
+//    float voltage = current_detect_v * (3.3 / 4095.0);
+
+//    // TODO: define voltage thresholds for each state
+
+//    // TODO: if detect is an analog pin and I am doing voltage thresholds to determine state, is that really scalable?
+//    switch (current_state)
+//    {
+//    // TODO: implement idle state
+//    case IDLE:
+//       if (voltage > /*voltage threshold for drill*/ &&voltage < /*voltage threshold for vice*/)
+//       {
+//          current_state = DRILL;
+//       }
+//       else if (voltage > /*voltage threshold for vice*/)
+//       {
+//          current_state = VICE;
+//       }
+//    // TODO: implement drill state
+//    case DRILL:
+//       if (voltage < /*voltage threshold for drill*/)
+//       {
+//          current_state = IDLE;
+//       }
+//    // TODO: implement vice state
+//    case VICE:
+//       // this should never happen
+//       if (voltage < /*voltage threshold for vice*/)
+//       {
+//          current_state = IDLE;
+//       }
+//    }
+//    return current_state;
+// }
+
+// TODO: add function for parsing IMU data
 
 void setup()
 {
+   Serial.begin(115200);
    i2c_config_t *config_m;
+
+   BLEDevice::init("ESP32 Keyboard");
+
+   pServer = BLEDevice::createServer();
+   pService = pServer->createService("c638083c-b74a-46df-ac04-f113eb352cef");
+
+   pCharacteristic = pService->createCharacteristic(
+       "488991d4-302b-4312-bc74-12d53139b35e",
+       BLECharacteristic::PROPERTY_NOTIFY);
+
+   pService->start();
+
+   // i2c
    config_m->mode = I2C_MODE_MASTER;
    // TODO: these pins are probably different on the schematic
    config_m->sda_io_num = 25;
@@ -153,17 +201,21 @@ void setup()
    config_m->sda_pullup_en = true;
    config_m->scl_pullup_en = true;
    config_m->master.clk_speed = 100000;
-   i2c_driver_install(I2C_NUM_1, config_m->mode, 0, 0, 0);
 
-   // when setting up we are in the idle state
+   i2c_param_config(I2C_NUM_0, config_m);
+   i2c_driver_install(I2C_NUM_0, config_m->mode, 0, 0, 0);
+
+   pinMode(button_test, INPUT_PULLUP);
+
+   // state initialization
    State current_state = IDLE;
 
-   Serial.begin(115200);
-
-   BLEDevice::init("ESP32 Keyboard");
-
-   pServer = BLEDevice::createServer();
    hid = new BLEHIDDevice(pServer);
+   if (hid == nullptr)
+   {
+      Serial.println("Failed to create BLEHIDDevice.");
+      return;
+   }
 
    // HID service
    hid->manufacturer()->setValue("Example");
@@ -172,31 +224,30 @@ void setup()
 
    // example report map from chat
    const uint8_t reportMap[] = {
-       USAGE_PAGE(1), 0x01,    // Generic Desktop Controls
-       USAGE(1), 0x06,         // Keyboard
-       COLLECTION(1), 0x01,    // Application
-       USAGE_PAGE(1), 0x07,    // Keyboard/Keypad
-       USAGE_MINIMUM(1), 0x00, // No modifiers
-       USAGE_MAXIMUM(1), 0x65, // Up to 101 keys
-       LOGICAL_MINIMUM(1), 0x00,
-       LOGICAL_MAXIMUM(1), 0x01,
-       REPORT_SIZE(1), 0x08,  // 1 byte for key press
-       REPORT_COUNT(1), 0x01, // 1 key at a time
-       INPUT(1), 0x02,        // Data, Variable, Absolute
-       END_COLLECTION(0)      // End collection
+       0x05, 0x01, // Usage Page (Generic Desktop Controls)
+       0x09, 0x06, // Usage (Keyboard)
+       0xA1, 0x01, // Collection (Application)
+       0x05, 0x07, // Usage Page (Keyboard/Keypad)
+       0x19, 0x00, // Usage Minimum (0)
+       0x29, 0x65, // Usage Maximum (101)
+       0x15, 0x00, // Logical Minimum (0)
+       0x25, 0x01, // Logical Maximum (1)
+       0x75, 0x08, // Report Size (8)
+       0x95, 0x01, // Report Count (1)
+       0x81, 0x02, // Input (Data, Variable, Absolute) — expanded directly
+       0xC0        // End Collection
    };
    hid->reportMap((uint8_t *)reportMap, sizeof(reportMap));
    hid->startServices();
 
    BLEAdvertising *pAdvertising = BLEDevice::getAdvertising();
    pAdvertising->addServiceUUID(hid->hidService()->getUUID());
+   pAdvertising->setScanResponse(true);
    pAdvertising->start();
 
    Serial.println("BLE HID ready.");
 
-   // SerialBT.begin(device_name); // Bluetooth device name
-   // SerialBT.deleteAllBondedDevices(); // Uncomment this to delete paired devices; Must be called after begin
-   // Serial.printf("The device with name \"%s\" is started.\nNow you can pair it with Bluetooth!\n", device_name.c_str());
+   delay(1000);
 }
 
 void loop()
@@ -215,7 +266,7 @@ void loop()
    //     Serial.write(SerialBT.read());
    // }
    // Read the state of the BOOT button (active-low, so pressed is LOW)
-   int buttonState = digitalRead(boot);
+   int buttonState = digitalRead(button_test);
 
    if (buttonState == LOW)
    {
@@ -240,3 +291,17 @@ void loop()
 
    delay(100);
 }
+
+/*
+TODO list:
+- look into different sensors to figure out how to start the programming for them
+   - macros, functionality
+- BMIC drivers
+- HID working
+- figure out dynamic pin configuration switching
+- integrate haptics
+   - figure out how different vibrations are actually started
+
+- connect button to a specific pin, simulate a state, read the data and send stuff over bluetooth
+
+*/
