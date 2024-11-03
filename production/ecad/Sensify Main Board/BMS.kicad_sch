@@ -3788,33 +3788,6 @@
     )
   )
 
-  (symbol (lib_id "BMS:500ASSP3M2QE") (at 255.27 90.17 270) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 103a6588-22b2-4ac6-ae11-37990105059b)
-    (property "Reference" "SW4" (at 259.08 95.25 90)
-      (effects (font (size 1.524 1.524)) (justify left))
-    )
-    (property "Value" "500ASSP3M2QE" (at 259.08 97.79 90)
-      (effects (font (size 1.524 1.524)) (justify left))
-    )
-    (property "Footprint" "500ASSP3M2QE_EWI" (at 255.27 90.17 0)
-      (effects (font (size 1.27 1.27) italic) hide)
-    )
-    (property "Datasheet" "500ASSP3M2QE" (at 255.27 90.17 0)
-      (effects (font (size 1.27 1.27) italic) hide)
-    )
-    (pin "1" (uuid 4e1ad8d5-8f17-49a2-8341-cfaf2365c1f8))
-    (pin "3" (uuid 1d8f902b-0e4c-4d4d-904e-95536a70d1aa))
-    (pin "2" (uuid 46670c81-1281-40f9-8ae1-44fcb9bf5e7a))
-    (instances
-      (project "Sensify Main Board"
-        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "SW4") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "power:GND") (at 342.9 125.73 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1185749d-65cb-4fac-a941-532d268eca4e)
@@ -6482,6 +6455,33 @@
       (project "BMS"
         (path "/b663df87-dd73-4614-b80d-e8e9f896eaba"
           (reference "BMS_ALERT_TP1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "BMS:500ASSP3M2QE") (at 255.27 90.17 270) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid bbc5cbee-caeb-45a9-a0a8-c9f4c6d16fb6)
+    (property "Reference" "SW3" (at 259.08 95.25 90)
+      (effects (font (size 1.524 1.524)) (justify left))
+    )
+    (property "Value" "500ASSP3M2QE" (at 259.08 97.79 90)
+      (effects (font (size 1.524 1.524)) (justify left))
+    )
+    (property "Footprint" "Sensify Footprints:500ASSP3M2QE_EWI" (at 255.27 90.17 0)
+      (effects (font (size 1.27 1.27) italic) hide)
+    )
+    (property "Datasheet" "500ASSP3M2QE" (at 255.27 90.17 0)
+      (effects (font (size 1.27 1.27) italic) hide)
+    )
+    (pin "1" (uuid 6c2034a9-f009-4989-81a6-925968ea83d4))
+    (pin "3" (uuid 976cd288-d510-4b69-aac0-e9ca011400f6))
+    (pin "2" (uuid ebb4171f-e41b-4d5e-b954-cd3c2b7a5f63))
+    (instances
+      (project "Sensify Main Board"
+        (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
+          (reference "SW3") (unit 1)
         )
       )
     )
