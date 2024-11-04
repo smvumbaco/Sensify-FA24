@@ -3936,7 +3936,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 100.33 90.17 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 17a2dc46-25b6-4e19-a4cb-dc445c5e84f4)
-    (property "Reference" "DIS_TP1" (at 101.6 87.63 0)
+    (property "Reference" "TP18" (at 101.6 87.63 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 101.6 90.17 0)
@@ -3952,7 +3952,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "DIS_TP1") (unit 1)
+          (reference "TP18") (unit 1)
         )
       )
       (project "BMS"
@@ -4437,7 +4437,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 77.47 90.17 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3dabf373-3222-4f8b-b888-90dcd3bf6f33)
-    (property "Reference" "CHG_TP1" (at 76.2 87.63 0)
+    (property "Reference" "TP17" (at 76.2 87.63 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 76.2 90.17 0)
@@ -4453,7 +4453,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "CHG_TP1") (unit 1)
+          (reference "TP17") (unit 1)
         )
       )
       (project "BMS"
@@ -5027,7 +5027,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 151.13 26.67 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5ead5d60-843f-4fa4-9322-5519d7d45ea0)
-    (property "Reference" "USB_9V+1" (at 152.4 25.4 0)
+    (property "Reference" "TP12" (at 152.4 25.4 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 152.4 28.702 0)
@@ -5043,7 +5043,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "USB_9V+1") (unit 1)
+          (reference "TP12") (unit 1)
         )
       )
       (project "BMS"
@@ -5497,7 +5497,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 116.84 186.69 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 74803c16-b3ed-47e9-be01-bdcaaeb2e1cf)
-    (property "Reference" "PMID_TP1" (at 106.68 181.61 0)
+    (property "Reference" "TP20" (at 106.68 181.61 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 106.68 184.15 0)
@@ -5513,7 +5513,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "PMID_TP1") (unit 1)
+          (reference "TP20") (unit 1)
         )
       )
       (project "BMS"
@@ -6159,7 +6159,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 170.18 26.67 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9c067368-046c-4301-a1f4-f2531c2855cb)
-    (property "Reference" "PACK+_TP1" (at 171.45 25.4 0)
+    (property "Reference" "TP15" (at 171.45 25.4 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 171.45 28.702 0)
@@ -6175,7 +6175,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "PACK+_TP1") (unit 1)
+          (reference "TP15") (unit 1)
         )
       )
       (project "BMS"
@@ -6485,7 +6485,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 170.18 40.64 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b59446d4-6f4c-4556-a99e-12d9217b33e3)
-    (property "Reference" "BMS_ALERT_TP1" (at 171.45 39.37 0)
+    (property "Reference" "TP16" (at 171.45 39.37 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 171.45 42.672 0)
@@ -6501,7 +6501,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "BMS_ALERT_TP1") (unit 1)
+          (reference "TP16") (unit 1)
         )
       )
       (project "BMS"
@@ -7035,7 +7035,7 @@
   (symbol (lib_id "Connector:TestPoint_Small") (at 86.36 200.66 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e5e42ff3-cb58-43c1-82dd-cbd7d03be8a7)
-    (property "Reference" "STAT_TP1" (at 85.09 200.66 0)
+    (property "Reference" "TP21" (at 85.09 200.66 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 82.55 201.93 0)
@@ -7051,7 +7051,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "STAT_TP1") (unit 1)
+          (reference "TP21") (unit 1)
         )
       )
       (project "BMS"
@@ -7197,7 +7197,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 119.38 147.32 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ed295c13-d22a-46ef-a6f3-466dfb7371a9)
-    (property "Reference" "TH1_TP1" (at 120.65 144.78 0)
+    (property "Reference" "TP19" (at 120.65 144.78 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 120.65 147.32 0)
@@ -7213,7 +7213,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "TH1_TP1") (unit 1)
+          (reference "TP19") (unit 1)
         )
       )
       (project "BMS"
@@ -7227,7 +7227,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 151.13 54.61 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ed8ea205-ef97-4c0d-bce0-e99b9d1fcb15)
-    (property "Reference" "BAT1-/BAT2+_TP1" (at 152.4 52.07 0)
+    (property "Reference" "TP14" (at 152.4 52.07 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 152.4 56.642 0)
@@ -7243,7 +7243,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "BAT1-/BAT2+_TP1") (unit 1)
+          (reference "TP14") (unit 1)
         )
       )
       (project "BMS"
@@ -7576,7 +7576,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 151.13 40.64 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid fc7f2eae-19cc-49fa-ac51-78c68cfaa247)
-    (property "Reference" "BAT1+_TP1" (at 152.4 38.1 0)
+    (property "Reference" "TP13" (at 152.4 38.1 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 152.4 42.672 0)
@@ -7592,7 +7592,7 @@
     (instances
       (project "Sensify Main Board"
         (path "/9a7ba7c3-7d28-4a83-bdbc-38fbff59fcbe/13ad10b4-913e-414a-9863-b902179dcb8b"
-          (reference "BAT1+_TP1") (unit 1)
+          (reference "TP13") (unit 1)
         )
       )
       (project "BMS"
