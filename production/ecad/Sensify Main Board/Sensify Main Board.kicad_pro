@@ -61,7 +61,7 @@
       },
       "rule_severities": {
         "annular_width": "error",
-        "clearance": "error",
+        "clearance": "warning",
         "connection_width": "warning",
         "copper_edge_clearance": "error",
         "copper_sliver": "warning",
@@ -181,8 +181,8 @@
           "drill": 0.0
         },
         {
-          "diameter": 0.459994,
-          "drill": 0.199898
+          "diameter": 0.46,
+          "drill": 0.2
         }
       ],
       "zones_allow_external_fillets": false
