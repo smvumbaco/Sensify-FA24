@@ -1920,22 +1920,22 @@
       (stroke (width 0.01) (type solid)) (fill solid) (layer "F.Mask") (tstamp e4a167a2-345c-41c6-b6fd-a6e0a2762e8f))
     (fp_poly
       (pts
-        (xy -1.675 -2.135)
-        (xy -0.825 -2.135)
-        (xy -0.825 -1.775)
-        (xy -1.675 -1.775)
-      )
-
-      (stroke (width 0.01) (type solid)) (fill solid) (layer "F.Mask") (tstamp f8fc28f1-7948-4ffa-8a64-22a446f68d21))
-    (fp_poly
-      (pts
-        (xy -1.675 1.775)
-        (xy -0.825 1.775)
-        (xy -0.825 2.135)
-        (xy -1.675 2.135)
+        (xy -1.4478 2.3876)
+        (xy -1.4478 1.5376)
+        (xy -1.0878 1.5376)
+        (xy -1.0878 2.3876)
       )
 
       (stroke (width 0.01) (type solid)) (fill solid) (layer "F.Mask") (tstamp 237e2e70-f1bc-4cfb-8766-9d1e5c530f40))
+    (fp_poly
+      (pts
+        (xy -1.4268 -1.5254)
+        (xy -1.4268 -2.3754)
+        (xy -1.0668 -2.3754)
+        (xy -1.0668 -1.5254)
+      )
+
+      (stroke (width 0.01) (type solid)) (fill solid) (layer "F.Mask") (tstamp f8fc28f1-7948-4ffa-8a64-22a446f68d21))
     (fp_poly
       (pts
         (xy -1.34 -1.34)
@@ -1947,94 +1947,94 @@
       (stroke (width 0.01) (type solid)) (fill solid) (layer "F.Mask") (tstamp 2fd3d045-3d6b-4ba4-bfa7-38694bcc17e6))
     (fp_poly
       (pts
-        (xy -1.175 -2.135)
-        (xy -0.325 -2.135)
-        (xy -0.325 -1.775)
-        (xy -1.175 -1.775)
-      )
-
-      (stroke (width 0.01) (type solid)) (fill solid) (layer "F.Mask") (tstamp bb896783-7bcf-4d74-ad45-db359cde57fc))
-    (fp_poly
-      (pts
-        (xy -1.175 1.775)
-        (xy -0.325 1.775)
-        (xy -0.325 2.135)
-        (xy -1.175 2.135)
+        (xy -0.9464 2.3876)
+        (xy -0.9464 1.5376)
+        (xy -0.5864 1.5376)
+        (xy -0.5864 2.3876)
       )
 
       (stroke (width 0.01) (type solid)) (fill solid) (layer "F.Mask") (tstamp 32dbe929-c6da-4c14-9547-bdc338697fb5))
     (fp_poly
       (pts
-        (xy -0.675 -2.135)
-        (xy 0.175 -2.135)
-        (xy 0.175 -1.775)
-        (xy -0.675 -1.775)
+        (xy -0.9188 -1.524)
+        (xy -0.9188 -2.374)
+        (xy -0.5588 -2.374)
+        (xy -0.5588 -1.524)
       )
 
-      (stroke (width 0.01) (type solid)) (fill solid) (layer "F.Mask") (tstamp 818cb1a6-af9a-432a-9c8a-9159ec522bf6))
+      (stroke (width 0.01) (type solid)) (fill solid) (layer "F.Mask") (tstamp bb896783-7bcf-4d74-ad45-db359cde57fc))
     (fp_poly
       (pts
-        (xy -0.675 1.775)
-        (xy 0.175 1.775)
-        (xy 0.175 2.135)
-        (xy -0.675 2.135)
+        (xy -0.4464 2.3876)
+        (xy -0.4464 1.5376)
+        (xy -0.0864 1.5376)
+        (xy -0.0864 2.3876)
       )
 
       (stroke (width 0.01) (type solid)) (fill solid) (layer "F.Mask") (tstamp 49f65066-a067-450d-89ca-00d82ee5ffbb))
     (fp_poly
       (pts
-        (xy -0.175 -2.135)
-        (xy 0.675 -2.135)
-        (xy 0.675 -1.775)
-        (xy -0.175 -1.775)
+        (xy -0.4362 -1.524)
+        (xy -0.4362 -2.374)
+        (xy -0.0762 -2.374)
+        (xy -0.0762 -1.524)
+      )
+
+      (stroke (width 0.01) (type solid)) (fill solid) (layer "F.Mask") (tstamp 818cb1a6-af9a-432a-9c8a-9159ec522bf6))
+    (fp_poly
+      (pts
+        (xy 0.0718 -1.524)
+        (xy 0.0718 -2.374)
+        (xy 0.4318 -2.374)
+        (xy 0.4318 -1.524)
       )
 
       (stroke (width 0.01) (type solid)) (fill solid) (layer "F.Mask") (tstamp 63c34a67-890d-425f-8313-ba693f0221c7))
     (fp_poly
       (pts
-        (xy -0.175 1.775)
-        (xy 0.675 1.775)
-        (xy 0.675 2.135)
-        (xy -0.175 2.135)
+        (xy 0.079 2.3876)
+        (xy 0.079 1.5376)
+        (xy 0.439 1.5376)
+        (xy 0.439 2.3876)
       )
 
       (stroke (width 0.01) (type solid)) (fill solid) (layer "F.Mask") (tstamp 04888ac6-9a47-4789-b56e-c77ab8fcc9ec))
     (fp_poly
       (pts
-        (xy 0.325 -2.135)
-        (xy 1.175 -2.135)
-        (xy 1.175 -1.775)
-        (xy 0.325 -1.775)
+        (xy 0.5536 -1.524)
+        (xy 0.5536 -2.374)
+        (xy 0.9136 -2.374)
+        (xy 0.9136 -1.524)
       )
 
       (stroke (width 0.01) (type solid)) (fill solid) (layer "F.Mask") (tstamp 66c419ef-a61a-4afa-9004-3acc5f6040ed))
     (fp_poly
       (pts
-        (xy 0.325 1.775)
-        (xy 1.175 1.775)
-        (xy 1.175 2.135)
-        (xy 0.325 2.135)
+        (xy 0.5536 2.3876)
+        (xy 0.5536 1.5376)
+        (xy 0.9136 1.5376)
+        (xy 0.9136 2.3876)
       )
 
       (stroke (width 0.01) (type solid)) (fill solid) (layer "F.Mask") (tstamp da6957a4-52fe-4fff-b0be-cc585166f09d))
     (fp_poly
       (pts
-        (xy 0.825 -2.135)
-        (xy 1.675 -2.135)
-        (xy 1.675 -1.775)
-        (xy 0.825 -1.775)
-      )
-
-      (stroke (width 0.01) (type solid)) (fill solid) (layer "F.Mask") (tstamp 5fe8304b-4f0c-4211-be77-68201f1ee986))
-    (fp_poly
-      (pts
-        (xy 0.825 1.775)
-        (xy 1.675 1.775)
-        (xy 1.675 2.135)
-        (xy 0.825 2.135)
+        (xy 1.0536 2.3876)
+        (xy 1.0536 1.5376)
+        (xy 1.4136 1.5376)
+        (xy 1.4136 2.3876)
       )
 
       (stroke (width 0.01) (type solid)) (fill solid) (layer "F.Mask") (tstamp 6d490f68-ab57-41a9-a38f-28a05e3c2b7a))
+    (fp_poly
+      (pts
+        (xy 1.079 -1.524)
+        (xy 1.079 -2.374)
+        (xy 1.439 -2.374)
+        (xy 1.439 -1.524)
+      )
+
+      (stroke (width 0.01) (type solid)) (fill solid) (layer "F.Mask") (tstamp 5fe8304b-4f0c-4211-be77-68201f1ee986))
     (fp_poly
       (pts
         (xy 1.53 -1.43)
@@ -14869,29 +14869,29 @@
     (pad "" np_thru_hole circle (at 1.58 -6.25 270) (size 0.7 0.7) (drill 0.7) (layers "F&B.Cu" "*.Mask") (tstamp ae51ba1a-2fc1-4bde-9e0d-a2cf2c4de0da))
     (pad "" np_thru_hole circle (at 7.36 -6.25 270) (size 0.7 0.7) (drill 0.7) (layers "*.Cu" "*.Mask") (tstamp e4d51d9b-5a48-425a-bf8b-1301416e0df6))
     (pad "A1_B12" smd rect (at 1.27 -7.32 270) (size 0.6 1.14) (layers "F.Cu" "F.Paste" "F.Mask")
-      (net 3 "GND") (pinfunction "GND_A") (pintype "power_in") (solder_mask_margin 0.102) (tstamp f960780b-d50d-41d3-b431-6d52ec1c4f69))
+      (net 3 "GND") (pinfunction "GND_A") (pintype "power_in") (solder_mask_margin 0.05) (tstamp f960780b-d50d-41d3-b431-6d52ec1c4f69))
     (pad "A4_B9" smd rect (at 2.07 -7.32 270) (size 0.6 1.14) (layers "F.Cu" "F.Paste" "F.Mask")
-      (net 35 "FLASHING_VBUS_5V") (pinfunction "VBUS_A") (pintype "power_in") (solder_mask_margin 0.102) (tstamp ea533889-3552-4e51-97f8-68dfbf3e8f04))
+      (net 35 "FLASHING_VBUS_5V") (pinfunction "VBUS_A") (pintype "power_in") (solder_mask_margin 0.05) (tstamp ea533889-3552-4e51-97f8-68dfbf3e8f04))
     (pad "A5" smd rect (at 3.22 -7.32 270) (size 0.3 1.14) (layers "F.Cu" "F.Paste" "F.Mask")
-      (net 37 "Net-(J3-CC1)") (pinfunction "CC1") (pintype "bidirectional") (solder_mask_margin 0.102) (tstamp b9808891-66a2-4b76-b39a-f9c59c35961d))
+      (net 37 "Net-(J3-CC1)") (pinfunction "CC1") (pintype "bidirectional") (solder_mask_margin 0.05) (tstamp b9808891-66a2-4b76-b39a-f9c59c35961d))
     (pad "A6" smd rect (at 4.22 -7.32 270) (size 0.3 1.14) (layers "F.Cu" "F.Paste" "F.Mask")
-      (net 82 "USB_D+") (pinfunction "DP1") (pintype "bidirectional") (solder_mask_margin 0.102) (tstamp 988f0f71-9e80-41e0-b159-1b1eb9c4cdbd))
+      (net 82 "USB_D+") (pinfunction "DP1") (pintype "bidirectional") (solder_mask_margin 0.05) (tstamp 988f0f71-9e80-41e0-b159-1b1eb9c4cdbd))
     (pad "A7" smd rect (at 4.72 -7.32 270) (size 0.3 1.14) (layers "F.Cu" "F.Paste" "F.Mask")
-      (net 83 "USB_D-") (pinfunction "DN1") (pintype "bidirectional") (solder_mask_margin 0.102) (tstamp 3d62fdde-51f0-4b2f-a43e-c7d124d9db31))
+      (net 83 "USB_D-") (pinfunction "DN1") (pintype "bidirectional") (solder_mask_margin 0.05) (tstamp 3d62fdde-51f0-4b2f-a43e-c7d124d9db31))
     (pad "A8" smd rect (at 5.72 -7.32 270) (size 0.3 1.14) (layers "F.Cu" "F.Paste" "F.Mask")
-      (net 38 "unconnected-(J3-SBU1-PadA8)") (pinfunction "SBU1") (pintype "bidirectional+no_connect") (solder_mask_margin 0.102) (tstamp e579a6cb-f1b2-4fc6-be6c-bb0fe57852c5))
+      (net 38 "unconnected-(J3-SBU1-PadA8)") (pinfunction "SBU1") (pintype "bidirectional+no_connect") (solder_mask_margin 0.05) (tstamp e579a6cb-f1b2-4fc6-be6c-bb0fe57852c5))
     (pad "B1_A12" smd rect (at 7.67 -7.32 270) (size 0.6 1.14) (layers "F.Cu" "F.Paste" "F.Mask")
-      (net 3 "GND") (pinfunction "GND_B") (pintype "power_in") (solder_mask_margin 0.102) (tstamp 47d0a5ac-3aa9-4821-a28d-9d966c204766))
+      (net 3 "GND") (pinfunction "GND_B") (pintype "power_in") (solder_mask_margin 0.05) (tstamp 47d0a5ac-3aa9-4821-a28d-9d966c204766))
     (pad "B4_A9" smd rect (at 6.87 -7.32 270) (size 0.6 1.14) (layers "F.Cu" "F.Paste" "F.Mask")
-      (net 35 "FLASHING_VBUS_5V") (pinfunction "VBUS_B") (pintype "power_in") (solder_mask_margin 0.102) (tstamp 8cdafeba-9e9d-4adc-b71f-4d910fac4995))
+      (net 35 "FLASHING_VBUS_5V") (pinfunction "VBUS_B") (pintype "power_in") (solder_mask_margin 0.05) (tstamp 8cdafeba-9e9d-4adc-b71f-4d910fac4995))
     (pad "B5" smd rect (at 6.22 -7.32 270) (size 0.3 1.14) (layers "F.Cu" "F.Paste" "F.Mask")
-      (net 39 "Net-(J3-CC2)") (pinfunction "CC2") (pintype "bidirectional") (solder_mask_margin 0.102) (tstamp 13352fdd-7f74-4827-a8eb-99d96e771989))
+      (net 39 "Net-(J3-CC2)") (pinfunction "CC2") (pintype "bidirectional") (solder_mask_margin 0.05) (tstamp 13352fdd-7f74-4827-a8eb-99d96e771989))
     (pad "B6" smd rect (at 5.22 -7.32 270) (size 0.3 1.14) (layers "F.Cu" "F.Paste" "F.Mask")
-      (net 82 "USB_D+") (pinfunction "DP2") (pintype "bidirectional") (solder_mask_margin 0.102) (tstamp 378575b9-6596-4237-9e68-59a5e68860d8))
+      (net 82 "USB_D+") (pinfunction "DP2") (pintype "bidirectional") (solder_mask_margin 0.05) (tstamp 378575b9-6596-4237-9e68-59a5e68860d8))
     (pad "B7" smd rect (at 3.72 -7.32 270) (size 0.3 1.14) (layers "F.Cu" "F.Paste" "F.Mask")
-      (net 83 "USB_D-") (pinfunction "DN2") (pintype "bidirectional") (solder_mask_margin 0.102) (tstamp 2a267212-880d-4a49-88e7-0112a33fe4ad))
+      (net 83 "USB_D-") (pinfunction "DN2") (pintype "bidirectional") (solder_mask_margin 0.05) (tstamp 2a267212-880d-4a49-88e7-0112a33fe4ad))
     (pad "B8" smd rect (at 2.72 -7.32 270) (size 0.3 1.14) (layers "F.Cu" "F.Paste" "F.Mask")
-      (net 36 "unconnected-(J3-SBU2-PadB8)") (pinfunction "SBU2") (pintype "bidirectional+no_connect") (solder_mask_margin 0.102) (tstamp 5b90cd84-df45-43e2-a327-6d0ebd316e73))
+      (net 36 "unconnected-(J3-SBU2-PadB8)") (pinfunction "SBU2") (pintype "bidirectional+no_connect") (solder_mask_margin 0.05) (tstamp 5b90cd84-df45-43e2-a327-6d0ebd316e73))
     (pad "SH1" thru_hole oval (at 0.15 -6.75 270) (size 1.05 2.15) (drill oval 0.65 1.55) (layers "*.Cu" "*.Mask")
       (net 3 "GND") (pinfunction "SHIELD") (pintype "passive") (solder_mask_margin 0.102) (tstamp ced6b9cf-6473-4d57-9b5a-128bb5d41d40))
     (pad "SH2" thru_hole oval (at 8.79 -6.75 270) (size 1.05 2.15) (drill oval 0.65 1.55) (layers "*.Cu" "*.Mask")
