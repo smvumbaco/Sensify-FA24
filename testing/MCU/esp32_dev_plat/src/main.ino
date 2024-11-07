@@ -26,7 +26,6 @@ BleGamepad bleGamepad;
 
 const int detect = 21;
 const int button_test = 13;
-// #define INPUT(size) 0x81, size
 
 enum State
 {
@@ -40,44 +39,56 @@ typedef struct
    uint8_t address;
    // length of data in bytes
    uint8_t length_of_data;
-} SensorConfiguration;
+} PeripheralConfiguration;
 
 State current_state;
 
+/*
+My idea is that you will never actually create an instance if the I2CAttachment or SPIAttachment class directly.
+Instead you will create instances of the child classes (drill, vice), which build off the functions
+of the parent class (which gives each child it's specialized functionality). You should then define the number
+of sensors/peripheral devices you want and the addresses for those devices
+- Note: You can create one function that completely handles the functionality of the state and usses the functions written
+  for that attachment (this is optional, but would make it easy to read in the main function)
+
+The reason I have the start transaction and end transaction functions not inside the read_and_send functions is because we do not want to keep
+accessing the i2c bus then freeing it every time we read something from it. We want to instead continuously read and send over
+bluetooth until the state changes, which will be done in the one function (that handles the state's functionality) mentioned above
+*/
 class I2CAttachment
 {
 private:
    // TODO: do I need to set memory here for initialization of memory block before assigning values?
-   i2c_config_t *config_i;
+   i2c_config_t config_i;
 
 public:
-   // could take in speed? depending on attachment we might need higher speeds, maybe implement later
-   I2CAttachment()
+   I2CAttachment(int sda, int scl, uint32_t clock_speed)
    {
       // config_i = new i2c_config_t;
       // initialize i2c pins
-      config_i->mode = I2C_MODE_MASTER;
-      config_i->sda_io_num = 17;
-      config_i->scl_io_num = 16;
-      config_i->sda_pullup_en = true;
-      config_i->scl_pullup_en = true;
-      config_i->master.clk_speed = 100000;
-      i2c_param_config(I2C_NUM_1, config_i);
-      i2c_driver_install(I2C_NUM_1, config_i->mode, 0, 0, 0);
+      config_i.mode = I2C_MODE_MASTER;
+      config_i.sda_io_num = sda; // 17
+      config_i.scl_io_num = scl; // 16
+      config_i.sda_pullup_en = true;
+      config_i.scl_pullup_en = true;
+      config_i.master.clk_speed = clock_speed; // 100000
+      i2c_param_config(I2C_NUM_1, &config_i);
+      i2c_driver_install(I2C_NUM_1, config_i.mode, 0, 0, 0);
    }
+
    // function for reading data
-   void read_and_send_sensors(int sensor_count, SensorConfiguration *sensors)
+   // This should only be called after start()
+   void read_and_send_sensors(int sensor_count, PeripheralConfiguration *sensors)
    {
       i2c_cmd_handle_t cmd = i2c_cmd_link_create();
-
       for (int i = 0; i < sensor_count; i++)
       {
          i2c_master_start(cmd);
-
          // read request
          i2c_master_write_byte(cmd, (sensors[i].address << 1) | I2C_MASTER_READ, ACK_CHECK_EN);
 
          // buffer for sensor data
+         // TODO: maybe change size of data???
          uint8_t sensor_data[2];
          i2c_master_read(cmd, sensor_data, sizeof(sensor_data), I2C_MASTER_LAST_NACK);
 
@@ -96,10 +107,9 @@ public:
          cmd = i2c_cmd_link_create();
       }
 
-      // Clean up
       i2c_cmd_link_delete(cmd);
    }
-   // function for sending over bluetoooth?
+   // TODO: function for sending over bluetoooth - use gamepad library - could add a button and define what buttons mean what in the specific attachments
    void send_data_over_bluetooth(uint8_t *sensor_data, int length, int sensor_count)
    {
       // if (SerialBT.available())
@@ -111,6 +121,8 @@ public:
       // }
    }
 
+   // for future attachments, you might need to write over I2C, so a function should be defined for that purpose
+
    ~I2CAttachment()
    {
       i2c_driver_delete(I2C_NUM_1);
@@ -119,94 +131,66 @@ public:
    }
 };
 
-class Vice : public I2CAttachment
-{
-public:
-   Vice() : I2CAttachment()
-   {
-      // TODO: change addresses when known, this is just an example
-      SensorConfiguration vice_sensors[] = {
-          {0x40, 1},
-          {0x41, 1}};
-
-      int num_of_sensors = 2;
-   }
-   // function for reading potentiometers to activate specific haptics responses?
-
-   void handle_vice_state()
-   {
-      // initialize vice class
-
-      // while state is still vice:
-
-      // listen for readings/update values using i2c
-
-      // send over BT
-
-      // call change state function
-   }
-};
-
 class SPIAttachment
 {
 private:
-   SPIClass *config_s;
+   SPIClass config_s;
 
 public:
-   SPIAttachment()
+   // 16, 18, 17
+   SPIAttachment(int scl, int miso, int mosi)
    {
-      const int cs = 15;
-      const int scl = 16;
-      const int miso = 18;
-      const int mosi = 17;
-
-      // uses hardware for chip select
-      config_s->setHwCs(true);
-      // sets MSB first
-      config_s->setBitOrder(MSBFIRST);
-      // in this mode the clock is low when idel and data is taken on the rising edge of the clock
-      config_s->setDataMode(SPI_MODE0);
-      // TODO: 1 MHz for now, probably wont need, could have another constructor that takes in clock speed
-      config_s->setFrequency(1000000);
+      config_s.begin(scl, miso, mosi, -1);
+      // config_s.setHwCs(true);
    }
    // function for starting a transaction
+   void start_transaction(uint32_t freq = 1000000, int8_t bit_o = MSBFIRST, int8_t mode = SPI_MODE0)
+   {
+      SPISettings settings(freq, bit_o, mode);
+      config_s.beginTransaction(settings);
+   }
 
    // function for ending a transaction
+   void end_transaction()
+   {
+      config_s.endTransaction();
+   }
+
+   void select(int8_t cs_pin)
+   {
+      digitalWrite(cs_pin, LOW);
+   }
+
+   void deselect(int8_t cs_pin)
+   {
+      digitalWrite(cs_pin, HIGH);
+   }
 
    // function for reading data
+   // TODO: move the starting and stopping of transactions to the handle drill function
+   void read_and_send(int8_t cs_pin, int sensor_count, PeripheralConfiguration *sensors)
+   {
+      for (int i = 0; i < sensor_count; i++)
+      {
+         digitalWrite(cs_pin, LOW);
+         start_transaction();
+         // TODO: this int8_t most likely needs to be changed
+         int8_t sensor_data = SPI.transfer(sensors[i].address);
+         send_data_over_bluetooth(sensor_data);
 
-   // function that sends data over bluetooth
+         SPI.endTransaction();
+         digitalWrite(cs_pin, HIGH);
+      }
+   }
 
-   // function for pulling given cs pins low (activating the device)
+   // TODO: function that sends data over bluetooth - use gamepad library
+   void send_data_over_bluetooth(int8_t data)
+   {
+   }
 
    ~SPIAttachment()
    {
       // delete config_s;
-   }
-};
-
-class Drill : public SPIAttachment
-{
-public:
-   // function for reading pwm signal?
-
-   // function for setting current limit?
-
-   void handle_drill_state()
-   {
-      // initialize drill class
-      // start spi transaction
-      // pull cs pin low for things we want to listen for
-
-      // while state is still drill:
-
-      // listen for readings/update values using
-
-      // send over BT
-
-      // call change state function
-      // end while loop
-      // end transaction
    }
 };
 
@@ -247,6 +231,76 @@ void next_state(State *current_state)
       break;
    }
 }
+
+class Vice : public I2CAttachment
+{
+public:
+   static const int num_of_sensors = 2;
+   PeripheralConfiguration vice_sensors[num_of_sensors];
+
+   Vice() : I2CAttachment(17, 16, 100000)
+   {
+      // TODO: change addresses when known, this is just an example
+      vice_sensors[0] = {0x40, 1}; // address, byte length
+      vice_sensors[1] = {0x41, 1};
+   }
+   // function for reading potentiometers to activate specific haptics responses?
+
+   void handle_vice_state(State *state)
+   {
+
+      while (*state == VICE)
+      {
+         // listen to i2c bus and send over HID input
+         read_and_send_sensors(num_of_sensors, vice_sensors);
+
+         // change state function
+         next_state(state);
+      }
+   }
+};
+
+class Drill : public SPIAttachment
+{
+private:
+   int8_t cs_pin_drill = 15;
+   static const int num_of_sensors = 2;
+   PeripheralConfiguration drill_peripherals[num_of_sensors];
+
+public:
+   Drill() : SPIAttachment(16, 18, 17)
+   {
+      // TODO: change addresses when known, this is just an example
+
+      drill_peripherals[0] = {0x40, 1};
+      drill_peripherals[1] = {0x41, 1};
+      // we only have one cs pin which is why it needs to be set as an ouput pin (we can activate or deactivate the reading from the device on this pin)
+      pinMode(cs_pin_drill, OUTPUT);
+   }
+
+   // HARI:
+   // function for reading pwm signal?
+
+   // function for setting current limit?
+
+   // use above functions in this handle drill state function to make it easy for the main function
+   // - the main function will only need to call this function... maybe
+   void handle_drill_state()
+   {
+
+      // pull cs pin low for things we want to listen for
+
+      // while state is still drill:
+
+      // listen for readings/update values using
+
+      // send over BT
+
+      // call change state function
+      // end while loop
+      // end transaction
+   }
+};
 
 // TODO: add function for parsing IMU data
 
@@ -301,14 +355,11 @@ void handle_idle_state(State *state)
       printf("In the IDLE state. Waiting for device... \n");
 
       delay(1000);
-
-      // next_state(state);
    }
 }
 
 void setup()
 {
-   Serial.begin(115200);
    Serial.begin(115200);
    Serial.println("Starting BLE work!");
    BleGamepadConfiguration bleGamepadConfig;
@@ -321,17 +372,17 @@ void setup()
 
    // i2c
    config_m.mode = I2C_MODE_MASTER;
-   // TODO: these pins are probably different on the schematic
+   // TODO: these pins are probably different
    config_m.sda_io_num = 23;
    config_m.scl_io_num = 22;
    config_m.sda_pullup_en = true;
    config_m.scl_pullup_en = true;
    config_m.master.clk_speed = 100000;
 
-   // i2c_param_config(I2C_NUM_0, &config_m);
-   // i2c_driver_install(I2C_NUM_0, config_m.mode, 0, 0, 0);
+   i2c_param_config(I2C_NUM_0, &config_m);
+   i2c_driver_install(I2C_NUM_0, config_m.mode, 0, 0, 0);
 
-   // pinMode(button_test, INPUT_PULLUP);
+   pinMode(button_test, INPUT_PULLUP);
 
    // state initialization
    current_state = IDLE;
@@ -356,11 +407,14 @@ void loop()
    }
    // else if (*current_state == DRILL)
    // {
+   //    initialize drill class
+   //    start spi transaction
    //    handle_drill_state();
    // }
    // else if (*current_state == VICE)
    // {
-   //    // start i2c transaction
+   //    initialize vice class
+   //    start i2c transaction
    //    handle_vice_state();
    // }
 
@@ -369,13 +423,14 @@ void loop()
 
 /*
 TODO list:
-- look into different sensors to figure out how to start the programming for them
-   - macros, functionality
-- BMIC drivers
-- HID working
+- look into different sensors to figure out how data will be parsed and sent as gamepad inputs
+   - IMU on main board
+   - vice ADCs and interrupts for each potentiometer
+   - drill PWM?
+- BMIC configuration, drivers
+- HID testing
 - figure out dynamic pin configuration switching
 - integrate haptics
-   - figure out how different vibrations are actually started
 
 - connect button to a specific pin, simulate a state, read the data and send stuff over bluetooth
 
