@@ -1,4 +1,0 @@
-(fp_lib_table
-  (version 7)
-  (lib (name "footprints")(type "KiCad")(uri "/Users/hari/Documents/GitHub/Sensify-FA24/production/ecad/components/footprints.pretty")(options "")(descr ""))
-)
