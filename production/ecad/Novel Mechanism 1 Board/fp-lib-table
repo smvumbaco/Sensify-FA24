@@ -1,5 +1,0 @@
-(fp_lib_table
-  (version 7)
-  (lib (name "Sensify")(type "KiCad")(uri "D:/generate-sensify/Sensify-FA24/production/ecad/components/footprints")(options "")(descr ""))
-  (lib (name "SensifyADC")(type "KiCad")(uri "D:/generate-sensify/Sensify-FA24/production/ecad/components/footprints")(options "")(descr ""))
-)
