@@ -20,7 +20,7 @@
 
 String device_name = "ESP32-BT-Serial";
 
-// BluetoothSerial SerialBT;
+BluetoothSerial SerialBT;
 
 BleGamepad bleGamepad;
 
@@ -41,6 +41,7 @@ typedef struct
    uint8_t length_of_data;
 } PeripheralConfiguration;
 
+// I eventually want to make this a non-global variable
 State current_state;
 
 /*
@@ -88,8 +89,7 @@ public:
          i2c_master_write_byte(cmd, (sensors[i].address << 1) | I2C_MASTER_READ, ACK_CHECK_EN);
 
          // buffer for sensor data
-         // TODO: maybe change size of data???
-         uint8_t sensor_data[2];
+         uint8_t sensor_data[sensors[i].length_of_data];
          i2c_master_read(cmd, sensor_data, sizeof(sensor_data), I2C_MASTER_LAST_NACK);
 
          i2c_master_stop(cmd);
@@ -97,7 +97,7 @@ public:
          if (ret == ESP_OK)
          {
             // TODO: define this function
-            send_data_over_bluetooth(sensor_data, sizeof(sensor_data), sensor_count);
+            send_data_over_bluetooth(sensor_data, sizeof(sensor_data));
          }
          else
          {
@@ -110,15 +110,15 @@ public:
       i2c_cmd_link_delete(cmd);
    }
    // TODO: function for sending over bluetoooth - use gamepad library - could add a button and define what buttons mean what in the specific attachments
-   void send_data_over_bluetooth(uint8_t *sensor_data, int length, int sensor_count)
+   void send_data_over_bluetooth(uint8_t *sensor_data, int length)
    {
-      // if (SerialBT.available())
-      // {
-      //    for (int i = 0; i < sensor_count; i++)
-      //    {
-      //       SerialBT.write(sensor_data[i]);
-      //    }
-      // }
+      if (SerialBT.available())
+      {
+         for (int i = 0; i < length; i++)
+         {
+            SerialBT.write(sensor_data[i]);
+         }
+      }
    }
 
    // for future attachments, you might need to write over I2C, so a function should be defined for that purpose
@@ -170,22 +170,31 @@ public:
    // TODO: move the starting and stopping of transactions to the handle drill function
    void read_and_send(int8_t cs_pin, int sensor_count, PeripheralConfiguration *sensors)
    {
+      // could make an array that stores the length of the data for each sensor
       for (int i = 0; i < sensor_count; i++)
       {
          digitalWrite(cs_pin, LOW);
          start_transaction();
-         // TODO: this int8_t most likely needs to be changed
+         // TODO: this int8_t most likely needs to be changed, I could make an array here (I NEED LENGTH SOMEHOW)
          int8_t sensor_data = SPI.transfer(sensors[i].address);
-         send_data_over_bluetooth(sensor_data);
+         send_data_over_bluetooth(&sensor_data, sensor_count);
 
          SPI.endTransaction();
          digitalWrite(cs_pin, HIGH);
       }
    }
 
-   // TODO: function that sends data over bluetooth - use gamepad library
-   void send_data_over_bluetooth(int8_t data)
+   // TODO: function that sends data over bluetooth
+   // takes in the data pointer and the length of the data to send over bluetooth
+   void send_data_over_bluetooth(int8_t *data, int length)
    {
+      if (SerialBT.available())
+      {
+         for (int i = 0; i < length; i++)
+         {
+            SerialBT.write(data[i]);
+         }
+      }
    }
 
    ~SPIAttachment()
@@ -311,6 +320,7 @@ void handle_idle_state(State *state)
    {
       if (bleGamepad.isConnected())
       {
+         // This code below is for HID gamepad
          Serial.println("Press buttons 1, 32, 64 and 128. Set hat 1 to down right and hat 2 to up left");
 
          // Press buttons 5, 32, 64 and 128
@@ -344,14 +354,16 @@ void handle_idle_state(State *state)
          bleGamepad.sendReport();
          delay(500);
       }
-      // if (Serial.available())
-      // {
-      //    SerialBT.write(Serial.read());
-      // }
-      // if (SerialBT.available())
-      // {
-      //    Serial.write(SerialBT.read());
-      // }
+
+      // for regular bluetooth serial
+      if (Serial.available())
+      {
+         SerialBT.write(Serial.read());
+      }
+      if (SerialBT.available())
+      {
+         Serial.write(SerialBT.read());
+      }
       printf("In the IDLE state. Waiting for device... \n");
 
       delay(1000);
@@ -405,18 +417,22 @@ void loop()
    {
       handle_idle_state(&current_state);
    }
-   // else if (*current_state == DRILL)
-   // {
-   //    initialize drill class
-   //    start spi transaction
-   //    handle_drill_state();
-   // }
-   // else if (*current_state == VICE)
-   // {
-   //    initialize vice class
-   //    start i2c transaction
-   //    handle_vice_state();
-   // }
+   else if (current_state == DRILL)
+   {
+      // initialize drill class
+      Drill drill;
+      // start spi transaction
+      drill.start_transaction();
+
+      drill.handle_drill_state();
+   }
+   else if (current_state == VICE)
+   {
+      // initialize vice class
+      Vice vice;
+      // start i2c transaction
+      vice.handle_vice_state(&current_state);
+   }
 
    delay(100);
 }
