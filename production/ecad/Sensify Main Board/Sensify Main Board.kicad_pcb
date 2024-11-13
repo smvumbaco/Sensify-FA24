@@ -6132,7 +6132,7 @@
       (scale (xyz 1 1 1))
       (rotate (xyz -180 0 0))
     )
-    (model "/Users/leo_chen/Downloads/1-2834011-2.STEP"
+    (model "/Users/leo_chen/Documents/Sensify/Sensify-FA24/production/ecad/components/cad/1-2834011-2.STEP"
       (offset (xyz -1 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 180 180))
@@ -17751,6 +17751,11 @@
       (net 136 "Net-(Q7-D)") (pinfunction "2") (pintype "unspecified") (tstamp 6f2cb043-61a3-4a0a-a818-92b47e9f6717))
     (pad "3" thru_hole circle (at 0 5.08 180) (size 1.6002 1.6002) (drill 1.0922) (layers "*.Cu" "*.Mask")
       (net 134 "Net-(U4-VIN)") (pinfunction "3") (pintype "unspecified") (tstamp cf1f3fa5-971c-4744-bccd-3681563b6868))
+    (model "/Users/leo_chen/Documents/Sensify/Sensify-FA24/production/ecad/components/cad/500ASSPxM2xE.stp"
+      (offset (xyz 0 -2.5 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 90))
+    )
   )
 
   (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" (layer "F.Cu")
@@ -18296,7 +18301,7 @@
       (scale (xyz 1 1 1))
       (rotate (xyz -180 0 0))
     )
-    (model "/Users/leo_chen/Downloads/1-2834011-3.step"
+    (model "/Users/leo_chen/Documents/Sensify/Sensify-FA24/production/ecad/components/cad/1-2834011-3.step"
       (offset (xyz 2.5 -3.75 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 180 0 0))
@@ -29969,7 +29974,7 @@
       (net 3 "GND") (pinfunction "GND") (pintype "power_out") (tstamp 19257c86-c542-4c36-8177-066f3789eeed))
     (pad "47" smd rect (at -1.5 -1.06 180) (size 0.889 0.889) (layers "B.Cu" "B.Paste" "B.Mask")
       (net 3 "GND") (pinfunction "GND") (pintype "power_out") (tstamp 232c5eac-15c0-4b6f-97d6-9f68628e252c))
-    (model "/Users/leo_chen/Downloads/ESP32-WROOM-32E-N16.STEP"
+    (model "/Users/leo_chen/Documents/Sensify/Sensify-FA24/production/ecad/components/cad/ESP32-WROOM-32E-N16.STEP"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
