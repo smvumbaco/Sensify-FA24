@@ -144,7 +144,7 @@ public:
       // config_s.setHwCs(true);
    }
    // function for starting a transaction
-   void start_transaction(uint32_t freq = 1000000, int8_t bit_o = MSBFIRST, int8_t mode = SPI_MODE0)
+   void start_transaction(uint32_t freq = 5000000, int8_t bit_o = MSBFIRST, int8_t mode = SPI_MODE0)
    {
       SPISettings settings(freq, bit_o, mode);
       config_s.beginTransaction(settings);
@@ -289,7 +289,10 @@ public:
 
    // HARI:
    // function for reading pwm signal?
-
+   void readpwm()
+   {
+      
+   }
    // function for setting current limit?
 
    // use above functions in this handle drill state function to make it easy for the main function
