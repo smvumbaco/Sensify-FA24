@@ -25,7 +25,14 @@ BluetoothSerial SerialBT;
 BleGamepad bleGamepad;
 
 const int detect = 21;
-const int button_test = 13;
+const int button_test = 19;
+
+int previous_button_state = HIGH;
+
+i2c_config_t config_m;
+
+// TODO change this when integrating
+uint8_t imu_address = 0x80;
 
 enum State
 {
@@ -90,14 +97,15 @@ public:
 
          // buffer for sensor data
          uint8_t sensor_data[sensors[i].length_of_data];
+         // should read everything into sensor_data, might need to cahnge size variable and instead use 'sensors[i].length_of_data'
          i2c_master_read(cmd, sensor_data, sizeof(sensor_data), I2C_MASTER_LAST_NACK);
 
          i2c_master_stop(cmd);
          esp_err_t ret = i2c_master_cmd_begin(I2C_NUM_1, cmd, 1000 / portTICK_RATE_MS);
          if (ret == ESP_OK)
          {
-            // TODO: define this function
-            send_data_over_bluetooth(sensor_data, sizeof(sensor_data));
+            // the buffer and the length of the buffer is passed to this function
+            send_data_over_bluetooth(sensors[i].address, sensor_data, sizeof(sensor_data));
          }
          else
          {
@@ -109,15 +117,21 @@ public:
 
       i2c_cmd_link_delete(cmd);
    }
-   // TODO: function for sending over bluetoooth - use gamepad library - could add a button and define what buttons mean what in the specific attachments
-   void send_data_over_bluetooth(uint8_t *sensor_data, int length)
+   // sends data over bluetooth
+   void send_data_over_bluetooth(uint8_t sensor_address, uint8_t *sensor_data, int length)
    {
       if (SerialBT.available())
       {
-         for (int i = 0; i < length; i++)
-         {
-            SerialBT.write(sensor_data[i]);
-         }
+         // this is creating a packet to send data over bluetooth
+         uint8_t buffer[2 + length];
+
+         // this is a marker of all 1s to indicate the beginning of a packet
+         buffer[0] = 0xFF;
+         buffer[1] = sensor_address;
+         buffer[2] = length;
+         memcpy(&buffer[3], sensor_data, length);
+
+         SerialBT.write(buffer, sizeof(buffer));
       }
    }
 
@@ -134,26 +148,26 @@ public:
 class SPIAttachment
 {
 private:
-   SPIClass config_s;
+   SPIClass *config_s;
 
 public:
    // 16, 18, 17
    SPIAttachment(int scl, int miso, int mosi)
    {
-      config_s.begin(scl, miso, mosi, -1);
+      config_s->begin(scl, miso, mosi, -1);
       // config_s.setHwCs(true);
    }
    // function for starting a transaction
    void start_transaction(uint32_t freq = 5000000, int8_t bit_o = MSBFIRST, int8_t mode = SPI_MODE0)
    {
       SPISettings settings(freq, bit_o, mode);
-      config_s.beginTransaction(settings);
+      config_s->beginTransaction(settings);
    }
 
    // function for ending a transaction
    void end_transaction()
    {
-      config_s.endTransaction();
+      config_s->endTransaction();
    }
 
    void select(int8_t cs_pin)
@@ -207,7 +221,7 @@ public:
 void next_state(State *current_state)
 {
    // TODO: this probably has an adc so I would need to change this
-   int current_detect_v = analogRead(detect);
+   int current_detect_v = digitalRead(detect);
 
    // converts to float
    float voltage = current_detect_v * (3.3 / 4095.0);
@@ -291,7 +305,6 @@ public:
    // function for reading pwm signal?
    void readpwm()
    {
-      
    }
    // function for setting current limit?
 
@@ -315,6 +328,13 @@ public:
 };
 
 // TODO: add function for parsing IMU data
+void imu_data(i2c_config_t *config_m)
+{
+   i2c_cmd_handle_t cmd_handle;
+
+   // start condition that initializes the communication session
+   i2c_master_start(cmd_handle);
+}
 
 // pass in the current_state variable here by reference
 void handle_idle_state(State *state)
@@ -324,66 +344,86 @@ void handle_idle_state(State *state)
       if (bleGamepad.isConnected())
       {
          // This code below is for HID gamepad
-         Serial.println("Press buttons 1, 32, 64 and 128. Set hat 1 to down right and hat 2 to up left");
+         // Serial.println("pressed button 5\n");
 
-         // Press buttons 5, 32, 64 and 128
          bleGamepad.press(BUTTON_5);
-         bleGamepad.press(BUTTON_32);
-         bleGamepad.press(BUTTON_64);
-         bleGamepad.press(BUTTON_128);
 
-         // Move all axes to max.
-         bleGamepad.setLeftThumb(32767, 32767);  // or bleGamepad.setX(32767); and bleGamepad.setY(32767);
-         bleGamepad.setRightThumb(32767, 32767); // or bleGamepad.setZ(32767); and bleGamepad.setRZ(32767);
-         bleGamepad.setLeftTrigger(32767);       // or bleGamepad.setRX(32767);
-         bleGamepad.setRightTrigger(32767);      // or bleGamepad.setRY(32767);
+         bleGamepad.setLeftThumb(32767, 32767);
+         bleGamepad.setLeftTrigger(32767);
          bleGamepad.setSlider1(32767);
-         bleGamepad.setSlider2(32767);
 
          // Set hat 1 to down right and hat 2 to up left (hats are otherwise centered by default)
-         bleGamepad.setHat1(DPAD_DOWN_RIGHT); // or bleGamepad.setHat1(HAT_DOWN_RIGHT);
-         bleGamepad.setHat2(DPAD_UP_LEFT);    // or bleGamepad.setHat2(HAT_UP_LEFT);
+         bleGamepad.setHat1(DPAD_DOWN_RIGHT);
+         bleGamepad.setHat2(DPAD_UP_LEFT);
          // Or bleGamepad.setHats(DPAD_DOWN_RIGHT, DPAD_UP_LEFT);
 
          // Send the gamepad report
          bleGamepad.sendReport();
-         delay(500);
 
-         Serial.println("Release button 5 and 64. Move all axes to min. Set hat 1 and 2 to centred.");
+         // Serial.println("released button, set axes to normal\n");
          bleGamepad.release(BUTTON_5);
-         bleGamepad.release(BUTTON_64);
          bleGamepad.setAxes(0, 0, 0, 0, 0, 0, 0, 0);
          bleGamepad.setHats(DPAD_CENTERED, HAT_CENTERED);
          bleGamepad.sendReport();
-         delay(500);
+         // delay(500);
       }
+
+      int button_test_read_send_BT = digitalRead(button_test);
+
+      const char *message_clicked = "Button clicked";
+      size_t message_size = strlen(message_clicked);
 
       // for regular bluetooth serial
       if (Serial.available())
       {
-         SerialBT.write(Serial.read());
+         if (button_test_read_send_BT == LOW && previous_button_state == HIGH)
+         {
+            Serial.println("button pressed\n");
+            // SerialBT.write((const uint8_t *)message_clicked, message_size);
+
+            uint8_t buffer[2 + 3];
+
+            uint8_t sensor_data[3] = {0x01, 0x02, 0x03};
+            // this is a marker of all 1s to indicate the beginning of a packet
+            buffer[0] = 0xFF;
+            buffer[1] = 0x01;
+            buffer[2] = 0x03;
+            memcpy(&buffer[3], sensor_data, 3);
+
+            // SerialBT.println(message_clicked);
+            SerialBT.write(buffer, 6);
+         }
+         // SerialBT.write(Serial.read());
       }
       if (SerialBT.available())
       {
-         Serial.write(SerialBT.read());
-      }
-      printf("In the IDLE state. Waiting for device... \n");
+         if (button_test_read_send_BT == LOW && previous_button_state == HIGH)
+         {
+            Serial.println("button pressed\n");
+            // SerialBT.write((const uint8_t *)message_clicked, message_size);
+            uint8_t buffer[2 + 3];
 
-      delay(1000);
+            uint8_t sensor_data[3] = {0x01, 0x02, 0x03};
+            // this is a marker of all 1s to indicate the beginning of a packet
+            buffer[0] = 0xFF;
+            buffer[1] = 0x01;
+            buffer[2] = 0x03;
+            memcpy(&buffer[3], sensor_data, 3);
+
+            // SerialBT.println(message_clicked);
+            SerialBT.write(buffer, 6);
+         }
+      }
+      previous_button_state = button_test_read_send_BT;
+      // printf("In the IDLE state. Waiting for device... \n");
+
+      next_state(state);
    }
 }
 
 void setup()
 {
    Serial.begin(115200);
-   Serial.println("Starting BLE work!");
-   BleGamepadConfiguration bleGamepadConfig;
-   bleGamepadConfig.setAutoReport(false); // This is true by default
-   bleGamepadConfig.setButtonCount(128);
-   bleGamepadConfig.setHatSwitchCount(2);
-   bleGamepad.begin(&bleGamepadConfig);
-
-   i2c_config_t config_m;
 
    // i2c
    config_m.mode = I2C_MODE_MASTER;
@@ -402,6 +442,15 @@ void setup()
    // state initialization
    current_state = IDLE;
 
+   // Serial.println("Starting BLE work!");
+   // BleGamepadConfiguration bleGamepadConfig;
+   // bleGamepadConfig.setAutoReport(false); // This is true by default
+   // bleGamepadConfig.setButtonCount(128);
+   // bleGamepadConfig.setHatSwitchCount(2);
+   // bleGamepad.begin(&bleGamepadConfig);
+
+   SerialBT.begin(device_name);
+
    Serial.print("done");
 
    delay(20);
@@ -409,10 +458,6 @@ void setup()
 
 void loop()
 {
-   // connect before doing anything
-
-   // current_state = nextState(current_state);
-
    // Read the state of the button (active-low, so pressed is LOW)
    int buttonState = digitalRead(button_test);
 
@@ -422,6 +467,8 @@ void loop()
    }
    else if (current_state == DRILL)
    {
+      // play haptics effect
+
       // initialize drill class
       Drill drill;
       // start spi transaction
