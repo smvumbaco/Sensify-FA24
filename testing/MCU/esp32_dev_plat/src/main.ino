@@ -264,8 +264,9 @@ public:
    Vice() : I2CAttachment(17, 16, 100000)
    {
       // TODO: change addresses when known, this is just an example
-      vice_sensors[0] = {0x40, 1}; // address, byte length
-      vice_sensors[1] = {0x41, 1};
+      vice_sensors[0] = {0x55, 1}; // address, byte length
+      vice_sensors[1] = {0x56, 1};
+      vice_sensors[2] = {0x59, 1};
    }
    // function for reading potentiometers to activate specific haptics responses?
 
