@@ -198,7 +198,7 @@ public:
       }
    }
 
-   // TODO: function that sends data over bluetooth
+   // TODO: test this function with HW
    // takes in the data pointer and the length of the data to send over bluetooth
    void send_data_over_bluetooth(int8_t *data, int length)
    {
@@ -328,13 +328,36 @@ public:
    }
 };
 
-// TODO: add function for parsing IMU data
-void imu_data(i2c_config_t *config_m)
+// TODO: test this function
+void imu_data(i2c_config_t *config_m, uint8_t address, uint8_t length)
 {
    i2c_cmd_handle_t cmd_handle;
 
    // start condition that initializes the communication session
    i2c_master_start(cmd_handle);
+
+   i2c_master_write_byte(cmd_handle, address << 1 | I2C_MASTER_READ, ACK_CHECK_EN);
+
+   // buffer for sensor data
+   uint8_t imu_data[length];
+   // should read everything into sensor_data, might need to cahnge size variable and instead use 'sensors[i].length_of_data'
+   i2c_master_read(cmd_handle, imu_data, sizeof(imu_data), I2C_MASTER_LAST_NACK);
+
+   i2c_master_stop(cmd_handle);
+   esp_err_t ret = i2c_master_cmd_begin(I2C_NUM_1, cmd_handle, 1000 / portTICK_RATE_MS);
+   if (ret == ESP_OK)
+   {
+      // the buffer and the length of the buffer is passed to this function
+      SerialBT.write(imu_data, sizeof(imu_data));
+   }
+   else
+   {
+      printf("Failed to read data from imu");
+   }
+
+   cmd_handle = i2c_cmd_link_create();
+
+   i2c_cmd_link_delete(cmd_handle);
 }
 
 // pass in the current_state variable here by reference
